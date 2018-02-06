@@ -1,7 +1,7 @@
 'use strict';
-/*$(document).ready(function() {
-    move();
-})*/
+$(document).ready(function() {
+    moveBootStrap();
+})
 
 
 /*function initializePage() {
@@ -11,6 +11,7 @@
         $(".jumbotron p").addClass("active");
     });
 }*/
+
 
 function move() {    
     var elem = document.getElementById("myBar"); 
@@ -24,4 +25,40 @@ function move() {
             elem.style.width = width + '%'; 
         }
     }
+}
+
+function moveBootStrap() {    
+    $(".progress-bar-success").animate({
+        width: "70%"
+    },2500);
+    $(".progress-bar-warning").animate({
+        width: "20%"
+    },2500);
+    $(".progress-bar-danger").animate({
+        width: "10%"
+    },2500);
+    //console.log("Hello");
+}
+
+function countDown() {    
+    var i = 70;
+    var j = 20;
+    var k = 10;
+    var counterBack = setInterval(function () {
+      i--;      
+      if (i >= 0) {
+        $('.progress-bar-success').css('width', i + '%');
+      } 
+      else if (i < 0 && j >= 0){
+        j--;       
+        $('.progress-bar-warning').css('width', j + '%');
+      }
+      else if (i < 0 && j < 0 && k >= 0){
+        k--;
+        $('.progress-bar-danger').css('width', k + '%');
+      }   
+      else {        
+        clearInterval(counterBack);
+      }
+    }, 100);
 }

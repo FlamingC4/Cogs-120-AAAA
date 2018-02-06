@@ -7,3 +7,19 @@
     height: 30px;
     background-color: red;
 }
+
+
+#greenBar {
+    -webkit-transition: none !important;
+    transition: none !important;
+}
+
+#yellowBar {
+    -webkit-transition: none !important;
+    transition: none !important;
+}
+
+#redBar {
+    -webkit-transition: none !important;
+    transition: none !important;
+}
