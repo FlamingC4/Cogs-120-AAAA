@@ -4,11 +4,15 @@
 <head>
 	<title>Progress Check</title>
 
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
 	<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+	
+	
+	<!--<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.min.css" rel="stylesheet"> -->
 	<link href="css/progress.css" rel="stylesheet">
 	<link href="css/bootstrap-reboot.css" rel="stylesheet">
 
@@ -21,19 +25,20 @@
 	<button onclick="move()">Click Me</button>
 
 	<div class="progress" onload="moveBootStrap()">
-	  <div class="progress-bar progress-bar-danger progress-bar-striped active" id="redBar" role="progressbar" style="width:0%"></div>
-	  <div class="progress-bar progress-bar-warning" id="yellowBar" role="progressbar" style="width:0%"></div>
-	  <div class="progress-bar progress-bar-success" id="greenBar" role="progressbar" style="width:0%"></div>  
+	  <div class="progress-bar progress-bar-danger progress-bar-striped progress-bar-animated bg-danger" id="redBar" role="progressbar" style="width:0%"></div>
+	  <div class="progress-bar progress-bar-warning progress-bar-striped progress-bar-animated bg-warning" id="yellowBar" role="progressbar" style="width:0%"></div>
+	  <div class="progress-bar progress-bar-success progress-bar-striped progress-bar-animated bg-success" id="greenBar" role="progressbar" style="width:0%"></div>  
 	</div>
 	<button onclick="countDown()">Click me for a countdown</button> 
 
 </div>	
 		 
-</body>
+
 
 <script src="https://code.jquery.com/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/progress.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>	
 
+</body>
 </html>
