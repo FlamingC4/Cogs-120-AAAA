@@ -54,7 +54,9 @@
     text: roboto;
     margin: 0px;
     font-size: 50px;
-    color: white;    
+    color: white;
+    top: 60px; 
+    right: -10px;   
 }
 
 .btn .btn-wide {
@@ -64,4 +66,8 @@
     -webkit-border-radius: 8px;
        -moz-border-radius: 8px;
             border-radius: 8px;
+}
+
+.container{
+    width: 650px;    
 }
