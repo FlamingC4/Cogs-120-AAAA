@@ -49,15 +49,14 @@
     margin: 10px ;
 }
 
-#top-of-page{
+.top-of-page {
     background-color: #009688;
-    text: roboto;
+    font: "roboto";
     margin: 0px;
     font-size: 50px;
-    color: white;
-    top: 60px; 
-    right: -10px;   
+    color: white;  
 }
+
 
 .btn .btn-wide {
     padding: 18px 100px;
@@ -71,3 +70,24 @@
 .container{
     width: 650px;    
 }
+
+#progressBarzBlank div {
+  height: 100%;
+  text-align: right;
+  padding: 0 10px;
+  line-height: 22px; /* same as #progressBar height if we want text middle aligned */
+  width: 500px;
+  background-color: black;
+  box-sizing: border-box;
+}
+
+#progressBarzBlank {
+  width: 90%;
+  margin: 10px auto;
+  height: 22px;
+  background-color: white;
+}
+
+/*.container.text-left{
+    text-align: right;
+}*/
