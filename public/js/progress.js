@@ -1,6 +1,9 @@
 'use strict';
+//const timer = require('jquery-countdown');
+
 $(document).ready(function() {
     moveBootStrap();
+    timer();
 })
 
 
@@ -13,7 +16,7 @@ $(document).ready(function() {
 }*/
 
 
-function move() {    
+function move() { 
     var elem = document.getElementById("myBar"); 
     var width = 1;
     var id = setInterval(frame, 10);
@@ -27,6 +30,7 @@ function move() {
     }
 }
 
+//initialize the BootStrap timer
 function moveBootStrap() {    
     $(".progress-bar-success").animate({
         width: "70%"
@@ -40,7 +44,21 @@ function moveBootStrap() {
     //console.log("Hello");
 }
 
-function countDown() {    
+function resetProgress() {    
+    $(".progress-bar-success").animate({
+        width: "70%"
+    },0);
+    $(".progress-bar-warning").animate({
+        width: "20%"
+    },0);
+    $(".progress-bar-danger").animate({
+        width: "10%"
+    },0);
+}
+    
+//progressBar
+function countDown() { 
+    resetProgress();
     var i = 70;
     var j = 20;
     var k = 10;
@@ -61,4 +79,10 @@ function countDown() {
         clearInterval(counterBack);
       }
     }, 100);
+}
+function timer(){
+$('#progress-timer').countdown('2018/02/08 20:00:00', function(event) {
+    $(this).html(event.strftime('%w weeks %d days %H:%M:%S'));    
+  });
+
 }

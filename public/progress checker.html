@@ -6,10 +6,10 @@
 
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="bootstrap-4.0.0/js/tests/vendor/jquery-1.9.1.min.js"></script>
 
-	<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-	
+	<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">	
 	
 	<!--<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet"> -->
@@ -19,10 +19,22 @@
 </head>
 
 <body>
-	<div id="myProgress">
+	<!--<div id="myProgress">
 	  <div id="myBar"></div>
+	</div> 
+	<button onclick="move()">Click Me</button>-->
+	<div class="jumbotron">
+  		<h1 class="display-4">Project Name Here</h1>
+  	</div>
+
+	<div class="alert alert-danger" role="alert">
+  		Pause <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
 	</div>
-	<button onclick="move()">Click Me</button>
+
+	<div class="alert alert-success" role="alert">
+  		Finish <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+	</div>
+	<p>Time Left<div id="progress-timer"></div></p>
 
 	<div class="progress" onload="moveBootStrap()">
 	  <div class="progress-bar progress-bar-danger progress-bar-striped progress-bar-animated bg-danger" id="redBar" role="progressbar" style="width:0%"></div>
@@ -30,15 +42,22 @@
 	  <div class="progress-bar progress-bar-success progress-bar-striped progress-bar-animated bg-success" id="greenBar" role="progressbar" style="width:0%"></div>  
 	</div>
 	<button onclick="countDown()">Click me for a countdown</button> 
+	</br>
 
-</div>	
-		 
+	<div class="progress">
+	  <div class="progress-bar progress-bar-danger progress-bar-striped progress-bar-animated bg-danger" id="redBar" role="progressbar" style="width:0%"></div>
+	  <div class="progress-bar progress-bar-warning progress-bar-striped progress-bar-animated bg-warning" id="yellowBar" role="progressbar" style="width:0%"></div>
+	  <div class="progress-bar progress-bar-success progress-bar-striped progress-bar-animated bg-success" id="greenBar" role="progressbar" style="width:0%"></div>  
+	</div>
+	
+			 
 
 
-<script src="https://code.jquery.com/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/progress.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>	
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/progress.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+	<script src="jquery-countdown/dist/jquery.countdown.js"></script>	
 
 </body>
 </html>
