@@ -103,7 +103,7 @@ function progress(timeleft, timetotal, $element) {
     if(timeleft > 0) {
         setTimeout(function() {
             progress(timeleft - 1, timetotal, $element);
-        }, 1000);
+        }, timetotal);
     }
 };
 progress(300, 600, $('#progressBarz'));

@@ -26,23 +26,21 @@
 	  <div id="myBar"></div>
 	</div> 
 	<button onclick="move()">Click Me</button>-->
-	<div class="jumbotron">
-  		<h1 class="display-4">Project Name Here</h1>
+	<div id="top-of-page">
+  		<p>COGS 108 Assignment <img src="images/edit project.png" style="width:120px;height:120px;position:relative;top:-10px;left:350px" ></p>
   	</div>
 
-	<div class="alert alert-danger" role="alert">
-  		Pause <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+  	<div class="text-center">   	
+  		</br>
+	  	<button type="button" class="btn btn-danger btn-wide btn-block" id="pause-button"> Pause </button>
+	  	</br>
+	  	</br>
+		<button type="button" class="btn btn-success btn-wide btn-block" id="finish-button">Finish</button>
+		</br>
+		</br>
 	</div>
 
-	<div class="alert alert-success" role="alert">
-  		Finish <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
-	</div>
-
-	<div id="text">
-		<p>Time Left</p>
-	</div>
-	<div id="progress-timer"></div></p>
-
+	
 	<!--<div class="progress" id="bootStrapBar" onload="moveBootStrap()">
 	  <div class="progress-bar progress-bar-danger progress-bar-striped progress-bar-animated bg-danger" id="redBar" role="progressbar" style="width:0%"></div>
 	  <div class="progress-bar progress-bar-warning progress-bar-striped progress-bar-animated bg-warning" id="yellowBar" role="progressbar" style="width:0%"></div>
@@ -52,6 +50,11 @@
 	
 	<div id="progressBarz">
   		<div class="bar"></div>
+	</div>
+
+	<div id="text">
+		<p>Time Left: <div id="progress-timer"></div></p>
+		
 	</div>
 
 	<script src="https://code.jquery.com/jquery.js"></script>

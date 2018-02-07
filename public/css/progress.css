@@ -28,7 +28,7 @@
   width: 90%;
   margin: 10px auto;
   height: 22px;
-  background-color: #0A5F44;
+  background-color: #800000;
 }
 
 #progressBarz div {
@@ -37,12 +37,12 @@
   padding: 0 10px;
   line-height: 22px; /* same as #progressBar height if we want text middle aligned */
   width: 0;
-  background-color: #CBEA00;
+  background-color: #009688;
   box-sizing: border-box;
 }
 
 #progress-timer{
-    margin: 10px ;
+    /*margin: 10px;*/
 }
 
 #text{
@@ -50,5 +50,18 @@
 }
 
 #top-of-page{
-    background: #009688
+    background-color: #009688;
+    text: roboto;
+    margin: 0px;
+    font-size: 50px;
+    color: white;    
+}
+
+.btn .btn-wide {
+    padding: 18px 100px;
+    font-size: 22px; 
+    line-height: normal;
+    -webkit-border-radius: 8px;
+       -moz-border-radius: 8px;
+            border-radius: 8px;
 }
