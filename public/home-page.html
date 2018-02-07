@@ -8,12 +8,11 @@
 				background-color: green;
 			}
 			.navbar-header {
-				background-color: blue;
-				width: 100%;
-				margin: 0;
+				background-color: white;
+				border-bottom: 2px solid black;
 			}
 			h1 {
-				color: white;
+				color: black;
 				size: 70px;
 				
 			}
@@ -31,33 +30,41 @@
 			}
 			.items {
 				background: white;
-				margin: 5px 5px 5px 5px;
+				margin: 5px 5px 5px 0;
 				border-bottom: 2px solid black;
+			}
+			.glyphicon.glyphicon-cog {
+				width: 500px;
+				color: white;
+			}
+			.add-sign {
+				position: absolute;
+				right: 0px;
+				bottom: 0px;
 			}
 		</style>
 	</head>
 	<body>
 		<div class="container">
-				<div class="container-fluid">
-					<div class="navbar-header">
-						<h1>ASSIGNMENTS</h1>
-						<img src="settings.png">
-					</div>
-				<!--</div> -->
-			<span class="glyphicon glyphicon-cog" aria-hidden="false"></span>
-			<div class="inner-container">
-				<div class="items">
-					<h3>PA #1</h3>
+			<div class="row navbar-header">
+				<div class="col-10">
+					<h1>ASSIGNMENTS</h1>
 				</div>
-				<div class="items">
-					<h3>Math 5.1 - 5.5 </h3>
-				</div>
-				<div class="items">
-					<h3>Muir 50 Essay</h3>
+				<div class="col-2">
+					<img src="gear.png">
 				</div>
 			</div>
+			<div class="items">
+				<h3>PA #1</h3>
+			</div>
+			<div class="items">
+				<h3>Math 5.1 - 5.5 </h3>
+			</div>
+			<div class="items">
+				<h3>Muir 50 Essay</h3>
+			</div>
+			<img class="add-sign" src="add.png">
 		</div>
-		<img src="settings.png">
 
 	</body>
 
