@@ -15,6 +15,9 @@
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet"> -->
 	<link href="css/progress.css" rel="stylesheet">
 	<link href="css/bootstrap-reboot.css" rel="stylesheet">
+	<!-- hex:#009688 -->
+	<!-- background hex: #979797 -->
+
 
 </head>
 
@@ -34,24 +37,22 @@
 	<div class="alert alert-success" role="alert">
   		Finish <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
 	</div>
-	<p>Time Left<div id="progress-timer"></div></p>
 
-	<div class="progress" onload="moveBootStrap()">
+	<div id="text">
+		<p>Time Left</p>
+	</div>
+	<div id="progress-timer"></div></p>
+
+	<!--<div class="progress" id="bootStrapBar" onload="moveBootStrap()">
 	  <div class="progress-bar progress-bar-danger progress-bar-striped progress-bar-animated bg-danger" id="redBar" role="progressbar" style="width:0%"></div>
 	  <div class="progress-bar progress-bar-warning progress-bar-striped progress-bar-animated bg-warning" id="yellowBar" role="progressbar" style="width:0%"></div>
 	  <div class="progress-bar progress-bar-success progress-bar-striped progress-bar-animated bg-success" id="greenBar" role="progressbar" style="width:0%"></div>  
 	</div>
-	<button onclick="countDown()">Click me for a countdown</button> 
-	</br>
-
-	<div class="progress">
-	  <div class="progress-bar progress-bar-danger progress-bar-striped progress-bar-animated bg-danger" id="redBar" role="progressbar" style="width:0%"></div>
-	  <div class="progress-bar progress-bar-warning progress-bar-striped progress-bar-animated bg-warning" id="yellowBar" role="progressbar" style="width:0%"></div>
-	  <div class="progress-bar progress-bar-success progress-bar-striped progress-bar-animated bg-success" id="greenBar" role="progressbar" style="width:0%"></div>  
-	</div>
+	<button onclick="countDown()">Click me for a countdown</button>--> 
 	
-			 
-
+	<div id="progressBarz">
+  		<div class="bar"></div>
+	</div>
 
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>

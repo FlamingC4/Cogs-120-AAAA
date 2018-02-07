@@ -23,3 +23,32 @@
     -webkit-transition: none !important;
     transition: none !important;
 }
+
+#progressBarz {
+  width: 90%;
+  margin: 10px auto;
+  height: 22px;
+  background-color: #0A5F44;
+}
+
+#progressBarz div {
+  height: 100%;
+  text-align: right;
+  padding: 0 10px;
+  line-height: 22px; /* same as #progressBar height if we want text middle aligned */
+  width: 0;
+  background-color: #CBEA00;
+  box-sizing: border-box;
+}
+
+#progress-timer{
+    margin: 10px ;
+}
+
+#text{
+    margin: 10px ;
+}
+
+#top-of-page{
+    background: #009688
+}

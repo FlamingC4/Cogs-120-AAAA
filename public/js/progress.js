@@ -57,7 +57,7 @@ function resetProgress() {
 }
     
 //progressBar
-function countDown() { 
+/*function countDown() { 
     resetProgress();
     var i = 70;
     var j = 20;
@@ -79,10 +79,33 @@ function countDown() {
         clearInterval(counterBack);
       }
     }, 100);
-}
+}*/
+
 function timer(){
 $('#progress-timer').countdown('2018/02/08 20:00:00', function(event) {
     $(this).html(event.strftime('%w weeks %d days %H:%M:%S'));    
   });
 
 }
+
+
+/*function timer(){
+$('#progress-timer').countdown('2018/02/08 20:00:00', function(event) {
+    $(this).html(event.strftime('%w weeks %d days %H:%M:%S'));    
+  });
+
+} */
+
+//countdown with the timer
+function progress(timeleft, timetotal, $element) {
+    var progressBarWidth = timeleft * $element.width() / timetotal;
+    $element.find('div').animate({ width: progressBarWidth }, 500).html(Math.floor(timeleft/60) + ":"+ timeleft%60);
+    if(timeleft > 0) {
+        setTimeout(function() {
+            progress(timeleft - 1, timetotal, $element);
+        }, 1000);
+    }
+};
+progress(300, 600, $('#progressBarz'));
+
+
