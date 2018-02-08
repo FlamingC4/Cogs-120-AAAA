@@ -1,0 +1,45 @@
+html, body {
+	height: 100%;	
+}
+body {
+	background-color: green;
+}
+.navbar-header {
+	background-color: white;
+	border-bottom: 2px solid black;
+	padding: 5px;
+}
+h1 {
+	color: black;
+	size: 70px;
+	
+}
+.container {
+	max-width: 650px;
+	width: 100%;
+	margin: 20px auto;
+	height: 100%;
+	background-color: white;
+}
+.glyphicon-cog {
+	color: black;
+}
+img {
+	width: 40px;
+}
+.add-sign {
+	position: absolute;
+	bottom: 0;
+	float: right;
+}
+.edit-logo {
+	width: 20%;
+	padding: 0;
+}
+.row {
+	border-bottom: 2px solid gray;
+	margin: 8px 0px 8px 0px;
+}
+.items {
+	padding-bottom: 8px;
+}
