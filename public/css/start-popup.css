@@ -1,0 +1,9 @@
+.startOptions {
+    text-align: center;    
+}
+
+.btnDivider {
+    width: 200px;
+    height: auto;
+    display: inline-block;
+}
