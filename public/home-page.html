@@ -4,6 +4,9 @@
 		<title>Home page</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 		<style>
+			html, body {
+				max-height: 100%;	
+			}
 			body {
 				background-color: green;
 			}
@@ -17,7 +20,8 @@
 				
 			}
 			.container {
-				width: 650px;
+				max-width: 650px;
+				width: 100%;
 				margin: 0 auto;
 				height: 800px;
 				background-color: white;
@@ -30,17 +34,25 @@
 			}
 			.items {
 				background: white;
+				width: 70%;
 				margin: 5px 5px 5px 0;
 				border-bottom: 2px solid black;
+				float: left;
 			}
 			.glyphicon.glyphicon-cog {
 				width: 500px;
 				color: white;
 			}
 			.add-sign {
-				position: absolute;
-				right: 0px;
-				bottom: 0px;
+				text-align: bottom;
+			}
+			.edit-logo {
+				width: 20%;
+				padding: 0;
+			}
+			.row {
+				border-bottom: 2px solid gray;
+				margin: 8px 0px 8px 0px;
 			}
 		</style>
 	</head>
@@ -54,21 +66,34 @@
 					<img src="gear.png">
 				</div>
 			</div>
-			<div class="items">
-				<h3>PA #1</h3>
+			<div class="row">
+				<div class="col-10">
+					<h3>PA #1</h3>
+				</div>
+				<div class="col-2">
+					<img src="edit-logo.png">
+				</div>
 			</div>
-			<div class="items">
-				<h3>Math 5.1 - 5.5 </h3>
+			<div class="row">
+				<div class="col-10">
+					<h3>Math 5.1 - 5.5 </h3>
+				</div>
+				<div class="col-2">
+					<img src="edit-logo.png">
+				</div>
 			</div>
-			<div class="items">
-				<h3>Muir 50 Essay</h3>
+			<div class="row">
+				<div class="col-10">
+					<h3>Muir 50 Essay</h3>
+				</div>
+				<div class="col-2">
+					<img src="edit-logo.png">
+				</div>
 			</div>
-			<img class="add-sign" src="add.png">
+			<div class="add-sign">
+				<img src="add.png">
+			</div>
 		</div>
 
 	</body>
-
-
-
-
 </html>
