@@ -1,20 +1,12 @@
 'use strict';
-//const timer = require('jquery-countdown');
+
+//var json = require('../data.json');
+
 
 $(document).ready(function() {
     moveBootStrap();
     timer();
 })
-
-
-/*function initializePage() {
-    $("#testjs").click(function(e) {
-        $('.jumbotron h1').text("Experience Chan! It's not a lot of questions.Too many questions is the Chan disease.The best way is just to observe the noise of the world. The answer to your questions?Ask your own heart.");
-        $("#testjs").text("Please wait...");
-        $(".jumbotron p").addClass("active");
-    });
-}*/
-
 
 function move() { 
     var elem = document.getElementById("myBar"); 
@@ -82,19 +74,12 @@ function resetProgress() {
 }*/
 
 function timer(){
-$('#progress-timer').countdown('2018/02/08 20:00:00', function(event) {
+$('#progress-timer').countdown('2019/02/15 20:00:00', function(event) {
     $(this).html(event.strftime('%w weeks %d days %H:%M:%S'));    
   });
 
 }
 
-
-/*function timer(){
-$('#progress-timer').countdown('2018/02/08 20:00:00', function(event) {
-    $(this).html(event.strftime('%w weeks %d days %H:%M:%S'));    
-  });
-
-} */
 
 //countdown with the timer
 function progress(timeleft, timetotal, $element) {
@@ -106,6 +91,16 @@ function progress(timeleft, timetotal, $element) {
         }, timetotal);
     }
 };
+
+function addToJson(name, estimated_time, actual_time){
+    //json.writeFile('data.json', "name :" + name + " estimated_time :" + estimated_time + 
+       // " actual_time :" + actual_time);
+
+}
+
 progress(300, 600, $('#progressBarz'));
+
+//var project = {name:"foo", estimated_time:"foo", actual_time:"foo"}
+//addToJson("Cogs 108 A3", "3 Hours", "2 Hours");
 
 
