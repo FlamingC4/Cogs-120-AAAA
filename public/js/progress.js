@@ -1,6 +1,8 @@
 'use strict';
+//var requirejs = require('requirejs');
 
-//var json = require('../data.json');
+var json = require('data.json');
+var jsonfile = require('jsonfile');
 
 
 $(document).ready(function() {
