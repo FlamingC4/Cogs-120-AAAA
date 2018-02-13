@@ -1,9 +1,8 @@
 'use strict';
 //var requirejs = require('requirejs');
 
-var json = require('data.json');
-var jsonfile = require('jsonfile');
-
+//var json = require('data.json');
+//var jsonfile = require('jsonfile');
 
 $(document).ready(function() {
     moveBootStrap();
@@ -75,8 +74,31 @@ function resetProgress() {
     }, 100);
 }*/
 
-function timer(){
-$('#progress-timer').countdown('2019/02/15 20:00:00', function(event) {
+function timer(dueYear, dueMonth, dueDay, duehour, dueMinute, dueSecond){
+    var dt = new Date();
+    var dueTime = new Date();
+    dueTime.setYear(2018);
+    dueTime.setMonth(5+1);
+    dueTime.setDate(24);
+    dueTime.setHours(16);
+    dueTime.setMinutes(42);
+    dueTime.setSeconds(55);
+
+    var year = dt.getFullYear();  
+    var month = dt.getMonth() + 1;  
+    var day = dt.getDate();       
+    var hour = dt.getHours();
+    var minute = dt.getMinutes();
+    var second = dt.getSeconds();
+    
+    var leftYear = dueTime.getFullYear();
+    var leftMonth = dueTime.getMonth() + 1 - month;
+    var leftDay = dueTime.getDate() - day;
+    var leftHour = dueTime.getHours() - hour;
+    var leftMinute = dueTime.getMinutes() - minute;
+    var leftSecond = dueTime.getSeconds() - second;
+    
+$('#progress-timer').countdown(leftYear + "/" + leftMonth + "/" + leftDay + " " + leftHour + ":" + leftMinute + ":" + leftSecond, function(event) {
     $(this).html(event.strftime('%w weeks %d days %H:%M:%S'));    
   });
 

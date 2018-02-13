@@ -24,10 +24,11 @@
 }
 
 #progressBarz {
+  border: 2px solid black;
   width: 90%;
   margin: 10px auto;
   height: 22px;
-  background-color: #800000;
+  background-color: #ffffff;
 }
 
 #progressBarz div {

@@ -23,41 +23,55 @@
 
 <body>
 	<div class="container">
-		<div>
-	  		<h1>COGS 108 Assignment
-                <a href="edit-assignment.html">
-                    <img src="images/Edit Prototype.png" class="picture-location">
-                </a>
-            </h1>
-	  	</div>
+		<!--<div id="myProgress">
+		  <div id="myBar"></div>
+		</div> 
+		<button onclick="move()">Click Me</button>
+		<div id="top-of-page">
+	  		<p>COGS 108 Assignment</p> 
+	  	</div> -->
 
-	  	<div class="text-center">   	
-	  		</br>
-		  	<h3> 
-                <a href="delay-input.html">Pause Button</a>
-            </h3>
-
-		  	</br>
-		  	</br>
-			<h3> 
-                <a href="finish-confirmation.html">Finish Button</a>
-            </h3>
-			</br>
-			</br>
+	  	<div class="top-of-page">
+		  	<div class="row">
+		  		<div class="col-10">
+		  			<p>COGS 108 Assignment</p> 
+		  		</div>
+		  		<div class="col-2">
+		  		<img src="images/edit project.png" style="width:50px;margin-top:-15px;">
+		  		</div>
+		  	 </div>
+	  	 </div>
+	  	
+	  	<div class="text-center">
+	  		<center>   	
+		  		</br>
+		  		<a href="delay-input.html"><button type="button" class="btn btn-danger btn-wide btn-block" id="pause-button" style="width:500px;" align="middle"> Pause </button>
+			  	</a>
+			  	</br>
+			  	</br>
+			  	<a href="finish-confirmation.html"><button type="button" class="btn btn-success btn-wide btn-block" id="finish-button"  style="width:500px;"">Finish</button></a>
+				</br>
+				</br>
+			</center>
 		</div>
-		<h5> Time left until next checkpoint </h5>		
+		
+
+		
+		<!--<div class="progress" id="bootStrapBar" onload="moveBootStrap()">
+		  <div class="progress-bar progress-bar-danger progress-bar-striped progress-bar-animated bg-danger" id="redBar" role="progressbar" style="width:0%"></div>
+		  <div class="progress-bar progress-bar-warning progress-bar-striped progress-bar-animated bg-warning" id="yellowBar" role="progressbar" style="width:0%"></div>
+		  <div class="progress-bar progress-bar-success progress-bar-striped progress-bar-animated bg-success" id="greenBar" role="progressbar" style="width:0%"></div>  
+		</div>
+		<button onclick="countDown()">Click me for a countdown</button>--> 
+		
+		
 		<div id="text">
-			<div id="progress-timer"></div>
+			<p>Time Left till checkpoint: <div id="progress-timer"></div></p>		
 		</div>
-		
-		
-		<h5 style="text-align:right">6 hours until due</h5>
-		
 
-		<div id="progressBarzBlank">
+		<div id="progressBarz">
 	  		<div class="bar"></div>
 		</div>
-
 		<h5>Current Progress: 10%</h5>
 		<h5>Estimated Time Left: 6hr 30min</h5>
 		<script src="https://code.jquery.com/jquery.js"></script>
