@@ -140,15 +140,17 @@ function addToJson(name, estimated_time, actual_time){
 //start the global timer
 var dueTime = new Date();
 
-var dueYear = dueTime.setYear(2019);
-var dueMonth = dueTime.setMonth(0);
-var dueDay = dueTime.setDate(0);
-var dueHours = dueTime.setHours(0);
+var dueYear = dueTime.setYear(2018);
+var dueMonth = dueTime.setMonth(1);
+var dueDay = dueTime.setDate(14);
+var dueHours = dueTime.setHours(2);
 var dueMinute = dueTime.setMinutes(0);
 var dueSecond = dueTime.setSeconds(0);
 
-//console.log(toSeconds(dueTime));//sort of works
-progress(toSeconds(dueTime) , toSeconds(dueTime) /*change this hard coded variable*/, $('#progressBarz'));
+console.log(toSeconds(dueTime));//sort of works
+
+//placeholder time independent of everything
+progress(toSeconds(dueTime)-200 , toSeconds(dueTime) /*change this hard coded variable*/, $('#progressBarz'));
 
 
 
