@@ -6,22 +6,53 @@
     <title>Enter Name Page</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="bootstrap-4.0.0/js/tests/vendor/jquery-1.9.1.min.js"></script>    
+    <link href="css/home-page.css" rel ="stylesheet">
     <link href="css/enter-name-page.css" rel="stylesheet">
 </head>
 
 <body>
-    <div>
-        <a href="home-page.html">Back</a>
-    </div>
-    <div>
-        <h1>Enter the assignment name</h1>
-    </div>
-    
-    <div>
-        Assignment Name: <input type="text" name="field"><br>
+    <div class="container">
+        <div>
+            <a href="home-page.html">Back</a>
+        </div>
+        <div>
+            <h1>Project Information</h1>
+        </div>
         
+        <div>
+            Assignment Name: <input type="text" name="field"><br>
+            <p class="forms">
+                Due Date: <input type="text" name="Date"><br>
+            </p>
+            <p class="forms">
+                Due Time: <input type="text" name="Time"><br>
+            </p>
+            <p class="forms">
+                Desired Start Date: <input type="text" name="Date"><br>
+            </p>
+            <p class="forms">
+                Desired Start Time: <input type="text" name="Time"><br>
+            </p>
 
-        <a href="due-date-input.html" class="spacedLink">Continue</a>
+            <div>
+            <p class="forms">
+                Checkpoint Interval: <input type="text" name="Checkpoint">
+                <button onclick="checkPointIntervalAlert()">?</button><br>
+            </p>
+            </div>
+
+            <p class="forms">
+                Estimated Hours Until Completion: <input type="text"
+                name="estimate"><br>
+            </p>
+            
+
+            <a href="start-countdown.html" class="spacedLink">Continue</a>
+        </div>
     </div>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/edit-name-page.js"></script>
 </body>

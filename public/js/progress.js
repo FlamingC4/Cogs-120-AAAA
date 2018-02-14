@@ -6,7 +6,7 @@
 
 $(document).ready(function() {
     moveBootStrap();
-    timer();
+    getTimer();
 })
 
 function move() { 
@@ -49,40 +49,18 @@ function resetProgress() {
     },0);
 }
     
-//progressBar
-/*function countDown() { 
-    resetProgress();
-    var i = 70;
-    var j = 20;
-    var k = 10;
-    var counterBack = setInterval(function () {
-      i--;      
-      if (i >= 0) {
-        $('.progress-bar-success').css('width', i + '%');
-      } 
-      else if (i < 0 && j >= 0){
-        j--;       
-        $('.progress-bar-warning').css('width', j + '%');
-      }
-      else if (i < 0 && j < 0 && k >= 0){
-        k--;
-        $('.progress-bar-danger').css('width', k + '%');
-      }   
-      else {        
-        clearInterval(counterBack);
-      }
-    }, 100);
-}*/
 
-function timer(dueYear, dueMonth, dueDay, duehour, dueMinute, dueSecond){
+
+function getTimer(dueYear, dueMonth, dueDay, dueHours, dueMinute, dueSecond){
     var dt = new Date();
     var dueTime = new Date();
-    dueTime.setYear(2018);
-    dueTime.setMonth(5+1);
-    dueTime.setDate(24);
-    dueTime.setHours(16);
-    dueTime.setMinutes(42);
-    dueTime.setSeconds(55);
+
+    dueTime.setYear(2019);
+    dueTime.setMonth(0);
+    dueTime.setDate(1);
+    dueTime.setHours(0);
+    dueTime.setMinutes(0);
+    dueTime.setSeconds(0);
 
     var year = dt.getFullYear();  
     var month = dt.getMonth() + 1;  
@@ -101,14 +79,22 @@ function timer(dueYear, dueMonth, dueDay, duehour, dueMinute, dueSecond){
 $('#progress-timer').countdown(leftYear + "/" + leftMonth + "/" + leftDay + " " + leftHour + ":" + leftMinute + ":" + leftSecond, function(event) {
     $(this).html(event.strftime('%w weeks %d days %H:%M:%S'));    
   });
+    var timeLeft = (leftSecond) + (60*leftMinute) + (3600*leftHour) + (3600*24*leftDay);
+    return timeLeft;
 
 }
+
+/*function timer(years, months, days, hours, minutes, seconds){
+    $('#progress-timer').countdown(years + "/" + months + "/" + days + " " + hours + ":" + minutes + ":" + seconds, function(event) {
+    $(this).html(event.strftime('%w weeks %d days %H:%M:%S'));    
+  });
+}*/
 
 
 //countdown with the timer
 function progress(timeleft, timetotal, $element) {
     var progressBarWidth = timeleft * $element.width() / timetotal;
-    $element.find('div').animate({ width: progressBarWidth }, 500).html(Math.floor(timeleft/60) + ":"+ timeleft%60);
+    $element.find('div').animate({ width: progressBarWidth }, 500);
     if(timeleft > 0) {
         setTimeout(function() {
             progress(timeleft - 1, timetotal, $element);
@@ -122,7 +108,18 @@ function addToJson(name, estimated_time, actual_time){
 
 }
 
-progress(300, 600, $('#progressBarz'));
+//start the global timer
+var dueTime = new Date();
+
+    var dueYear = dueTime.setYear(2019);
+    var dueMonth = dueTime.setMonth(0);
+    var dueDay = dueTime.setDate(0);
+    var dueHours = dueTime.setHours(0);
+    var dueMinute = dueTime.setMinutes(0);
+    var dueSecond = dueTime.setSeconds(0);
+
+//timer(dueYear, dueMonth, dueDay, dueHours, dueMinute, dueSecond);
+progress(0, 600, $('#progressBarz'));
 
 //var project = {name:"foo", estimated_time:"foo", actual_time:"foo"}
 //addToJson("Cogs 108 A3", "3 Hours", "2 Hours");
