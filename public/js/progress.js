@@ -8,6 +8,7 @@ $(document).ready(function() {
     moveBootStrap();
     getTimer();
     startTimer();
+    checkpointTimer();
 })
 
 function move() { 
@@ -97,12 +98,29 @@ function getTimer(){
     return dueDate;
 }
 
-function startTimer(){
+
+//for when assignment is due
+function startTimer(/*duedate goes here*/){
     var currentDate = new Date();
     var dueDate = getTimer(2019, 11, 31, 23, 59, 59); //change this hard code
     //console.log(dueDate);
 
     $('#progress-timer').countdown(dueDate, function(event) {
+        $(this).html(event.strftime('%w weeks %d days %H:%M:%S'));    
+    });
+
+    //console.log(toSeconds(dueDate));
+    //return toSeconds(dueDate);   
+    //console.log(toSeconds(dueDate));
+}
+
+//for checkpoint
+function checkpointTimer(/*checkpoint interval goes here*/){
+    var currentDate = new Date();
+    var checkPoint = getTimer(2019, 11, 31, 23, 59, 59); //change this hard code
+    //console.log(dueDate);
+
+    $('#progress-timer2').countdown(checkPoint, function(event) {
         $(this).html(event.strftime('%w weeks %d days %H:%M:%S'));    
     });
 
@@ -127,9 +145,9 @@ function progress(timeleft, timetotal, $element) {
     if(timeleft > 0) {
         setTimeout(function() {
             progress(timeleft - 1, timetotal, $element);
-        }, timetotal);
+        }, 1000);
     }
-}
+};
 
 function addToJson(name, estimated_time, actual_time){
     //json.writeFile('data.json', "name :" + name + " estimated_time :" + estimated_time + 
@@ -142,7 +160,7 @@ var dueTime = new Date();
 
 var dueYear = dueTime.setYear(2018);
 var dueMonth = dueTime.setMonth(1);
-var dueDay = dueTime.setDate(14);
+var dueDay = dueTime.setDate(15);
 var dueHours = dueTime.setHours(2);
 var dueMinute = dueTime.setMinutes(0);
 var dueSecond = dueTime.setSeconds(0);
@@ -150,7 +168,7 @@ var dueSecond = dueTime.setSeconds(0);
 console.log(toSeconds(dueTime));//sort of works
 
 //placeholder time independent of everything
-progress(toSeconds(dueTime)-200 , toSeconds(dueTime) /*change this hard coded variable*/, $('#progressBarz'));
+progress(200 , toSeconds(dueTime) /*change this hard coded variable*/, $('#progressBarz'));
 
 
 
