@@ -7,9 +7,35 @@
 $(document).ready(function() {
     moveBootStrap();
     getTimer();
+    startTimer();
+    checkpointTimer();
 })
 
-function move() { 
+//from enter-due-date
+function setDueDate(){
+    /*var x = document.getElementById("dueDate");
+    var y = document.getElementById("dueTime");
+    console.log(x);
+    var text = "";
+    var text2 = "";
+    var i;
+    for (i = 0; i < x.length ;i++) {
+        text += x.elements[i].value;
+    }
+       
+    for (i = 0; i < y.length ;i++) {
+        text2 += y.elements[i].value;
+    }
+    var dueDate = text;
+    var dueTime = text2;*/
+    var dueDate = $("#dueDateInput").val();
+    var dueTime = $("#dueTimeInput").val();
+    console.log(dueDate);
+    console.log(dueTime);
+
+}
+
+/*function move() { 
     var elem = document.getElementById("myBar"); 
     var width = 1;
     var id = setInterval(frame, 10);
@@ -21,7 +47,7 @@ function move() {
             elem.style.width = width + '%'; 
         }
     }
-}
+}*/
 
 //initialize the BootStrap timer
 function moveBootStrap() {    
@@ -48,19 +74,18 @@ function resetProgress() {
         width: "10%"
     },0);
 }
-    
 
-
-function getTimer(dueYear, dueMonth, dueDay, dueHours, dueMinute, dueSecond){
+function getTimer(){
     var dt = new Date();
     var dueTime = new Date();
-
+   
     dueTime.setYear(2019);
-    dueTime.setMonth(0);
-    dueTime.setDate(1);
-    dueTime.setHours(0);
-    dueTime.setMinutes(0);
-    dueTime.setSeconds(0);
+    dueTime.setMonth(11); //November is 11
+    dueTime.setDate(31);
+    dueTime.setHours(23);
+    dueTime.setMinutes(59);
+    dueTime.setSeconds(59);
+    //console.log(dueTime);
 
     var year = dt.getFullYear();  
     var month = dt.getMonth() + 1;  
@@ -75,20 +100,55 @@ function getTimer(dueYear, dueMonth, dueDay, dueHours, dueMinute, dueSecond){
     var leftHour = dueTime.getHours() - hour;
     var leftMinute = dueTime.getMinutes() - minute;
     var leftSecond = dueTime.getSeconds() - second;
-    
-$('#progress-timer').countdown(leftYear + "/" + leftMonth + "/" + leftDay + " " + leftHour + ":" + leftMinute + ":" + leftSecond, function(event) {
-    $(this).html(event.strftime('%w weeks %d days %H:%M:%S'));    
-  });
-    var timeLeft = (leftSecond) + (60*leftMinute) + (3600*leftHour) + (3600*24*leftDay);
-    return timeLeft;
 
+    var dueDate = (leftYear + "/" + leftMonth + "/" + leftDay + " " + leftHour + ":" + leftMinute + ":" + leftSecond);
+
+    /*$('#progress-timer').countdown(dueDate, function(event) {
+    $(this).html(event.strftime('%w weeks %d days %H:%M:%S'));    
+    });*/    
+   // console.log(dueDate);
+
+    return dueDate;
 }
 
-/*function timer(years, months, days, hours, minutes, seconds){
-    $('#progress-timer').countdown(years + "/" + months + "/" + days + " " + hours + ":" + minutes + ":" + seconds, function(event) {
-    $(this).html(event.strftime('%w weeks %d days %H:%M:%S'));    
-  });
-}*/
+
+//for when assignment is due
+function startTimer(/*duedate goes here*/){
+    var currentDate = new Date();
+    var dueDate = getTimer(2019, 11, 31, 23, 59, 59); //change this hard code
+    //console.log(dueDate);
+
+    $('#progress-timer').countdown(dueDate, function(event) {
+        $(this).html(event.strftime('%w weeks %d days %H:%M:%S'));    
+    });
+
+    //console.log(toSeconds(dueDate));
+    //return toSeconds(dueDate);   
+    //console.log(toSeconds(dueDate));
+}
+
+//for checkpoint
+function checkpointTimer(/*checkpoint interval goes here*/){
+    var currentDate = new Date();
+    var checkPoint = getTimer(2019, 11, 31, 23, 59, 59); //change this hard code
+    //console.log(dueDate);
+
+    $('#progress-timer2').countdown(checkPoint, function(event) {
+        $(this).html(event.strftime('%w weeks %d days %H:%M:%S'));    
+    });
+
+    //console.log(toSeconds(dueDate));
+    //return toSeconds(dueDate);   
+    //console.log(toSeconds(dueDate));
+}
+
+function toSeconds(dueDate){
+    var currentDate = new Date();
+    //console.log(currentDate);
+    //var currentDueDate = getTimer(dueDate); //change this hard code var dueDate = getTimer(dueDate);
+    var seconds = (Math.floor(dueDate.valueOf()/1000)) - (Math.floor(currentDate.valueOf()/1000));    
+    return seconds; 
+}
 
 
 //countdown with the timer
@@ -98,7 +158,7 @@ function progress(timeleft, timetotal, $element) {
     if(timeleft > 0) {
         setTimeout(function() {
             progress(timeleft - 1, timetotal, $element);
-        }, timetotal);
+        }, 1000);
     }
 };
 
@@ -111,17 +171,18 @@ function addToJson(name, estimated_time, actual_time){
 //start the global timer
 var dueTime = new Date();
 
-    var dueYear = dueTime.setYear(2019);
-    var dueMonth = dueTime.setMonth(0);
-    var dueDay = dueTime.setDate(0);
-    var dueHours = dueTime.setHours(0);
-    var dueMinute = dueTime.setMinutes(0);
-    var dueSecond = dueTime.setSeconds(0);
+var dueYear = dueTime.setYear(2018);
+var dueMonth = dueTime.setMonth(1);
+var dueDay = dueTime.setDate(15);
+var dueHours = dueTime.setHours(2);
+var dueMinute = dueTime.setMinutes(0);
+var dueSecond = dueTime.setSeconds(0);
 
-//timer(dueYear, dueMonth, dueDay, dueHours, dueMinute, dueSecond);
-progress(0, 600, $('#progressBarz'));
+console.log(toSeconds(dueTime));//sort of works
 
-//var project = {name:"foo", estimated_time:"foo", actual_time:"foo"}
-//addToJson("Cogs 108 A3", "3 Hours", "2 Hours");
+//placeholder time independent of everything
+progress(200 , toSeconds(dueTime) /*change this hard coded variable*/, $('#progressBarz'));
+
+
 
 
