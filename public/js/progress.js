@@ -18,15 +18,17 @@ function setDueDate(){
     var dueTime = $("#dueTimeInput").val();
     checkDate();
 
-    if (dueDate)
+    if (dueDate){
+
+    }
     //console.log(dueDate);
     //console.log(dueTime);
+}
 
-}
-function checkDate(dueDate,dueTime){
-for(var i = 0, i < 10, i++)
-        if(dueDate.elements[i].value >=)
-}
+/*function checkDate(dueDate,dueTime){
+    for(var i = 0; i < 10; i++)
+            if(dueDate.elements[i].value >= 0)
+} 
 
 /*function move() { 
     var elem = document.getElementById("myBar"); 
