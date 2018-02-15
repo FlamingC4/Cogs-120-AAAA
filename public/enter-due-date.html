@@ -3,10 +3,11 @@
 <html lang="en">
 
 <head>
-    <title>Enter Name Page</title>
+    <title>Enter Due Date</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
     <script src="bootstrap-4.0.0/js/tests/vendor/jquery-1.9.1.min.js"></script>    
     <link href="css/home-page.css" rel ="stylesheet">
     <link href="css/enter-name-page.css" rel="stylesheet">
@@ -21,13 +22,13 @@
             <h1>(Assignment name goes here)</h1>
         </div>
         
-        <div>
-           
+        <div>           
             <p class="forms">
-                Due Date: <input type="text" name="Date"><br>
+                Due Date: <input type="text" id="dueDateInput" name="dueDateInput"><br>
             </p>
+
             <p class="forms">
-                Due Time: <input type="text" name="Time"><br>
+                Due Time: <input type="text" id="dueTimeInput" name="dueTimeInput"><br>
             </p>
            
             <!--<div>
@@ -35,14 +36,19 @@
                     Checkpoint Interval: <input type="text" name="Checkpoint">
                     <button onclick="checkPointIntervalAlert()">?</button><br>
                 </p>
-            </div>-->
+            </div>-->                        
 
-                        
+            <!--<a href="edit-assignment-start.html" class="spacedLink">Continue</a>-->
+            <button onclick="setDueDate()"><a href="edit-assignment-start.html">Continue</button></a>
+            <!--<button onclick="return setDueDate()">Continue</button>
+            This wont take you to a new page^^^-->
 
-            <a href="edit-assignment-start.html" class="spacedLink">Continue</a>
         </div>
     </div>
 
+    <script src="https://code.jquery.com/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/edit-name-page.js"></script>
+    <script src="js/progress.js"></script>
+    <script src="js/enter-due-date.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 </body>

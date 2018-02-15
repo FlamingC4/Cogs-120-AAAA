@@ -2,46 +2,23 @@
     width: 100%;
     background-color: green;
 }
-#myBar {
-    width: 1%;
-    height: 30px;
-    background-color: red;
-}
-
-#greenBar {
-    -webkit-transition: none !important;
-    transition: none !important;
-}
-
-#yellowBar {
-    -webkit-transition: none !important;
-    transition: none !important;
-}
-
-#redBar {
-    -webkit-transition: none !important;
-    transition: none !important;
-}
 
 #progressBarz {
+  border: 2px solid black;
   width: 90%;
   margin: 10px auto;
   height: 22px;
-  background-color: #800000;
+  background-color: #ffffff;
 }
 
 #progressBarz div {
   height: 100%;
   text-align: right;
-  padding: 0 10px;
+  /*padding: 0 10px;*/
   line-height: 22px; /* same as #progressBar height if we want text middle aligned */
   width: 0;
   background-color: #009688;
   box-sizing: border-box;
-}
-
-#progress-timer{
-    /*margin: 10px;*/
 }
 
 #text{
@@ -77,22 +54,6 @@
     width: 650px;    
 }
 
-#progressBarzBlank div {
-  height: 100%;
-  text-align: right;
-  padding: 0 10px;
-  line-height: 22px; /* same as #progressBar height if we want text middle aligned */
-  width: 500px;
-  background-color: black;
-  box-sizing: border-box;
-}
-
-#progressBarzBlank {
-  width: 90%;
-  margin: 10px auto;
-  height: 22px;
-  background-color: white;
-}
 
 /*.container.text-left{
     text-align: right;
