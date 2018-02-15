@@ -30,7 +30,7 @@ img {
 	position: absolute;
 	bottom: 0;
     /* We will need to change this so it isn't hardcoded */
-	right: 500px;
+	right: 625px;
 }
 .edit-logo {
 	width: 20%;
