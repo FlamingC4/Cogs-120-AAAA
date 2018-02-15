@@ -14,6 +14,11 @@
 			"name": "Muir 50 Essay",
 			"estimated_time": "4 Hours",
 			"actual_time": "3 Hours 46 Minutes"			
-		}
+		},
+        {
+            "name": "Cogs 120 project",
+            "estimated_time": "20 hours",
+            "actual_time": "24 hours"
+        }
 	]
 }

@@ -18,16 +18,16 @@
                 </a>
             </div>
         </div>
-        {{ assignments.forEach(function(assignment) { }}
+        {{#each project}}
         	 <div class="row items">
              	<div class="col-10">
-                    <h3 class="prevAssignment">Assignment.name</h3>
+                    <h3 class="prevAssignment">{{name}}</h3>
             	</div>
             	<div class="col-2">
                 	<img src="edit-logo.png">
             	</div>
         	</div>
-        {{ }); }}
+        {{/each}}
         
         <a href="/enterDetails" id="add-link" method="get" action="/enterDetails">
             <div class="add-sign">
@@ -36,7 +36,7 @@
         </a>
         <script src="js/jquery-1.11.0.js"></script>
         <script src="js/bootstrap.js"></script>
-        <!--<script src="js/enter-name.js"></script>-->
+        <script src="js/enter-name.js"></script>
     </div>
 </body>
 </html>
