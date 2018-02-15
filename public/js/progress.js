@@ -11,7 +11,31 @@ $(document).ready(function() {
     checkpointTimer();
 })
 
-function move() { 
+//from enter-due-date
+function setDueDate(){
+    /*var x = document.getElementById("dueDate");
+    var y = document.getElementById("dueTime");
+    console.log(x);
+    var text = "";
+    var text2 = "";
+    var i;
+    for (i = 0; i < x.length ;i++) {
+        text += x.elements[i].value;
+    }
+       
+    for (i = 0; i < y.length ;i++) {
+        text2 += y.elements[i].value;
+    }
+    var dueDate = text;
+    var dueTime = text2;*/
+    var dueDate = $("#dueDateInput").val();
+    var dueTime = $("#dueTimeInput").val();
+    console.log(dueDate);
+    console.log(dueTime);
+
+}
+
+/*function move() { 
     var elem = document.getElementById("myBar"); 
     var width = 1;
     var id = setInterval(frame, 10);
@@ -23,7 +47,7 @@ function move() {
             elem.style.width = width + '%'; 
         }
     }
-}
+}*/
 
 //initialize the BootStrap timer
 function moveBootStrap() {    
@@ -50,17 +74,6 @@ function resetProgress() {
         width: "10%"
     },0);
 }
-
-/*$('div#clock').countdown(finalDate, {elapse: true})
-  .on('update.countdown', function(event) {
-    if (event.elapsed) { // Either true or false
-      // Counting up...
-    } else {
-      // Countdown...
-    }
-  });*/
-    
-
 
 function getTimer(){
     var dt = new Date();
