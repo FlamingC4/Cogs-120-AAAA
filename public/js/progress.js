@@ -9,30 +9,23 @@ $(document).ready(function() {
     getTimer();
     startTimer();
     checkpointTimer();
-})
+});
 
 //from enter-due-date
+
 function setDueDate(){
-    /*var x = document.getElementById("dueDate");
-    var y = document.getElementById("dueTime");
-    console.log(x);
-    var text = "";
-    var text2 = "";
-    var i;
-    for (i = 0; i < x.length ;i++) {
-        text += x.elements[i].value;
-    }
-       
-    for (i = 0; i < y.length ;i++) {
-        text2 += y.elements[i].value;
-    }
-    var dueDate = text;
-    var dueTime = text2;*/
     var dueDate = $("#dueDateInput").val();
     var dueTime = $("#dueTimeInput").val();
-    console.log(dueDate);
-    console.log(dueTime);
+    checkDate();
 
+    if (dueDate)
+    //console.log(dueDate);
+    //console.log(dueTime);
+
+}
+function checkDate(dueDate,dueTime){
+for(var i = 0, i < 10, i++)
+        if(dueDate.elements[i].value >=)
 }
 
 /*function move() { 
