@@ -1,7 +1,7 @@
 'use strict';
 
 //THIS ISN'T WORKING BECAUSE REQUIRE MIGHT ONLY WORK ON ROUTES, RECHECK
-var a_Data = require("../cAssignment.json");
+//var a_Data = require("../cAssignment.json");
 
 // Call this function when page loads
 $(document).ready(function() {
