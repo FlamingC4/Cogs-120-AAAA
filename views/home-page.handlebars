@@ -21,7 +21,9 @@
         {{#each project}}
         	 <div class="row items">
              	<div class="col-10">
-                    <h3 class="prevAssignment">{{name}}</h3>
+                    <a href="#" onclick="window.alert('Estimated Time: {{estimated_time}}\nActual Time: {{actual_time}}');">
+                        <h3 class="prevAssignment">{{name}}</h3>
+                    </a>
             	</div>
             	<div class="col-2">
                 	<img src="edit-logo.png">
