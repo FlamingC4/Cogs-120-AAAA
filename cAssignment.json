@@ -1,13 +1,14 @@
 {
     "name" : "Cogs 108 Assignment",
     "logistics" : {
-        "DueDate" : ,
-        "DueTime" : ,
-        "StartDate" : ,
-        "StartTime" : ,
-        "CheckInterval" : ,
-        "Estimated Time" :
+        "DueDate" : "04/20/18" ,
+        "DueTime" : "23:59",
+        "StartDate" : "04/21/18",
+        "StartTime" : "00:00",
+        "CheckIntervalHrs": "5",
+        "CheckIntervalMins": "15",
+        "EstimatedHrs" :"25"
     },
 
-    "PercentCompleted" :
+    "PercentCompleted" : "15"
 }
