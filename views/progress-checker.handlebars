@@ -49,7 +49,7 @@
 			  	</a>
 			  	</br>
 			  	</br>
-			  	<a href="finish-confirmation.html"><button type="button" class="btn btn-success btn-wide btn-block" id="finish-button"  style="width:500px;"">Finish</button></a>
+			  	<a href="finish-confirmation.html"><button type="button" class="btn btn-success btn-wide btn-block" id="finish-button"  style="width:500px;">Finish</button></a>
 				</br>
 				</br>
 			</center>
@@ -57,17 +57,21 @@
 	
 		
 		<div class="row">
-			<p>Next checkpoint: </br></br><div id="progress-timer"></div></p>		
+			<p>Next checkpoint: </br></br><div id="progress-timer"></div></p>
 		</div>
 
+        <div class="row">
+            <p>Checkpoint Interval: {{logistics.CheckIntervalHrs}}:{{logistics.CheckIntervalMins}}</p>
+        </div>
 		
 		<div id="progressBarz">
 	  		<div class="bar"></div>
 		</div>
 		
 
-		<p>Current Progress: 10%</p>
+		<p>Current Progress: {{PercentCompleted}}%</p>
 		<p>Estimated Time Left: 6hr 30min</p>
+        <p>Due Date: {{logistics.DueDate}}</p>
 
 		
 		<!--<script data-main="app" src="../requirejs/require.js"></script> -->
