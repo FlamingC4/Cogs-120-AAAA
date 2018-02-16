@@ -1,3 +1,13 @@
 {
+    "name" : "Cogs 108 Assignment",
+    "logistics" : {
+        "DueDate" : ,
+        "DueTime" : ,
+        "StartDate" : ,
+        "StartTime" : ,
+        "CheckInterval" : ,
+        "Estimated Time" :
+    },
 
+    "PercentCompleted" :
 }
