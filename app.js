@@ -9,7 +9,9 @@ var path = require('path');
 var handlebars = require('express3-handlebars');
 
 
+
 var index = require('./routes/index');
+var login = require('./routes/login');
 var home = require('./routes/home-page');
 var enterName = require('./routes/enter-name');
 var enterDetails = require('./routes/enterDetails');
@@ -44,7 +46,7 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-app.get('/', index.view);
+app.get('/', login.view);
 app.get('/home-page', home.view);
 //app.get('/enter-name', enterName.enter); DOESN'T WORK
 app.get('/enterDetails', enterDetails.view);
