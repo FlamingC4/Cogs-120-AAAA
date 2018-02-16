@@ -14,7 +14,7 @@ var enterName = require('./routes/enter-name');
 var enterDetails = require('./routes/enterDetails');
 var startCountdown = require('./routes/start-countdown');
 var progressChecker = require('./routes/progress-checker');
-var editAssignment = requre('./routes/edit-assignment');
+//var editAssignment = requre('./routes/edit-assignment');
 // Example route
 // var user = require('./routes/user');
 
@@ -45,7 +45,7 @@ app.get('/enter-name', enterName.enter);
 app.get('/enterDetails', enterDetails.view);
 app.get('/progress-checker', progressChecker.view);
 app.get('/start-countdown', startCountdown.view);
-app.get('/edit-assignment', editAssignment.view);
+//app.get('/edit-assignment', editAssignment.view);
 // Example route
 // app.get('/users', user.list);
 
