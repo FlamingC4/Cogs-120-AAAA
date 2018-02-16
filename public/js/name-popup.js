@@ -1,8 +1,3 @@
-'use strict';
-
-//THIS ISN'T WORKING BECAUSE REQUIRE MIGHT ONLY WORK ON ROUTES, RECHECK
-//var a_Data = require("../cAssignment.json");
-
 // Call this function when page loads
 $(document).ready(function() {
     initializePage();
@@ -24,9 +19,5 @@ function createNew(e){
         
     }*/
 
-    var currAssignment = {
-        "name" : Assignment,
-    };
-
-    a_Data.current = currAssignment;
+    window.location.assign("/enterDetails");
 }
