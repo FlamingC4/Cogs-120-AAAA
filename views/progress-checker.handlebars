@@ -5,7 +5,7 @@
 	<title>Progress Check</title>
 
 	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="bootstrap-4.0.0/js/tests/vendor/jquery-1.9.1.min.js"></script>
 
 	<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>	
@@ -49,7 +49,7 @@
 			  	</a>
 			  	</br>
 			  	</br>
-			  	<a href="finish-confirmation.html"><button type="button" class="btn btn-success btn-wide btn-block" id="finish-button"  style="width:500px;">Finish</button></a>
+			  	<a href="finish-confirmation.html"><button type="button" class="btn btn-success btn-wide btn-block" id="finish-button"  style="width:500px;"">Finish</button></a>
 				</br>
 				</br>
 			</center>
@@ -57,21 +57,17 @@
 	
 		
 		<div class="row">
-			<p>Next checkpoint: </br></br><div id="progress-timer"></div></p>
+			<p>Next checkpoint: </br></br><div id="progress-timer"></div></p>		
 		</div>
 
-        <div class="row">
-            <p>Next Checkpoint In: {{logistics.CheckIntervalHrs}} hrs {{logistics.CheckIntervalMins}} mins</p>
-        </div>
 		
 		<div id="progressBarz">
 	  		<div class="bar"></div>
 		</div>
 		
 
-		<p>Current Progress: {{PercentCompleted}}%</p>
+		<p>Current Progress: {{PercentCompleted}}</p>
 		<p>Estimated Time Left: 6hr 30min</p>
-        <p>Due Date: {{logistics.DueDate}}</p>
 
 		
 		<!--<script data-main="app" src="../requirejs/require.js"></script> -->

@@ -167,7 +167,7 @@ function addToJson(name, estimated_time, actual_time){
 var dueTime = new Date();
 
 var dueYear = dueTime.setYear(2018);
-var dueMonth = dueTime.setMonth(1);
+var dueMonth = dueTime.setMonth(2);
 var dueDay = dueTime.setDate(16);
 var dueHours = dueTime.setHours(2);
 var dueMinute = dueTime.setMinutes(0);
@@ -177,6 +177,7 @@ console.log(toSeconds(dueTime));//sort of works
 
 //placeholder time independent of everything
 progress(toSeconds(dueTime) , toSeconds(dueTime) /*change this hard coded variable*/, $('#progressBarz'));
+
 
 
 

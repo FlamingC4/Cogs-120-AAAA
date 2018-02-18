@@ -5,9 +5,14 @@
     <title>Countdown to start</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="bootstrap-4.0.0/js/tests/vendor/jquery-1.9.1.min.js"></script>
 
+    <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>   
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">    
+    <link href="css/start-popup.css" rel="stylesheet">
     <!--<link href="css/start-input.css" rel="stylesheet">-->
 </head>
+
 
 <body>
     <div>
@@ -15,7 +20,8 @@
     </div>
     <div>
         <h1>{{name}}</h1>
-        <h1>Time Until Start</h1>
+        <h1>Time Until Start X minutes</h1>
+        
     </div>
 
     <div>
@@ -23,6 +29,88 @@
     </div>
 
     <div>
-        <a href="start-popup.html">When countdown hits 0</a>
+        <button id="myBtn">When countdown hits 0</button>
+        </br>
+        <button id="myBtnAGAIN">When countdown hits 0 and user has delayed more than once</button>
+         <!--<button id ="myBtn" onclick="document.getElementById('sound1').play();">When countdown hits 0</button> -->
     </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <!--<span class="close">&times;</span>-->            
+            <div class="startOptions">
+                <h1>It's time to start working on the assignment</h1>
+            </div>
+
+            <div class="startOptions">
+                <a href="progress-checker">Start!</a>
+                <div class="btnDivider" />
+                <a href="delay-start.html">Delay</a>
+            </div>
+    </div>
+
+    <div id="myModalAGAIN" class="modal">
+        <div class="modal-content">
+            <!--<span class="close">&times;</span>-->        
+            <div class="startOptions">
+                <h1>IT'S TIME TO START ON YOUR ASSIGNMENT NOW!!!!</h1>
+            </div>           
+
+        <div class="startOptions">
+            <a href="progress-checker">START NOW!</a>
+            <div class="btnDivider" />
+            <a href="delay-start.html">DELAY AGAIN</a>
+            <!--<a href="delay-startAGAIN.html">DELAY AGAIN</a> CREATE THIS PAGE-->
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script>
+        // Get the modal
+        var modal = document.getElementById('myModal');
+        var modalAGAIN = document.getElementById('myModalAGAIN');
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+        var btn2 = document.getElementById("myBtnAGAIN");
+
+        // Get the <span> element that closes the modal
+        //var span = document.getElementsByClassName("close")[0];
+
+        var audio1 = new Audio('Alarm.mp3');
+        audio1.loop = true;
+
+        var audio2 = new Audio('StrongAlarm.mp3');
+        audio2.loop = true;
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+            modal.style.display = "block";
+            audio1.play();
+        }
+
+        btn2.onclick = function() {
+            modal.style.display = "block";
+            modalAGAIN.style.display = "block";
+            audio2.play();
+        }
+
+
+
+        // When the user clicks on <span> (x), close the modal
+        /*span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        /*window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }*/
+</script>
+    </script>
 </body>
+</html>
