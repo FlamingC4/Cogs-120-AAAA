@@ -163,6 +163,11 @@ function addToJson(name, estimated_time, actual_time){
 
 }
 
+//checkpoint info
+function checkPointInfo(){
+    alert("Estimate how done you are in terms of percentage (ex: if you are done with 4/8 problems, you are approximately 50% complete)");
+}
+
 //start the global timer
 var dueTime = new Date();
 
@@ -177,6 +182,22 @@ console.log(toSeconds(dueTime));//sort of works
 
 //placeholder time independent of everything
 progress(toSeconds(dueTime) , toSeconds(dueTime) /*change this hard coded variable*/, $('#progressBarz'));
+
+
+
+//Button sound
+var btn = document.getElementById("checkpoint0");
+var modal = document.getElementById('myModal');
+
+var checkpointAudio = new Audio('checkpoint.mp3');
+
+
+btn.onclick = function() {
+        modal.style.display = "block";
+        checkpointAudio.play();
+    }
+
+
 
 
 
