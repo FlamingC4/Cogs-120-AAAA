@@ -75,7 +75,7 @@ function getTimer(){
     var dueTime = new Date();
    
     dueTime.setYear(2019);
-    dueTime.setMonth(11); //November is 11
+    dueTime.setMonth(11); //November is 10
     dueTime.setDate(31);
     dueTime.setHours(23);
     dueTime.setMinutes(59);
