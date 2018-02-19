@@ -13,8 +13,16 @@ function checkInput(){
     	alert("Please format Due Date to MM/DD/YYYY");
     	return false;
     }
-    if(!checkValidDate(dueDate)){
+    else if(!checkValidDate(dueDate)){
     	alert("Please make sure Due Date is today or later");
+    	return false;
+    }
+    if(!checkTimeFormat(dueTime)){
+    	alert("Please format time in HH:MM in 24 hour format");
+    	return false;
+    }
+    else if(!checkValidTime(dueDate, dueTime)){
+    	alert("Please make sure time is later than today's current time");
     	return false;
     }
 
@@ -106,5 +114,61 @@ function checkValidDate(date){
     	return false;
 
     return true;
+
+}
+
+function checkTimeFormat(time){
+	if(time.length != 5)
+		return false;
+	var timeArray = time.split('');
+
+	if(timeArray[0] + timeArray[1] < 00 || timeArray[0] + timeArray[1] > 23)
+		return false;
+	if(timeArray[2] != ':')
+		return false;
+	if(timeArray[3] + timeArray[4] < 00 || timeArray[3] + timeArray[4] > 59)
+		return false;
+
+	return true
+}
+
+function checkValidTime(date, time){
+	var currentDate = new Date();
+	var timeArray = time.split('');
+	
+	//check user input date
+	var dateArray = date.split('');
+	var dt = new Date();
+
+
+	var month = parseInt(dateArray[0] + dateArray[1]);
+	var day = parseInt(dateArray[3] + dateArray[4]);
+	var year = parseInt(dateArray[6] + dateArray[7] + dateArray[8] + dateArray[9]);
+
+	dt.setYear(year);
+    dt.setMonth(month - 1); //November is 11
+    dt.setDate(day);
+
+	//User's inputted time
+	var tm = new Date();
+
+	var hour = parseInt(timeArray[0] + timeArray[1]);
+	var minute = parseInt(timeArray[3] + timeArray[4]);
+
+	tm.setHours(hour);
+	tm.setMinutes(minute);
+	
+	//if it's today's date
+	if ((dt.getFullYear() == tm.getFullYear()) && (dt.getMonth() == tm.getMonth()) && (dt.getDate() == tm.getDate())){
+		if(currentDate.getHours() > tm.getHours())
+			return false;
+		if((currentDate.getHours() == tm.getHours()) && currentDate.getMinutes() > tm.getMinutes())
+			return false;
+	}
+
+	return true;
+
+
+
 
 }
