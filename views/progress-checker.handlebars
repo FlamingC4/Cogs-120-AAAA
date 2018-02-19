@@ -57,7 +57,7 @@
 	
 		
 		<div class="row">
-			<p>Next checkpoint: </br></br><div id="progress-timer"></div></p>		
+			<h5>Next checkpoint: </br></br><div id="progress-timer"></div></h5>		
 		</div>
 
 		
@@ -66,22 +66,19 @@
 		</div>
 		
 
-		<p>Current Progress: {{PercentCompleted}}</p>
+		<p>Current Progress: {{PercentCompleted}}%</p>
 		<p>Estimated Time Left: 6hr 30min</p>
 
 		<div>
-		<button id="checkpoint0">See What happens when checkpoint timer hits 0</button>		
+		<button id="checkpoint0">See what happens when checkpoint timer hits 0</button>		
 		<div id="myModal" class="modal">
         <div class="modal-content">
             <!--<span class="close">&times;</span>-->            
             <div class="startOptions">
                 <h6>Enter your progress<button onclick="checkPointInfo()">?</button><br> <input type:"text" name:"checkpointInterval><br></h6>
+                <span class="close"><p> Next </p></span>
             </div>
-        </div>
-            	
-            
-
-            
+        </div>            
     </div>
 
 		

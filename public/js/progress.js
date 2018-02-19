@@ -183,7 +183,8 @@ console.log(toSeconds(dueTime));//sort of works
 //placeholder time independent of everything
 progress(toSeconds(dueTime) , toSeconds(dueTime) /*change this hard coded variable*/, $('#progressBarz'));
 
-
+//Close the modal
+var span = document.getElementsByClassName("close")[0];
 
 //Button sound
 var btn = document.getElementById("checkpoint0");
@@ -195,6 +196,11 @@ var checkpointAudio = new Audio('checkpoint.mp3');
 btn.onclick = function() {
         modal.style.display = "block";
         checkpointAudio.play();
+    }
+
+//next button on modal
+span.onclick = function() {
+        modal.style.display = "none";
     }
 
 
