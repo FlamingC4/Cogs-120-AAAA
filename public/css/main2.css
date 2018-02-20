@@ -1,0 +1,98 @@
+.container {
+	background: white;
+	max-width: 600px;
+	width: 100%
+
+}
+
+.title h1 {
+	font-size: 4em;
+	margin: 0 auto;
+	border-radius: 8px;
+	border: 2px solid green;
+	margin: 5px 0;
+	display: inline-block;
+	padding: 5px;
+	color: green;
+}
+
+.header h1 {
+	color: white;
+}
+
+.glyphicon {
+    top: 0px;
+}
+
+.glyphicon-plus {
+	padding: 5px 5px;
+	border: 2px solid black;
+	border-radius: 50%;
+}
+
+.header {
+	background-color: green;
+	color: white;
+}
+
+.title {
+	margin-top: 100px;
+	margin-bottom: 60px;
+	text-align: center;
+}
+
+.login {
+	height: 60px;
+	font-size: 2em;
+}
+
+.signup {
+	color: green;
+	margin-top: 10px;
+}
+
+.form-group {
+	margin: 40px auto;
+}
+
+.left {
+	text-align: left;
+}
+
+.right {
+	text-align: right;
+}
+
+.item {
+	border-bottom: 1px solid black;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    max-width: 600px;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    margin: 30px auto;
+}
+
+/* Modal Content */
+.modal-content {
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+}
+
+.exit {
+	height: 30px;
+}
+
