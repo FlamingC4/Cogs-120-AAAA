@@ -38,15 +38,17 @@
 	  		<div class="modal-content">
 	    		<!--<span class="close">&times;</span> -->
 	    		<h3>Add New Project</h3>
-	    		<input class="form-control" type="text" placeholder="Project Name">
-	    		<div class="row">
-	    			<div class="col-xs-6 left">
-	    				<button class="exit btn btn-danger btn-md">Cancel</button>
-	    			</div>
-	    			<div class="col-xs-6 right">
-	    				<button class="exit btn btn-primary btn-md">Save</button>
-	    			</div>
-	  			</div>
+	    		<form action="/enterDetails" method="GET">
+		    		<input class="form-control" type="text" placeholder="Project Name">
+		    		<div class="row">
+		    			<div class="col-xs-6 left">
+		    				<button class="exit btn btn-danger btn-md">Cancel</button>
+		    			</div>
+		    			<div class="col-xs-6 right">
+		    				<button type="submit" class="exit btn btn-primary btn-md">Save</button>
+		    			</div>
+		  			</div>
+	  			</form>
 			</div>
 		</div>
 	</div>
