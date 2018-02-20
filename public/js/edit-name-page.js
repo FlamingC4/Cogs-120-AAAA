@@ -2,31 +2,72 @@ function checkPointIntervalAlert(){
 	alert("How often you would like to be notified to enter progress)");
 }
 
-
 //check input from enter-name-page when user clicks submit
 function checkInput(){
+
 	var dueDate = $('#DueDate').val();
     var dueTime = $('#DueTime').val();
     var startDate = $('#StartDate').val();
-    var startTime = $('#StartTime').val();    
+    var startTime = $('#StartTime').val(); 
+
+ 	var good = true;
+ 	console.log(good);
+
     if(!checkDateFormat(dueDate)){
     	alert("Please format Due Date to MM/DD/YYYY");
-    	return false;
+    	$("#DueDate").css("background-color","#ff3333");
+    	good = false;	    	
     }
     else if(!checkValidDate(dueDate)){
     	alert("Please make sure Due Date is today or later");
-    	return false;
+    	$("#DueDate").css("background-color","#ff3333");
+    	good = false;
     }
+
     if(!checkTimeFormat(dueTime)){
     	alert("Please format time in HH:MM in 24 hour format");
-    	return false;
+    	$("#DueTime").css("background-color","#ff3333");
+    	good = false;
     }
     else if(!checkValidTime(dueDate, dueTime)){
     	alert("Please make sure time is later than today's current time");
-    	return false;
+    	$("#DueTime").css("background-color","#ff3333");
+    	good = false;
     }
 
-    return true;
+
+    if(!checkDateFormat(startDate)){
+    	alert("Please format Desired Start Date to MM/DD/YYYY");
+    	$("#StartDate").css("background-color","#ff3333");
+    	good = false;
+    }
+    else if(!checkValidDate(startDate)){
+    	alert("Please make sure Desired Start Date is today or later");
+    	$("#StartDate").css("background-color","#ff3333");
+    	good = false;	    	
+    }
+    else if(!checkStartDateEarlierThanDueDate(dueDate, startDate)){
+    	alert("Please make sure you are starting before the Due Date");
+    	$("#StartDate").css("background-color","#ff3333");
+    	good = false;
+    }
+
+    if(!checkTimeFormat(startTime)){
+    	alert("Please format Desired Start Time in HH:MM in 24 hour format");
+    	$("#StartTime").css("background-color","#ff3333");
+    	good = false;
+    }
+    else if(!checkValidTime(startDate, startTime)){
+    	alert("Please make sure Desired Start Time is later than Desired Start Time");
+    	$("#StartTime").css("background-color","#ff3333");
+    	good = false;
+    }
+    else if(!checkStartTimeEarlierThanDueTime(dueDate, startDate, dueTime, startTime)){
+    	alert("Please make sure you are starting before the Due Time");
+    	$("#StartTime").css("background-color","#ff3333");
+    	good = false;
+    }
+    return good;
 }
 
 function checkDateFormat(date){
@@ -165,10 +206,50 @@ function checkValidTime(date, time){
 		if((currentDate.getHours() == tm.getHours()) && currentDate.getMinutes() > tm.getMinutes())
 			return false;
 	}
-
 	return true;
-
-
-
-
 }
+
+function checkStartDateEarlierThanDueDate(dueDate, startDate){
+	var dueDateArray = dueDate.split('');	
+	var startDateArray = startDate.split('');
+
+	//make sure dueYear>startYear
+	if((dueDateArray[6] + dueDateArray[7] + dueDateArray[8] + dueDateArray[9]) <
+		(startDateArray[6] + startDateArray[7] + startDateArray[8] + startDateArray[9]))
+		return false;	
+	if((dueDateArray[6] + dueDateArray[7] + dueDateArray[8] + dueDateArray[9]) == 
+		(startDateArray[6] + startDateArray[7] + startDateArray[8] + startDateArray[9])){
+		if((dueDateArray[0] + dueDateArray[1]) < (startDateArray[0] + startDateArray[1]))
+			return false;
+		else if ((dueDateArray[0] + dueDateArray[1]) == (startDateArray[0] + startDateArray[1]))
+			if ((dueDateArray[3] + dueDateArray[4]) < (startDateArray[3] + startDateArray[4]))
+			return false;
+	}
+	return true;
+}
+
+function checkStartDateEarlierThanDueDate(dueDate, startDate, dueTime, startTime){
+	//split date
+	var dueDateArray = dueDate.split('');	
+	var startDateArray = startDate.split('');
+
+	//split time
+	var dueTimeArray = dueTime.split('');
+	var startTimeArray = startTime.split('');
+
+	//if the dates are the same, now we check the same
+	if((dueDateArray[0] + dueDateArray[1] + dueDateArray[3] + dueDateArray[4] + 
+		dueDateArray[6] + dueDateArray[7] + dueDateArray[8] + dueDateArray[9]) == 
+		(startDateArray[0] + startDateArray[1] + startDateArray[3] + startDateArray[4] +
+		startDateArray[6] + startDateArray[7] + startDateArray[8] + startDateArray[9])){
+		if((dueTimeArray[0] + dueTimeArray[1]) < (startTimeArray[0] + startTimeArray[1]))
+			return false;
+		else if ((dueTimeArray[0] + dueTimeArray[1]) == (startTimeArray[0] + startTimeArray[1]))
+			if ((dueTimeArray[3] + dueTimeArray[4]) > (startTimeArray[3] + startTimeArray[4]))
+				return false;
+	}
+	return true;
+}
+
+
+
