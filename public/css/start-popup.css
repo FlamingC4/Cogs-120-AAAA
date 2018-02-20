@@ -35,7 +35,8 @@ body {font-family: Roboto;}
 }
 
 /* The Close Button */
-/*.close {
+/*
+.close {
     color: #aaaaaa;
     float: right;
     font-size: 28px;

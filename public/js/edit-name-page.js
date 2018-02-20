@@ -11,8 +11,7 @@ function checkInput(){
     var startTime = $('#StartTime').val(); 
 
  	var good = true;
- 	console.log(good);
-
+ 	
     if(!checkDateFormat(dueDate)){
     	alert("Please format Due Date to MM/DD/YYYY");
     	$("#DueDate").css("background-color","#ff3333");
@@ -234,6 +233,7 @@ function checkStartDateEarlierThanDueDate(dueDate, startDate, dueTime, startTime
 	var startDateArray = startDate.split('');
 
 	//split time
+	consol.log(dueDate);
 	var dueTimeArray = dueTime.split('');
 	var startTimeArray = startTime.split('');
 
@@ -248,7 +248,8 @@ function checkStartDateEarlierThanDueDate(dueDate, startDate, dueTime, startTime
 			if ((dueTimeArray[3] + dueTimeArray[4]) > (startTimeArray[3] + startTimeArray[4]))
 				return false;
 	}
-	return true;
+	//return true;
+	return false;
 }
 
 

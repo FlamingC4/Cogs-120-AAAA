@@ -3,6 +3,12 @@
     background-color: green;
 }
 
+/*doesnt work
+/*.container{
+  max-width: 600px;
+  width: 100%;
+}*/
+
 #progressBarz {
   border: 2px solid black;
   width: 90%;
