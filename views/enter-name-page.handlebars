@@ -5,12 +5,16 @@
 <head>
     <title>Enter Name Page</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <script src="bootstrap-4.0.0/js/tests/vendor/jquery-1.9.1.min.js"></script> 
     <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>   
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">     
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="css/materialize.css">
+    
+    <!-- Stylesheets that we wrote -->
     <link href="css/home-page.css" rel ="stylesheet">
     <link href="css/enter-name-page.css" rel="stylesheet">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
 </head>
 
 <body>
@@ -19,10 +23,15 @@
             <a href="home-page">Back</a>
         </div>
         <div>
+            <!--Possibly change font size here-->
             <h1>{{name}}</h1>
         </div>
         
         <div>
+            <div class="input-field col s12">
+                <input id="test-field" type="text" class="validate">
+                <label for="test2">Enter in MM/DD/YYYY format</label>
+            </div>
             <p class="forms">
                 Due Date: <input type="text" name="DueDate" id="DueDate"><br>
             </p>
@@ -56,5 +65,6 @@
 
     <script src="https://code.jquery.com/jquery.js"></script>        
     <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/materialize.js"></script>
     <script src="js/edit-name-page.js"></script>
 </body>
