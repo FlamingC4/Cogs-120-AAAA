@@ -15,18 +15,23 @@
     <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen">
     
     <!-- Stylesheets that we wrote -->
-    <link href="css/home-page.css" rel ="stylesheet">
+    <link href="css/main2.css" rel="stylesheet">
     <link href="css/enter-name-page.css" rel="stylesheet"> 
     
 </head>
 
 <body>
     <div class="container">
-        <div>
-            <a href="home-page">Back</a>
-        </div>
-        <div>
-            <h1>{{name}}</h1>
+        <div class="top-of-page">
+            <div class="row">
+                <div class="col-3">
+                    <a href="home-page">Back</a>
+                </div>
+                
+                <div class="col-9">
+                    <h1>{{name}}</h1>
+                </div>
+            </div>
         </div>
         
         <div>
@@ -39,7 +44,11 @@
                 <label for="DueTime">Due Time</label>
             </div>
         </div>
-        
+       
+        <!-- Div that contains empty space, to give illusion of two pages -->
+        <div class="middle-spacer"></div>
+
+        <!-- Second set of forms to enter -->
         <div>
             <div class="input-field col s12">
                 <input placeholder="Enter in MM/DD/YYYY format" id="StartDate" type="text" class="validate">
@@ -52,8 +61,8 @@
             </div>
 
             <div class="input-field col s6">
-                <input id="Checkpoint" type="text" class="validate">
-                <label for"StartDate">Checkpoint Interval</label>
+                <input placeholder="Enter in hrs:mins format" id="Checkpoint" type="text" class="validate">
+                <label for="Checkpoint">Checkpoint Interval</label>
             </div>
             
             <div class="input-field col s12">
@@ -62,6 +71,7 @@
             </div>
         </div>
         
+        <div class="bottom-spacer"></div>
         <a onclick="return checkInput();" href="start-countdown" class="spacedLink">Continue</a>
     </div>
 
