@@ -45,7 +45,7 @@ h1{
     background-color: #009688;
     font-family: Roboto;
     max-width: 650px;
-    width: 100%;    
+    width: 100vw;    
     color: white;  
 }
 
@@ -81,7 +81,7 @@ body {font-family: Roboto;}
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
-    padding-top: 100vw; /* Location of the box */
+    /*padding-top: 100vh; Location of the box */
     left: 0;
     top: 0;
     width: 100vw; /* Full width */
