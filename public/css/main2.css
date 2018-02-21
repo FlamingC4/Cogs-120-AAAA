@@ -5,6 +5,11 @@ html, body {
 
 .top-of-page .row {
     background-color: #009688;
+    font-family: Roboto;
+    max-width: 650px;
+    width: 100%;    
+    color: white;  
+    margin: 0 auto;
 }
 
 .container {
