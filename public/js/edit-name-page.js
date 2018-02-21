@@ -233,7 +233,7 @@ function checkStartDateEarlierThanDueDate(dueDate, startDate, dueTime, startTime
 	var startDateArray = startDate.split('');
 
 	//split time
-	consol.log(dueDate);
+	console.log(dueDate);
 	var dueTimeArray = dueTime.split('');
 	var startTimeArray = startTime.split('');
 
