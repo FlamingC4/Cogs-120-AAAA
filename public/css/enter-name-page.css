@@ -1,7 +1,10 @@
 h1 {
-	font-size: 6vw;
+    font-size: 6vw;
 	/*white-space: nowrap;*/
 	max-width: 650px;
+    color: #009688;
+    margin-bottom: 10vh;
+    font-family: Roboto;
 }
 
 .middle-spacer {
