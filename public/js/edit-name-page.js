@@ -3,12 +3,10 @@ function checkPointIntervalAlert(){
 }
 
 //check input from enter-name-page when user clicks submit
-function checkInput(){
+function checkInputTop(){
 
 	var dueDate = $('#DueDate').val();
-    var dueTime = $('#DueTime').val();
-    var startDate = $('#StartDate').val();
-    var startTime = $('#StartTime').val(); 
+    var dueTime = $('#DueTime').val();    
 
  	var good = true;
  	
@@ -33,9 +31,17 @@ function checkInput(){
     	$("#DueTime").css("background-color","#ff3333");
     	good = false;
     }
+}
 
+   
 
-    if(!checkDateFormat(startDate)){
+function checkInputBottom(){
+	var startDate = $('#StartDate').val();
+    var startTime = $('#StartTime').val();
+
+    var good = true;
+
+     if(!checkDateFormat(startDate)){
     	alert("Please format Desired Start Date to MM/DD/YYYY");
     	$("#StartDate").css("background-color","#ff3333");
     	good = false;
@@ -61,7 +67,8 @@ function checkInput(){
     	$("#StartTime").css("background-color","#ff3333");
     	good = false;
     }
-    else if(!checkStartTimeEarlierThanDueTime(dueDate, startDate, dueTime, startTime)){
+    else if(!checkStartTimeEarlierThanDueTime(dueDate, startDate, dueTime, startTime))
+    {
     	alert("Please make sure you are starting before the Due Time");
     	$("#StartTime").css("background-color","#ff3333");
     	good = false;
@@ -227,7 +234,7 @@ function checkStartDateEarlierThanDueDate(dueDate, startDate){
 	return true;
 }
 
-function checkStartDateEarlierThanDueDate(dueDate, startDate, dueTime, startTime){
+function checkStartTimeEarlierThanDueTime(dueDate, startDate, dueTime, startTime){
 	//split date
 	var dueDateArray = dueDate.split('');	
 	var startDateArray = startDate.split('');
@@ -248,8 +255,8 @@ function checkStartDateEarlierThanDueDate(dueDate, startDate, dueTime, startTime
 			if ((dueTimeArray[3] + dueTimeArray[4]) > (startTimeArray[3] + startTimeArray[4]))
 				return false;
 	}
-	//return true;
-	return false;
+	return true;
+	//return false;
 }
 
 
