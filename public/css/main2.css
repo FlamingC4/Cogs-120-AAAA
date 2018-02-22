@@ -69,11 +69,11 @@ html, body {
 	font-size: 4em;
 	margin: 0 auto;
 	border-radius: 8px;
-	border: 2px solid green;
+	border: 2px solid #009688;
 	margin: 5px 0;
 	display: inline-block;
 	padding: 5px;
-	color: green;
+	color: #009688;
 }
 
 .header h1 {
@@ -86,16 +86,16 @@ html, body {
 
 .glyphicon-plus {
 	padding: 10px 10px;
-	border: 1px solid green;
+	border: 1px solid #009688;
 	border-radius: 50%;
-	background-color: green;
+	background-color: #009688;
 	color: white;
 	font-size: 4em;
 	margin-right: 5%;
 }
 
 .header {
-	background-color: green;
+	background-color: #009688;
 	max-width: 650px;
 	width: 100%;
 	color: white;
@@ -113,7 +113,7 @@ html, body {
 }
 
 .signup {
-	color: green;
+	color: #009688;
 	margin-top: 10px;
 }
 
