@@ -1,3 +1,11 @@
+h1 {
+  font-size: 6vw;
+  margin-top: 2vh;
+}
+
+.container {
+	padding: 0 0;
+}
 .forms {
     margin-top: 25px;
 }
