@@ -1,20 +1,8 @@
 h1 {
-  font-size: 6vw;
-  margin-top: 2vh;
-}
-
-h2 {
-	font-size: 9vw;
-	margin-top: 5vh
-}
-
-.container {
-	padding: 0 0;
-}
-.forms {
-    margin-top: 25px;
-}
-.nextButton {
-    display: block;
-    margin-top: 25px;
+    font-size: 6vw;
+	/*white-space: nowrap;*/
+	max-width: 650px;
+    color: #009688;
+    margin-bottom: 10vh;
+    font-family: Roboto;
 }

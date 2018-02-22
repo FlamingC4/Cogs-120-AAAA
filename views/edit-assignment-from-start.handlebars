@@ -6,35 +6,55 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--<link href="css/start-input.css" rel="stylesheet">-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="bootstrap-4.0.0/js/tests/vendor/jquery-1.9.1.min.js"></script> 
+    <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>   
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen">
+    
+    <link href="css/main2.css" rel="stylesheet">
+    <link href="css/start-input.css" rel="stylesheet">
 </head>
 
 <body>
+    <div class="container">
     <!--Wording might need to be different here -->
-    <div>
-        <a href="start-countdown">Back</a>
-    </div>
+        <div class="top-of-page">
+            <div class="row nav-header">
+                <div class="col-3">
+                    <a href="start-countdown">Back</a>
+                </div>
+                
+            </div>
+        </div>
 
-    <div>
-        <h1>Edit Assignment Attributes</h1>
-    </div>
+        <div class="col 12">
+            <h1>Edit Assignment Attributes</h1>
+        </div>
 
-    <div>
-        <p>
-            Change Due Date: <input type:"text" name:"newDate"><br>
-        </p>
-        
-        <p>
-            Change Due Time: <input type:"text" name:"newTime"><br>
-        </p>
+        <div>
+            <div class="input-field col s12">
+                <input placeholder="Enter in MM/DD/YYYY format" id="newDate" type="text" class="validate">
+                <label for="newDate">Change Due Date</label>
+            </div>
 
-        <p>
-            Change Checkpoint Interval: <input type:"text"
-                name:"newCheckpoint"><br>
-        </p>
-    </div>
+            <div class="input-field col s12">
+                <input placeholder="Enter in hrs:mins format" id="newTime" type="text" class="validate">
+                <label for="newTime">Change Due Time</label>
+            </div>
 
-    <div>
-        <a href="start-countdown">Save</a>
-    </div>
+            <div class="input-field col s12">
+                <input placeholder="Enter in hrs:mins format" id="newCheck" type="text" class="validate">
+                <label for="newCheck">Change Checkpoint Interval</label>
+            </div>
+        </div>
+
+        <div>
+            <a href="start-countdown">Save</a>
+        </div>
+    </div> 
+    
+    <script src="https://code.jquery.com/jquery.js"></script>        
+    <script type="text/javascript" src="js/materialize.js"></script>
 </body>
