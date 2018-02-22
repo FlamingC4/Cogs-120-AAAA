@@ -3,12 +3,10 @@ function checkPointIntervalAlert(){
 }
 
 //check input from enter-name-page when user clicks submit
-function checkInput(){
+function checkInputTop(){
 
 	var dueDate = $('#DueDate').val();
-    var dueTime = $('#DueTime').val();
-    var startDate = $('#StartDate').val();
-    var startTime = $('#StartTime').val(); 
+    var dueTime = $('#DueTime').val();    
 
  	var good = true;
  	
@@ -33,9 +31,17 @@ function checkInput(){
     	$("#DueTime").css("background-color","#ff3333");
     	good = false;
     }
+}
 
+   
 
-    if(!checkDateFormat(startDate)){
+function checkInputBottom(){
+	var startDate = $('#StartDate').val();
+    var startTime = $('#StartTime').val();
+
+    var good = true;
+
+     if(!checkDateFormat(startDate)){
     	alert("Please format Desired Start Date to MM/DD/YYYY");
     	$("#StartDate").css("background-color","#ff3333");
     	good = false;
