@@ -10,15 +10,59 @@
 </head>
 <body>
 	<div class="container text-center">
-		<div class="row header">
-			<div class="col-xs-8">
-				<h1>ASSIGNMENTS</h1>
-			</div>
-			<div class="col-xs-4 right">
-				<h1><span class="glyphicon glyphicon-cog"></span></h1>
-			</div>
-		</div>
+		<div class="nav-container navbar-fixed-top">
+			<nav class="nav-header">
+  				<div class="row header">
+					<div class="col-xs-10">
+						<h1>ASSIGNMENTS</h1>
+					</div>
+					<div class="col-xs-2 right">
+						<h1><span class="glyphicon glyphicon-cog"></span></h1>
+					</div>
+				</div>
+			</nav>
+		</div> 
+		
 		{{#each project}}
+			<div class="row item">
+             	<div class="col-xs-10 left">
+                    <a href="#" onclick="window.alert('Estimated Time: {{estimated_time}}\nActual Time: {{actual_time}}');">
+                        <h3 class="prevAssignment">{{name}}</h3>
+                    </a>
+            	</div>
+            	<div class="col-xs-2 right">
+                	<h4><span class="glyphicon glyphicon-ok"></span></h4>	
+            	</div>
+        	</div>
+        {{/each}}
+
+        {{#each project}}
+			<div class="row item">
+             	<div class="col-xs-10 left">
+                    <a href="#" onclick="window.alert('Estimated Time: {{estimated_time}}\nActual Time: {{actual_time}}');">
+                        <h3 class="prevAssignment">{{name}}</h3>
+                    </a>
+            	</div>
+            	<div class="col-xs-2 right">
+                	<h4><span class="glyphicon glyphicon-ok"></span></h4>	
+            	</div>
+        	</div>
+        {{/each}}
+
+         {{#each project}}
+			<div class="row item">
+             	<div class="col-xs-10 left">
+                    <a href="#" onclick="window.alert('Estimated Time: {{estimated_time}}\nActual Time: {{actual_time}}');">
+                        <h3 class="prevAssignment">{{name}}</h3>
+                    </a>
+            	</div>
+            	<div class="col-xs-2 right">
+                	<h4><span class="glyphicon glyphicon-ok"></span></h4>	
+            	</div>
+        	</div>
+        {{/each}}
+
+         {{#each project}}
 			<div class="row item">
              	<div class="col-xs-10 left">
                     <a href="#" onclick="window.alert('Estimated Time: {{estimated_time}}\nActual Time: {{actual_time}}');">
@@ -50,11 +94,11 @@
 	  			</form>
 			</div>
 		</div>
-
+			<nav class="right nav-footer">
+  				<a id="myBtn" href="#"><span class="glyphicon glyphicon-plus"></span></a>
+			</nav>
 	</div>
-	<nav class="navbar fixed-bottom navbar-light bg-light right">
-  		<a id="myBtn" href="#"><span class="glyphicon glyphicon-plus"></span></a>
-	</nav>
+	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
