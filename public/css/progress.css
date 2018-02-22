@@ -1,6 +1,15 @@
+* {
+    font-family: Roboto;
+}
+
 #myProgress {
     width: 100%;
     background-color: green;
+}
+
+h1{
+  font-size: 6vw;
+  margin-top: 2vh;
 }
 
 /*doesnt work
@@ -31,12 +40,17 @@
     margin: 10px ;
 }
 
+/*project name on top*/
 .top-of-page {
     background-color: #009688;
-    font: "roboto";
-    margin: 0px;
-    font-size: 50px;
+    font-family: Roboto;
+    max-width: 650px;
+    width: 100vw;    
     color: white;  
+}
+
+.top-of-page .row {
+    background-color: #009688;
 }
 
 
@@ -56,9 +70,9 @@
     top:-10px;
 }
 
-.container{
+/*.container{
     width: 650px;    
-}
+}*/
 
 body {font-family: Roboto;}
 
@@ -67,11 +81,11 @@ body {font-family: Roboto;}
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    /*padding-top: 100vh; Location of the box */
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
+    width: 100vw; /* Full width */
+    height: 100vh; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
@@ -81,8 +95,8 @@ body {font-family: Roboto;}
 .modal-content {
     background-color: #fefefe;
     margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
+    padding: 25vw;
+    border: 1vw solid #888;
     width: 20%;
 }
 

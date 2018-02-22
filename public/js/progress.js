@@ -166,6 +166,12 @@ function addToJson(name, estimated_time, actual_time){
 //checkpoint info
 function checkPointInfo(){
     alert("Estimate how done you are in terms of percentage (ex: if you are done with 4/8 problems, you are approximately 50% complete)");
+    
+}
+
+//now set the checkpoint
+function setCheckPoint(){
+    
 }
 
 //start the global timer

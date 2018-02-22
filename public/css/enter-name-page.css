@@ -1,5 +1,32 @@
+h1 {
+	font-size: 6vw;
+	/*white-space: nowrap;*/
+	max-width: 650px;
+}
+
+.middle-spacer {
+    margin-bottom: 75vh;
+}
+
+.bottom-spacer {
+    margin-bottom: 50vh;
+}
+
+.container {
+	max-width: 650px;
+	width: 100%;
+	/*border: 2px solid black;*/
+	margin: 0 auto;
+	height: 100%;
+    padding: 0 0;
+	background-color: white;
+	overflow: scroll;
+    overflow-y: auto;
+}
+
 .spacedLink {
    margin-top: 30px; 
+   margin-bottom: 30px;
    display: block;
 }
 

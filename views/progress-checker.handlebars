@@ -11,14 +11,12 @@
 	<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>	
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">	
 	
-	<!--<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/bootstrap-theme.min.css" rel="stylesheet"> -->	
 	<link href="css/bootstrap-reboot.css" rel="stylesheet">
 	<link href="css/progress.css" rel="stylesheet">
 	<link href="css/main2.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	<!-- hex:#009688 -->
 	<!-- background hex: #979797 -->
-
 
 </head>
 
@@ -34,11 +32,11 @@
 
 	  	<div class="top-of-page">
 		  	<div class="row">
-		  		<div class="col-10">
-		  			<p>{{name}}</p> 
+		  		<div class="col-9">
+		  			<h1>{{name}}</h1> 
 		  		</div>
-		  		<div class="col-2">
-		  		<a href = "edit-assignment"> <img src="images/edit project.png" style="width:50px;margin-top:-15px;"></a>
+		  		<div class="col-3">
+		  			<a href = "edit-assignment"> <img src="images/edit project.png" style="width:10vw;margin-top:2vw;"></a>
 		  		</div>
 		  	 </div>
 	  	 </div>
@@ -46,18 +44,18 @@
 	  	<div class="text-center">
 	  		<center>   	
 		  		</br>
-		  		<a href="delay-input.html"><button type="button" class="btn btn-danger btn-wide btn-block" id="pause-button" style="width:500px;" align="middle"> Pause </button>
+		  		<a href="delay-input.html"><button type="button" class="btn btn-danger btn-wide btn-block" id="pause-button" style="width:40vw;" align="middle"> Pause </button>
 			  	</a>
 			  	</br>
 			  	</br>
-			  	<a href="finish-confirmation.html"><button type="button" class="btn btn-success btn-wide btn-block" id="finish-button"  style="width:500px;"">Finish</button></a>
+			  	<a href="finish-confirmation.html"><button type="button" class="btn btn-success btn-wide btn-block" id="finish-button"  style="width:40vw;"">Finish</button></a>
 				</br>
 				</br>
 			</center>
 		</div>
 	
 		
-		<div class="row">
+		<div>
 			<h5>Next checkpoint: </br></br><div id="progress-timer"></div></h5>		
 		</div>
 
@@ -71,13 +69,18 @@
 		<p>Estimated Time Left: 6hr 30min</p>
 
 		<div>
-		<button id="checkpoint0">See what happens when checkpoint timer hits 0</button>		
+		<button id="checkpoint0">See what happens when checkpoint timer hits 0</button>	</br>
+		</br>
+		<button id="checkpoint1">See what happens when 1 hour is left</button> 
+		</div>
+
+
 		<div id="myModal" class="modal">
         <div class="modal-content">
             <!--<span class="close">&times;</span>-->            
             <div class="startOptions">
-                <h6>Enter your progress<button onclick="checkPointInfo()">?</button><br> <input type:"text" name:"checkpointInterval><br></h6>
-                <span class="close"><p> Next </p></span>
+                <h6>Enter your progress<button onclick="checkPointInfo()">?</button><br> <input type="text" name="checkpointInterval"><br></h6>
+                <span class="close" onclick="setCheckPoint()"><p> Next </p></span>
             </div>
         </div>            
     </div>
