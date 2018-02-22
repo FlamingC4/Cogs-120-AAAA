@@ -31,6 +31,8 @@ function checkInputTop(){
     	$("#DueTime").css("background-color","#ff3333");
     	good = false;
     }
+
+    return good;
 }
 
    
@@ -259,5 +261,12 @@ function checkStartTimeEarlierThanDueTime(dueDate, startDate, dueTime, startTime
 	//return false;
 }
 
+function autoScroll() {
+    var valid = checkInputTop();
 
-
+   if(valid) { 
+        //currently broken
+        var nextPage = $("#start-forms").offset().top;
+        $("html, body").animate({ scrollTop: 200 }, "slow"); 
+    }
+}

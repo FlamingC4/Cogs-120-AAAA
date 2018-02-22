@@ -23,9 +23,11 @@
 <body>
     <div class="container">
         <div class="top-of-page">
-            <div class="row">
+            <div class="row nav-header">
                 <div class="col-3">
-                    <a href="home-page">Back</a>
+                    <a href="home-page">
+                        <img class="arrow-space" src="images/Arrow2.png"> 
+                    </a>
                 </div>
                 
             </div>
@@ -44,6 +46,13 @@
                 <input placeholder="Enter in hrs:mins format" id="DueTime" type="text" class="validate">
                 <label for="DueTime">Due Time</label>
             </div>
+            <div>
+                <a href="#" onclick="autoScroll()">
+                    <div class="right next-arrow-pos">
+                        <img class="arrow-space" src="images/Arrow3.png">
+                    </div>
+                </a>
+            </div>
         </div>
         <!-- checkInputTop for when the user clicks the arrow-->
         <!--<a onclick="return checkInputBottom();" href="start-countdown" class="spacedLink">Continue</a>-->
@@ -51,7 +60,7 @@
         <div class="middle-spacer"></div>
 
         <!-- Second set of forms to enter -->
-        <div>
+        <div id="start-forms">
             <div class="input-field col s12">
                 <input placeholder="Enter in MM/DD/YYYY format" id="StartDate" type="text" class="validate">
                 <label for="StartDate">Desired Start Date</label>
@@ -74,7 +83,11 @@
         </div>
         
         <div class="bottom-spacer"></div>
-        <a onclick="return checkInputBottom();" href="start-countdown" class="spacedLink">Continue</a>
+        <a onclick="return checkInputBottom();" href="start-countdown" class="spacedLink">
+            <div class="right arrow-finish">
+                <img src="images/Arrow3.png">
+            </div>
+        </a>
     </div>
 
     <script src="https://code.jquery.com/jquery.js"></script>        
