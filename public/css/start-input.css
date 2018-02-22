@@ -1,20 +1,28 @@
 h1 {
-  font-size: 6vw;
-  margin-top: 2vh;
+    font-size: 6vw;
+	/*white-space: nowrap;*/
+	max-width: 650px;
+    color: #009688;
+    margin-bottom: 10vh;
+    font-family: Roboto;
 }
 
-h2 {
-	font-size: 9vw;
-	margin-top: 5vh
+.arrow-space {
+    margin-top: 2vh;
+    margin-bottom: 2vh;
 }
 
-.container {
-	padding: 0 0;
+.save-button {
+    width:60vw; 
+    background-color: #009688; 
+    border-color: #009688;
 }
-.forms {
-    margin-top: 25px;
-}
-.nextButton {
-    display: block;
-    margin-top: 25px;
+
+.btn .btn-wide {
+    padding: 18px 50px;
+    font-size: 22px; 
+    line-height: normal;
+    -webkit-border-radius: 8px;
+       -moz-border-radius: 8px;
+            border-radius: 8px;
 }
