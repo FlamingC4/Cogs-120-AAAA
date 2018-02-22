@@ -6,30 +6,60 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="css/delay-input.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="bootstrap-4.0.0/js/tests/vendor/jquery-1.9.1.min.js"></script> 
+    <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen">
+    <link href="css/main2.css" rel="stylesheet">
+    <link href="css/enter-name-page.css" rel="stylesheet"> 
+
+    <!--link href="css/delay-input.css" rel="stylesheet">-->
 </head>
 
+
 <body>
-    <div>
-        <!-- probably needs rewording -->
-        <a href="progress-checker">Back</a>
-    </div>
+    <div class="container">
+        <div class="top-of-page">
+            <div class="row">
+                <div class="col-3">
+                    <a href="home-page">Back</a>
+                </div>
+                
+            </div>
+        </div>
+        
+        <div class="col-12">
+            <h1>Pause Assignment</h1>
+        </div>
 
-    <div>
-        <h1>Pause working on the assignment</h1>
-    </div>
+        <div>
+            <div class="input-field col s12">
+                <input placeholder="Enter in MM/DD/YYYY format" id="DueDate" type="text" class="validate">
+                <label for="DueDate">Restart Date</label>
+            </div>
+            <div class="input-field col s12">
+                <input placeholder="Enter in hrs:mins format" id="DueTime" type="text" class="validate">
+                <label for="DueTime">Restart Time</label>
+            </div>
+        </div>
 
-    <div>
+    <!--<div>
         <p class="forms">
             Restart Date: <input type="text" name="Date"><br>
+            <div class="input-field col s12">
+                <input placeholder="Enter in MM/DD/YYYY format" id="DueDate" type="text" class="validate">
+            </div>
         </p>
 
         <p class="forms">
             Restart Time: <input type="text" name="Time"><br>
         </p>
-    </div>
+    </div>-->
     
     <div>
-        <a href="start-countdown">Delay</a> 
+        <a href="start-countdown">Continue</a> 
     </div>
 </body>
