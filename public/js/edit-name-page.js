@@ -1,3 +1,7 @@
+$(document).ready(function() {
+    $("html, body").animate({ scrollTop: 400 }, "slow"); 
+});
+
 function checkPointIntervalAlert(){
 	alert("How often you would like to be notified to enter progress)");
 }

@@ -21,6 +21,10 @@ html, body {
 	padding-top: 70px;
 }
 
+.div-login {
+	padding: 0 10%;
+}
+
 .top-of-page .row {
     background-color: #009688;
     font-family: Roboto;
@@ -110,6 +114,8 @@ html, body {
 .login {
 	height: 60px;
 	font-size: 2em;
+	background-color: #009688; 
+	border-color: #009688;
 }
 
 .signup {
