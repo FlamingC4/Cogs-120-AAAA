@@ -1,5 +1,8 @@
 $(document).ready(function() {
-    $("html, body").animate({ scrollTop: 400 }, "slow"); 
+    $("html, body").animate({ scrollTop: 400 }, "slow");
+
+    //$("html, body").animate({ scrollTop: $(document).height() }, "slow");
+    console.log("wtf");
 });
 
 function checkPointIntervalAlert(){
@@ -266,11 +269,11 @@ function checkStartTimeEarlierThanDueTime(dueDate, startDate, dueTime, startTime
 }
 
 function autoScroll() {
-    var valid = checkInputTop();
-
+    var valid = checkInputTop();    
    if(valid) { 
         //currently broken
         var nextPage = $("#start-forms").offset().top;
         $("html, body").animate({ scrollTop: 200 }, "slow"); 
+        //window.scrollBy(0, 400);
     }
 }
