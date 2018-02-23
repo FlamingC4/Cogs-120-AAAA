@@ -14,6 +14,7 @@ var home = require('./routes/home-page');
 //var enterName = require('./routes/enter-name');
 var enterDetails = require('./routes/enterDetails');
 var startCountdown = require('./routes/start-countdown');
+var startAgain = require('./routes/start-again');
 var progressChecker = require('./routes/progress-checker');
 var editAssignStart = require('./routes/edit-assignment-start');
 var editAssign = require('./routes/edit-assignment');
@@ -51,7 +52,7 @@ app.get('/', login.view);
 app.get('/home-page', home.view);
 //app.get('/enter-name', enterName.enter); DOESN'T WORK
 app.get('/enterDetails', enterDetails.view);
-app.get('/start-countdown', startCountdown.viewFin);
+app.get('/start-countdown', startAgain.view);
 app.get('/progress-checker', progressChecker.view);
 app.get('/edit-assignment-from-start', editAssignStart.view);
 app.get('/edit-assignment', editAssign.view);

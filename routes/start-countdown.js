@@ -17,6 +17,3 @@ exports.view = function(req, res){
   record.project.push(newEntry);  
 };
 
-exports.viewFin = function(req, res) {
-  res.render('start-countdown',count);
-}
