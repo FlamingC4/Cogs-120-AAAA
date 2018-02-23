@@ -47,12 +47,8 @@
                     <input placeholder="Enter in hrs:mins format" name="detail[DueTime]" id="DueTime" type="text" class="validate">
                     <label for="DueTime">Due Time</label>
                 </div>
-                <div>
-                    <a href="#" onclick="autoScroll()">
-                        <div class="right next-arrow-pos">
-                            <img href="#start-forms" class="arrow-space" src="images/Arrow3.png">
-                        </div>
-                    </a>
+                <div class="right next-arrow-pos">
+                    <a href="#start-forms"><img class="arrow-space" src="images/Arrow3.png"></a>
                 </div>
             </div>
             <!-- checkInputTop for when the user clicks the arrow-->
@@ -60,13 +56,12 @@
             <!-- Div that contains empty space, to give illusion of two pages -->
             <div class="middle-spacer"></div>
 
-            <!-- Second set of forms to enter -->
+            <!--Second set of forms to enter -->
             <div id="start-forms">
                 <div class="input-field col s12">
                     <input placeholder="Enter in MM/DD/YYYY format" name="detail[StartDate]" id="StartDate" type="text" class="validate">
                     <label for="StartDate">Desired Start Date</label>
                 </div>
-
                 <div class="input-field col s12">
                     <input placeholder="Enter in hrs:mins format" name="detail[StartTime]" id="StartTime" type="text" class="validate">
                     <label for="StartTime">Desired Start Time</label>
@@ -84,11 +79,13 @@
             </div>
             
             <div class="bottom-spacer"></div>
-            <button type="submit" onclick="return checkInputBottom();" href="#" class="spacedLink">
-                <div class="right arrow-finish">
-                    <img src="images/Arrow3.png">
-                </div>
-            </button>
+            <div class="right">
+            	<button type="submit" onclick="return checkInputBottom();" href="#" class="spacedLink no-border">
+                	<div class="right arrow-finish">
+                    	<img src="images/Arrow3.png">
+                	</div>
+            	</button>
+        	</div>
         </form>
     </div>
 

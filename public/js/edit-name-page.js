@@ -1,8 +1,16 @@
 $(document).ready(function() {
-    $("html, body").animate({ scrollTop: 400 }, "slow");
+   /* $("html, body").animate({ scrollTop: 400 }, "slow");*/
 
     //$("html, body").animate({ scrollTop: $(document).height() }, "slow");    
 });
+
+/*$(document).on('click', 'a[href^="#"]', function(e) {
+	/*e.preventDefault();
+	alert("hi");
+	$('html, body').animate({
+		scrollTop: $($.attr(this, 'href')).offset().top
+	}, 1000); 
+}); */
 
 function checkPointIntervalAlert(){
 	alert("How often you would like to be notified to enter progress)");
