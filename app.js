@@ -24,8 +24,10 @@ var userSettings = require('./routes/edit-user-settings');
 // var user = require('./routes/user');
 
 var app = express();
+var bodyParser = require("body-parser");
 
 // all environments
+app.use(bodyParser.urlencoded({extended: true}));
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 app.engine('handlebars', handlebars());
@@ -54,7 +56,7 @@ app.get('/start-countdown', startCountdown.view);
 app.get('/edit-assignment-from-start', editAssignStart.view);
 app.get('/edit-assignment', editAssign.view);
 app.get('/user-settings', userSettings.view);
-app.get('/enterDetails/:name', enterDetails.view);
+app.post('/enterDetails', enterDetails.view);
 //app.get('/edit-assignment', editAssignment.view);
 // Example route
 // app.get('/users', user.list);
