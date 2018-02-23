@@ -12,6 +12,10 @@ h1 {
     margin-bottom: 2vh;
 }
 
+.button-spacer {
+    margin-top: 15vh;
+}
+
 .save-button {
     width:60vw; 
     background-color: #009688; 
