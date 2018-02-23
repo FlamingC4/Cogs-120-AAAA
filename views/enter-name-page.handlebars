@@ -21,7 +21,7 @@
 </head>
 
 <body>
-    <div class="container hideOverflow">
+    <div class="container">
         <div class="top-of-page">
             <div class="row nav-header">
                 <div class="col-3">
@@ -47,11 +47,11 @@
                 <label for="DueTime">Due Time</label>
             </div>
             <div>
-                <!-- <a href="#" onclick="autoScroll()"> -->
+                <a href="#" onclick="autoScroll()">
                     <div class="right next-arrow-pos">
-                        <a href="#start-forms"><img class="arrow-space" src="images/Arrow3.png"></a>
+                        <img href="#start-forms" class="arrow-space" src="images/Arrow3.png">
                     </div>
-                <!-- </a> -->
+                </a>
             </div>
         </div>
         <!-- checkInputTop for when the user clicks the arrow-->
@@ -60,7 +60,7 @@
         <div class="middle-spacer"></div>
 
         <!-- Second set of forms to enter -->
-        <div id="start-forms" >
+        <div id="start-forms">
             <div class="input-field col s12">
                 <input placeholder="Enter in MM/DD/YYYY format" id="StartDate" type="text" class="validate">
                 <label for="StartDate">Desired Start Date</label>
@@ -77,7 +77,7 @@
             </div>
             
             <div class="input-field col s12">
-                <input id="Estimate" type="text" class="validate">
+                <input placeholder="Enter in hrs:mins format" id="Estimate" type="text" class="validate">
                 <label for="Estimate">Estimated Hours Until Completion</label>
             </div>
         </div>
