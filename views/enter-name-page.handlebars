@@ -21,7 +21,7 @@
 </head>
 
 <body>
-    <div class="container hideOverflow">
+    <div class="container">
         <div class="top-of-page">
             <div class="row nav-header">
                 <div class="col-3">
@@ -47,17 +47,30 @@
                 <label for="DueTime">Due Time</label>
             </div>
             <div>
-                <!-- <a href="#" onclick="autoScroll()"> -->
                     <div class="right next-arrow-pos">
                         <a class="arrow-space" href="#start-forms"><img src="images/Arrow3.png"></a>
                     </div>
-                <!-- </a> -->
+            <form action="/start-countdown" method="POST">
+                <div class="input-field col s12">
+                    <input placeholder="Enter in MM/DD/YYYY format" name="detail[DueDate]" id="DueDate" type="text" class="validate">
+                    <label for="DueDate">Due Date</label>
+                </div>
+                <div class="input-field col s12">
+                    <input placeholder="Enter in hrs:mins format" name="detail[DueTime]" id="DueTime" type="text" class="validate">
+                    <label for="DueTime">Due Time</label>
+                </div>
+                <div>
+                    <a href="#" onclick="autoScroll()">
+                        <div class="right next-arrow-pos">
+                            <img href="#start-forms" class="arrow-space" src="images/Arrow3.png">
+                        </div>
+                    </a>
+                </div>
             </div>
-        </div>
-        <!-- checkInputTop for when the user clicks the arrow-->
-        <!--<a onclick="return checkInputBottom();" href="start-countdown" class="spacedLink">Continue</a>-->
-        <!-- Div that contains empty space, to give illusion of two pages -->
-        <div class="middle-spacer"></div>
+            <!-- checkInputTop for when the user clicks the arrow-->
+            <!--<a onclick="return checkInputBottom();" href="start-countdown" class="spacedLink">Continue</a>-->
+            <!-- Div that contains empty space, to give illusion of two pages -->
+            <div class="middle-spacer"></div>
 
         <!-- Second set of forms to enter -->
         <div id="start-forms" >
@@ -67,29 +80,35 @@
                 <input placeholder="Enter in MM/DD/YYYY format" id="StartDate" type="text" class="validate">
                 <label for="StartDate">Desired Start Date</label>
             </div>
+            <!-- Second set of forms to enter -->
+            <div id="start-forms">
+                <div class="input-field col s12">
+                    <input placeholder="Enter in MM/DD/YYYY format" name="detail[StartDate]" id="StartDate" type="text" class="validate">
+                    <label for="StartDate">Desired Start Date</label>
+                </div>
+                <div class="input-field col s12">
+                    <input placeholder="Enter in hrs:mins format" name="detail[StartTime]" id="StartTime" type="text" class="validate">
+                    <label for="StartTime">Desired Start Time</label>
+                </div>
 
-            <div class="input-field col s12">
-                <input placeholder="Enter in hrs:mins format" id="StartTime" type="text" class="validate">
-                <label for="StartTime">Desired Start Time</label>
-            </div>
-
-            <div class="input-field col s6">
-                <input placeholder="Enter in hrs:mins format" id="Checkpoint" type="text" class="validate">
-                <label for="Checkpoint">Checkpoint Interval</label>
+                <div class="input-field col s6">
+                    <input placeholder="Enter in hrs:mins format" name="detail[Checkpoint]" id="Checkpoint" type="text" class="validate">
+                    <label for="Checkpoint">Checkpoint Interval</label>
+                </div>
+                
+                <div class="input-field col s12">
+                    <input placeholder="Enter in hrs:mins format" name="detail[Estimate]" id="Estimate" type="text" class="validate">
+                    <label for="Estimate">Estimated Hours Until Completion</label>
+                </div>
             </div>
             
-            <div class="input-field col s12">
-                <input id="Estimate" type="text" class="validate">
-                <label for="Estimate">Estimated Hours Until Completion</label>
-            </div>
-        </div>
-        
-        <div class="bottom-spacer"></div>
-        <a onclick="return checkInputBottom();" href="start-countdown" class="spacedLink">
-            <div class="right arrow-finish">
-                <img src="images/Arrow3.png">
-            </div>
-        </a>
+            <div class="bottom-spacer"></div>
+            <button type="submit" onclick="return checkInputBottom();" href="#" class="spacedLink">
+                <div class="right arrow-finish">
+                    <img src="images/Arrow3.png">
+                </div>
+            </button>
+        </form>
     </div>
 
     <script src="https://code.jquery.com/jquery.js"></script>        

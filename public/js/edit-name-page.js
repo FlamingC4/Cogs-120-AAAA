@@ -1,8 +1,7 @@
 $(document).ready(function() {
    /* $("html, body").animate({ scrollTop: 400 }, "slow");*/
 
-    //$("html, body").animate({ scrollTop: $(document).height() }, "slow");
-    console.log("wtf");
+    //$("html, body").animate({ scrollTop: $(document).height() }, "slow");    
 });
 
 /*$(document).on('click', 'a[href^="#"]', function(e) {
@@ -55,6 +54,9 @@ function checkInputTop(){
 function checkInputBottom(){
 	var startDate = $('#StartDate').val();
     var startTime = $('#StartTime').val();
+    var checkpoint = $('#Checkpoint').val();
+    var estimate = $('#Estimate').val();
+
 
     var good = true;
 
@@ -90,6 +92,17 @@ function checkInputBottom(){
     	$("#StartTime").css("background-color","#ff3333");
     	good = false;
     }
+    if(checkpoint.length == 0){
+    	alert("Please format Checkpoint Interval in HH:MM in 24 hour format");
+    	$("#Checkpoint").css("background-color","#ff3333");
+    	good = false;
+    }
+    if(estimate.length == 0){
+    	alert("Please format Estimated Hours Until Completion in HH:MM in 24 hour format");
+    	$("#Estimate").css("background-color","#ff3333");
+    	good = false;
+    }
+
     return good;
 }
 
@@ -274,6 +287,10 @@ function checkStartTimeEarlierThanDueTime(dueDate, startDate, dueTime, startTime
 	}
 	return true;
 	//return false;
+}
+
+function checkCheckpointFormat(checkpoint){
+
 }
 
 function autoScroll() {
