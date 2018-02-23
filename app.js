@@ -54,6 +54,7 @@ app.get('/start-countdown', startCountdown.view);
 app.get('/edit-assignment-from-start', editAssignStart.view);
 app.get('/edit-assignment', editAssign.view);
 app.get('/user-settings', userSettings.view);
+app.get('/enterDetails/:name', enterDetails.view);
 //app.get('/edit-assignment', editAssignment.view);
 // Example route
 // app.get('/users', user.list);
