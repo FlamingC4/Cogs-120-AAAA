@@ -9,5 +9,5 @@ exports.view = function(req, res){
         "name": name
     });
 
-    currData.
+    //currData.
 };
