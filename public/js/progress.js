@@ -137,6 +137,15 @@ function checkpointTimer(/*checkpoint interval goes here*/){
     //console.log(toSeconds(dueDate));
 }
 
+function startCounterWizardofOzTimer(/*checkpoint interval goes here*/){
+    var currentDate = new Date();
+    var checkPoint = getTimer(2019, 11, 31, 29 , 30, 59); //change this hard code
+    //console.log(dueDate);
+
+    $('#progress-timer').countdown(checkPoint, function(event) {
+        $(this).html(event.strftime('0 weeks 0 days 0:%M:%S'));    
+    });
+
 function toSeconds(dueDate){
     var currentDate = new Date();
     //console.log(currentDate);
