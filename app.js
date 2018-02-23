@@ -17,6 +17,7 @@ var startCountdown = require('./routes/start-countdown');
 var progressChecker = require('./routes/progress-checker');
 var editAssignStart = require('./routes/edit-assignment-start');
 var editAssign = require('./routes/edit-assignment');
+var userSettings = require('./routes/edit-user-settings');
 
 //var editAssignment = requre('./routes/edit-assignment');
 // Example route
@@ -52,6 +53,7 @@ app.get('/progress-checker', progressChecker.view);
 app.get('/start-countdown', startCountdown.view);
 app.get('/edit-assignment-from-start', editAssignStart.view);
 app.get('/edit-assignment', editAssign.view);
+app.get('/user-settings', userSettings.view);
 //app.get('/edit-assignment', editAssignment.view);
 // Example route
 // app.get('/users', user.list);
