@@ -14,6 +14,5 @@ exports.view = function(req, res){
     var currAssignment = {
         "name" : projectName
     };
-
     currData.name = projectName; 
 };
