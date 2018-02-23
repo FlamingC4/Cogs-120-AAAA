@@ -44,11 +44,11 @@
 	  	<div class="text-center">
 	  		<center>   	
 		  		</br>
-		  		<a href="delay-input.html"><button type="button" class="btn btn-danger btn-wide btn-block" id="pause-button" style="width:60vw; background-color: #DB4437; border-color: #DB4437;" align="middle"> Pause </button>
+		  		<a href="delay-input.html"><button type="button" class="btn btn-danger btn-wide btn-block" id="pause-button" style="width:60%; background-color: #DB4437; border-color: #DB4437;" align="middle"> Pause </button>
 			  	</a>
 			  	</br>
 			  	</br>
-			  	<a href="finish-confirmation.html"><button type="button" class="btn btn-success btn-wide btn-block" id="finish-button"  style="width:60vw; background-color: #3E50B4; border-color: #3E50B4;">Finish</button></a>
+			  	<a href="finish-confirmation.html"><button type="button" class="btn btn-success btn-wide btn-block" id="finish-button"  style="width: 60%; background-color: #3E50B4; border-color: #3E50B4;">Finish</button></a>
 				</br>
 				</br>
 			</center>
@@ -64,34 +64,33 @@
 	  		<div class="bar"></div>
 		</div>
 		
-
-		<p>Current Progress: {{PercentCompleted}}%</p>
-		<p>Estimated Time Left: 6hr 30min</p>
-
 		<div>
-		<button id="checkpoint0">See what happens when checkpoint timer hits 0</button>	</br>
-		</br>
-		<button id="checkpoint1">See what happens when 1 hour is left</button> 
+			<p>Current Progress: {{PercentCompleted}}%</p>
+			<p>Estimated Time Left: 6hr 30min</p>
+		</div>
+		<div>
+			<button id="checkpoint0">See what happens when checkpoint timer hits 0</button>	</br>
+			</br>
+			<button id="checkpoint1">See what happens when 1 hour is left</button> 
 		</div>
 
-
+	</div>
 		<div id="myModal" class="modal">
-        <div class="modal-content">
-            <!--<span class="close">&times;</span>-->            
-            <div class="startOptions">
-                <h6>Enter your progress<button onclick="checkPointInfo()">?</button><br> <input type="text" name="checkpointInterval"><br></h6>
-                <span class="close" onclick="setCheckPoint()"><p> Next </p></span>
-            </div>
-        </div>            
-    </div>
+        	<div class="modal-content">
+            	<!--<span class="close">&times;</span>-->            
+            	<div class="startOptions">
+                	<h6>Enter your progress<button onclick="checkPointInfo()">?</button><br> <input type="text" name="checkpointInterval"><br></h6>
+                	<span class="close" onclick="setCheckPoint()"><p> Next </p></span>
+            	</div>
+        	</div>            
+    	</div>
 
-		
+	
 		<!--<script data-main="app" src="../requirejs/require.js"></script> -->
 		<script src="https://code.jquery.com/jquery.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/progress.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 		<script src="jquery-countdown/dist/jquery.countdown.js"></script>	
-	</div>
-</body>
+	</body>
 </html>
