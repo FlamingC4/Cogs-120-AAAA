@@ -1,8 +1,7 @@
 $(document).ready(function() {
     $("html, body").animate({ scrollTop: 400 }, "slow");
 
-    //$("html, body").animate({ scrollTop: $(document).height() }, "slow");
-    console.log("wtf");
+    //$("html, body").animate({ scrollTop: $(document).height() }, "slow");    
 });
 
 function checkPointIntervalAlert(){
