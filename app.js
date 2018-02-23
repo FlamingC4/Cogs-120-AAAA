@@ -11,7 +11,7 @@ var handlebars = require('express3-handlebars');
 var index = require('./routes/index');
 var login = require('./routes/login');
 var home = require('./routes/home-page');
-var enterName = require('./routes/enter-name');
+//var enterName = require('./routes/enter-name');
 var enterDetails = require('./routes/enterDetails');
 var startCountdown = require('./routes/start-countdown');
 var progressChecker = require('./routes/progress-checker');
@@ -52,11 +52,11 @@ app.get('/home-page', home.view);
 //app.get('/enter-name', enterName.enter); DOESN'T WORK
 app.get('/enterDetails', enterDetails.view);
 app.get('/progress-checker', progressChecker.view);
-app.get('/start-countdown', startCountdown.view);
 app.get('/edit-assignment-from-start', editAssignStart.view);
 app.get('/edit-assignment', editAssign.view);
 app.get('/user-settings', userSettings.view);
 app.post('/enterDetails', enterDetails.view);
+app.post('/start-countdown', startCountdown.view);
 //app.get('/edit-assignment', editAssignment.view);
 // Example route
 // app.get('/users', user.list);
