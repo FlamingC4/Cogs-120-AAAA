@@ -21,6 +21,10 @@ html, body {
 	padding-top: 70px;
 }
 
+.hideOverflow {
+	overflow: hidden;
+}
+
 .div-login {
 	padding: 0 10%;
 }
