@@ -1,9 +1,12 @@
 .centerText {
-    text-align: center;    
+    text-align: center;
+    margin-left: 1vw;
+    margin-right: 1vw;
+
 }
 
 .btnDivider {
-    width: 200px;
+    width: 50vw;
     height: auto;
     display: inline-block;
 }

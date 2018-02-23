@@ -191,12 +191,16 @@ progress(toSeconds(dueTime) , toSeconds(dueTime) /*change this hard coded variab
 
 //Close the modal
 var span = document.getElementsByClassName("close")[0];
+var span2 = document.getElementsByClassName("close")[1];
 
 //Button sound
 var btn = document.getElementById("checkpoint0");
+var btn2 = document.getElementById("1HourRemaining");
 var modal = document.getElementById('myModal');
+var modal2 = document.getElementById('myModal2');
 
 var checkpointAudio = new Audio('checkpoint.mp3');
+var oneHourRemaining = new Audio('1HourRemaining.mp3');
 
 
 btn.onclick = function() {
@@ -204,10 +208,23 @@ btn.onclick = function() {
         checkpointAudio.play();
     }
 
+btn2.onclick = function() {    
+        modal2.style.display = "block";
+        oneHourRemaining.play();
+    }
+
+
+
 //next button on modal
 span.onclick = function() {
-        modal.style.display = "none";
-    }
+    modal.style.display = "none";
+}
+
+span2.onclick = function() {
+    modal2.style.display = "none";
+}
+
+
 
 
 
