@@ -48,7 +48,8 @@ function checkInputBottom(){
     var startTime = $('#StartTime').val();
     var checkpoint = $('#Checkpoint').val();
     var estimate = $('#Estimate').val();
-
+    var dueDate = $('#DueDate').val();
+    var dueTime = $('#DueTime').val();    
 
     var good = true;
 
