@@ -51,6 +51,7 @@ app.get('/', login.view);
 app.get('/home-page', home.view);
 //app.get('/enter-name', enterName.enter); DOESN'T WORK
 app.get('/enterDetails', enterDetails.view);
+app.get('/start-countdown', startCountdown.viewFin);
 app.get('/progress-checker', progressChecker.view);
 app.get('/edit-assignment-from-start', editAssignStart.view);
 app.get('/edit-assignment', editAssign.view);
