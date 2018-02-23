@@ -9,7 +9,7 @@ $(document).ready(function() {
     getTimer();
     startTimer();
     checkpointTimer();
-});
+    });
 
 //from enter-due-date
 
