@@ -6,5 +6,8 @@ exports.view = function(req, res){
     console.log(name);  
     //console.log(currData);
     res.render('enter-name-page', {
-        "name": name});
+        "name": name
+    });
+
+    currData.
 };
