@@ -11,13 +11,24 @@ var handlebars = require('express3-handlebars');
 var index = require('./routes/index');
 var login = require('./routes/login');
 var home = require('./routes/home-page');
-//var enterName = require('./routes/enter-name');
 var enterDetails = require('./routes/enterDetails');
 var startCountdown = require('./routes/start-countdown');
 var progressChecker = require('./routes/progress-checker');
 var editAssignStart = require('./routes/edit-assignment-start');
 var editAssign = require('./routes/edit-assignment');
 var userSettings = require('./routes/edit-user-settings');
+
+
+//ALT ROUTES
+//var index = require('./routes/index');
+//var login = require('./routes/login');
+var homeAlt = require('./routes/home-pageAlt');
+var enterDetailsAlt = require('./routes/enterDetailsAlt');
+var startCountdownAlt = require('./routes/start-countdownAlt');
+var progressCheckerAlt = require('./routes/progress-checkerAlt');
+var editAssignStart = require('./routes/edit-assignment-start');
+//var editAssign = require('./routes/edit-assignment'); //CHANGE TO A MODAL
+//var userSettings = require('./routes/edit-user-settings');
 
 //var editAssignment = requre('./routes/edit-assignment');
 // Example route
@@ -61,6 +72,8 @@ app.post('/start-countdown', startCountdown.view);
 //app.get('/edit-assignment', editAssignment.view);
 // Example route
 // app.get('/users', user.list);
+
+//ALT ROUTES
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
