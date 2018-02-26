@@ -13,10 +13,10 @@ var btn2 = document.getElementById("myBtnAGAIN");
 // Get the <span> element that closes the modal
 //var span = document.getElementsByClassName("close")[0];
 
-var audio1 = new Audio('Alarm.mp3');
+var audio1 = new Audio('/Alarm.mp3');
 audio1.loop = true;
 
-var audio2 = new Audio('StrongAlarm.mp3');
+var audio2 = new Audio('/StrongAlarm.mp3');
 audio2.loop = true;
 
 // When the user clicks the button, open the modal 
