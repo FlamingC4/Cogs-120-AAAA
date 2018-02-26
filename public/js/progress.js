@@ -94,7 +94,9 @@ function getTimer(){
 //for when assignment is due
 function startTimer(/*duedate goes here*/){
     var currentDate = new Date();
-    var dueDate = getTimer(2019, 11, 31, 23, 59, 59); //change this hard code
+    currentDate.setMinutes(currentDate.getMinutes() + 5);
+    //var dueDate = getTimer(2019, 11, 31, 23, 59, 59); //change this hard code
+    var dueDate = currentDate;
     //console.log(dueDate);
 
     $('#progress-timer').countdown(dueDate, function(event) {
@@ -109,7 +111,9 @@ function startTimer(/*duedate goes here*/){
 //for checkpoint
 function checkpointTimer(/*checkpoint interval goes here*/){
     var currentDate = new Date();
-    var checkPoint = getTimer(2019, 11, 31, 23, 59, 59); //change this hard code
+    //var checkPoint = getTimer(2019, 11, 31, 23, 59, 59); //change this hard code
+    var checkPoint = getTimer(currentDate.getYear(), currentDate.getMonth(), currentDate.getDate(), 
+        currentDate.getHours(),currentDate.getMinutes() +5,currentDate.getSeconds());
     //console.log(dueDate);
 
     $('#progress-timer2').countdown(checkPoint, function(event) {
@@ -166,17 +170,21 @@ function setCheckPoint(){
 //start the global timer
 var dueTime = new Date();
 
-var dueYear = dueTime.setYear(2018);
-var dueMonth = dueTime.setMonth(2);
-var dueDay = dueTime.setDate(16);
-var dueHours = dueTime.setHours(2);
-var dueMinute = dueTime.setMinutes(0);
-var dueSecond = dueTime.setSeconds(0);
+//var dueYear = dueTime.setYear(2018);
+var dueYear = dueTime.getYear();
+var dueMonth = dueTime.getMonth();
+var dueDay = dueTime.getDate();
+var dueHours = dueTime.getHours();
+var dueMinute = dueTime.setMinutes(dueTime.getMinutes() + 5);
+var dueSecond = dueTime.getSeconds();
 
-console.log(toSeconds(dueTime));//sort of works
+//console.log(toSeconds(dueTime));//sort of works
 
 //placeholder time independent of everything
-progress(toSeconds(dueTime) , toSeconds(dueTime) /*change this hard coded variable*/, $('#progressBarz'));
+//progress(toSeconds(dueTime) , toSeconds(dueTime) /*change this hard coded variable*/, $('#progressBarz'));
+progress(300, 300 /*change this hard coded variable*/, $('#progressBarz'));
+
+
 
 //Close the modal
 var span = document.getElementsByClassName("close")[0];
