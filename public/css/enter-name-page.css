@@ -34,12 +34,12 @@ h1 {
 }
 
 .arrow-finish {
-    margin-bottom: 15vh;
+    margin-bottom: 10vh;
     margin-right: 10vw;
 }
 
 .spacedLink {
-   margin-top: 30px; 
+   margin-top: -15px; 
    margin-bottom: 30px;
    display: block;
 }
