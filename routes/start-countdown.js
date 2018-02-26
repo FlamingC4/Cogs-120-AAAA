@@ -15,6 +15,7 @@ exports.view = function(req, res){
      "actual_time" : " "
   }
   record.project.push(newEntry);  
+  count["viewAlt"] = false;
 };
 
 exports.viewAlt = function(req, res){
@@ -31,5 +32,6 @@ exports.viewAlt = function(req, res){
      "actual_time" : " "
   }
   record.project.push(newEntry);  
+  count["viewAlt"] = true;
 };
 
