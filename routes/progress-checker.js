@@ -5,3 +5,9 @@ exports.view = function(req, res){
   console.log(progress);
   res.render('progress-checker', progress);
 };
+
+exports.viewAlt = function(req, res){
+  console.log(progress);
+  res.render('progress-checker', progress);
+};
+
