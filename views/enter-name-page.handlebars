@@ -40,11 +40,11 @@
         <div>
             <form action="/start-countdown" method="POST">
                 <div class="input-field col s12">
-                    <input placeholder="Enter in MM/DD/YYYY format" name="detail[DueDate]" id="DueDate" type="text" class="validate">
+                    <input placeholder="Enter in MM/DD/YYYY format  ex: 01/04/2020" name="detail[DueDate]" id="DueDate" type="text" class="validate">
                     <label for="DueDate">Due Date</label>
                 </div>
                 <div class="input-field col s12">
-                    <input placeholder="Enter in hrs:mins format" name="detail[DueTime]" id="DueTime" type="text" class="validate">
+                    <input placeholder="Enter in hrs:mins format ex:21:12" name="detail[DueTime]" id="DueTime" type="text" class="validate">
                     <label for="DueTime">Due Time</label>
                 </div>
                 <div class="right next-arrow-pos">
@@ -58,22 +58,23 @@
 
             <!--Second set of forms to enter -->
             <div id="start-forms">
+            </br>
                 <div class="input-field col s12">
-                    <input placeholder="Enter in MM/DD/YYYY format" name="detail[StartDate]" id="StartDate" type="text" class="validate">
+                    <input placeholder="Enter in MM/DD/YYYY format ex:01/04/2020" name="detail[StartDate]" id="StartDate" type="text" class="validate">
                     <label for="StartDate">Desired Start Date</label>
                 </div>
                 <div class="input-field col s12">
-                    <input placeholder="Enter in hrs:mins format" name="detail[StartTime]" id="StartTime" type="text" class="validate">
+                    <input placeholder="Enter in hrs:mins format ex:01:12" name="detail[StartTime]" id="StartTime" type="text" class="validate">
                     <label for="StartTime">Desired Start Time</label>
                 </div>
 
                 <div class="input-field col s6">
-                    <input placeholder="Enter in hrs:mins format" name="detail[Checkpoint]" id="Checkpoint" type="text" class="validate">
+                    <input placeholder="Enter in hrs:mins format ex:21:12" name="detail[Checkpoint]" id="Checkpoint" type="text" class="validate">
                     <label for="Checkpoint">Checkpoint Interval</label>
                 </div>
                 
                 <div class="input-field col s12">
-                    <input placeholder="Enter in hrs:mins format" name="detail[Estimate]" id="Estimate" type="text" class="validate">
+                    <input placeholder="Enter in hrs:mins format ex:11:12" name="detail[Estimate]" id="Estimate" type="text" class="validate">
                     <label for="Estimate">Estimated Hours Until Completion</label>
                 </div>
             </div>
