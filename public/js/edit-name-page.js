@@ -13,7 +13,7 @@ $(document).ready(function() {
 }); */
 
 function checkPointIntervalAlert(){
-	alert("How often you would like to be notified to enter progress)");
+	alert("How often you would like to be notified to enter progress");
 }
 
 //check input from enter-name-page when user clicks submit
@@ -26,23 +26,23 @@ function checkInputTop(){
  	
     if(!checkDateFormat(dueDate)){
     	alert("Please format Due Date to MM/DD/YYYY");
-    	$("#DueDate").css("background-color","#ff3333");
+    	$("#DueDate").css("background-color","#ffff99");
     	good = false;	    	
     }
     else if(!checkValidDate(dueDate)){
     	alert("Please make sure Due Date is today or later");
-    	$("#DueDate").css("background-color","#ff3333");
+    	$("#DueDate").css("background-color","#ffff99");
     	good = false;
     }
 
     if(!checkTimeFormat(dueTime)){
     	alert("Please format time in HH:MM in 24 hour format");
-    	$("#DueTime").css("background-color","#ff3333");
+    	$("#DueTime").css("background-color","#ffff99");
     	good = false;
     }
     else if(!checkValidTime(dueDate, dueTime)){
     	alert("Please make sure time is later than today's current time");
-    	$("#DueTime").css("background-color","#ff3333");
+    	$("#DueTime").css("background-color","#ffff99");
     	good = false;
     }
 
@@ -63,44 +63,44 @@ function checkInputBottom(){
 
      if(!checkDateFormat(startDate)){
     	alert("Please format Desired Start Date to MM/DD/YYYY");
-    	$("#StartDate").css("background-color","#ff3333");
+    	$("#StartDate").css("background-color","#ffff99");
     	good = false;
     }
     else if(!checkValidDate(startDate)){
     	alert("Please make sure Desired Start Date is today or later");
-    	$("#StartDate").css("background-color","#ff3333");
+    	$("#StartDate").css("background-color","#ffff99");
     	good = false;	    	
     }
     else if(!checkStartDateEarlierThanDueDate(dueDate, startDate)){
     	alert("Please make sure you are starting before the Due Date");
-    	$("#StartDate").css("background-color","#ff3333");
+    	$("#StartDate").css("background-color","#ffff99");
     	good = false;
     }
 
     if(!checkTimeFormat(startTime)){
     	alert("Please format Desired Start Time in HH:MM in 24 hour format");
-    	$("#StartTime").css("background-color","#ff3333");
+    	$("#StartTime").css("background-color","#ffff99");
     	good = false;
     }
     else if(!checkValidTime(startDate, startTime)){
     	alert("Please make sure Desired Start Time is later than Desired Start Time");
-    	$("#StartTime").css("background-color","#ff3333");
+    	$("#StartTime").css("background-color","#ffff99");
     	good = false;
     }
     else if(!checkStartTimeEarlierThanDueTime(dueDate, startDate, dueTime, startTime))
     {
     	alert("Please make sure you are starting before the Due Time");
-    	$("#StartTime").css("background-color","#ff3333");
+    	$("#StartTime").css("background-color","#ffff99");
     	good = false;
     }
     if(checkpoint.length == 0){
     	alert("Please format Checkpoint Interval in HH:MM in 24 hour format");
-    	$("#Checkpoint").css("background-color","#ff3333");
+    	$("#Checkpoint").css("background-color","#ffff99");
     	good = false;
     }
     if(estimate.length == 0){
     	alert("Please format Estimated Hours Until Completion in HH:MM in 24 hour format");
-    	$("#Estimate").css("background-color","#ff3333");
+    	$("#Estimate").css("background-color","#ffff99");
     	good = false;
     }
 
