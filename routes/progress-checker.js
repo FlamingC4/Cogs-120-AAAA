@@ -4,12 +4,13 @@ var list = require("../data.json");
 exports.view = function(req, res){
   //console.log(progress);
   res.render('progress-checker', progress);
-  count["viewAlt"] = false;
+   //var percentCompleted= req.body.name;  
+  list["viewAlt"] = false;
 };
 
 exports.viewAlt = function(req, res){
   //console.log(progress);
   res.render('progress-checker', progress);
-  count["viewAlt"] = true;
+  list["viewAlt"] = true;
 };
 

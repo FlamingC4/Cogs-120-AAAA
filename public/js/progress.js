@@ -1,4 +1,6 @@
 'use strict';
+//var data = require('../data.json');
+
 //var requirejs = require('requirejs');
 
 //var json = require('data.json');
@@ -25,24 +27,6 @@ function setDueDate(){
     //console.log(dueTime);
 }
 
-/*function checkDate(dueDate,dueTime){
-    for(var i = 0; i < 10; i++)
-            if(dueDate.elements[i].value >= 0)
-} 
-
-/*function move() { 
-    var elem = document.getElementById("myBar"); 
-    var width = 1;
-    var id = setInterval(frame, 10);
-    function frame() {
-        if (width >= 100) {
-            clearInterval(id);
-        } else {
-            width++; 
-            elem.style.width = width + '%'; 
-        }
-    }
-}*/
 
 //initialize the BootStrap timer
 function moveBootStrap() {    
@@ -171,7 +155,12 @@ function checkPointInfo(){
 
 //now set the checkpoint
 function setCheckPoint(){
-    
+    //console.log("hi");
+    var checkpoint = $("#checkpointInterval").val();
+    var cpBox = $("#checkpointPercent")[0];
+    //var cpBox = document.getElementById("checkpointPercent");
+    cpBox.innerHTML = "<p>Percent Completed: " + checkpoint + "%</p>";
+    //console.log("hello");
 }
 
 //start the global timer

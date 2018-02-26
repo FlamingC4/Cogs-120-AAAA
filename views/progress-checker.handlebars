@@ -65,7 +65,7 @@
 		</div>
 		
 		<div>
-			<p>Current Progress: {{PercentCompleted}}%</p>
+			<p name="checkpointPercent" id="checkpointPercent">Percent Completed: </p>
 			<p>Estimated Time Left: 6hr 30min</p>
 		</div>
 		<div>
@@ -74,6 +74,7 @@
 			<button id="1HourRemaining">See what happens when 1 hour is left</button> 
 		</div>
 
+	<!--the modals -->
 	</div>
 		<div id="myModal" class="modal">
         	<div class="modal-content">
@@ -81,10 +82,10 @@
             	<div class="startOptions">
                 	<h6>Enter your progress
                         <button onclick="checkPointInfo()">?</button><br> 
-                        <input type="text" name="checkpointInterval"><br>
+                        <input type="text" name="checkpointInterval" id ="checkpointInterval" ><br>
                     </h6>
                 	
-                    <span class="close" onclick="setCheckPoint()"><p> Next </p></span>
+                    <span class="close"><p onclick="setCheckPoint();"> Next </p></span>
             	</div>
         	</div>            
     	</div>
