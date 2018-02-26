@@ -103,12 +103,12 @@ html, body {
 }
 
 .glyphicon-plus {
-	padding: 10px 10px;
+	padding: 20px 20px;
 	border: 1px solid #009688;
 	border-radius: 50%;
 	background-color: #009688;
 	color: white;
-	font-size: 4em;
+	font-size: 2em;
 	margin-right: 5%;
 }
 
