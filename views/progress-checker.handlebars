@@ -31,6 +31,7 @@
 	  		<p>COGS 108 Assignment</p> 
 	  	</div> -->
 
+	  	
 	  	<div class="top-of-page">
 		  	<div class="row">
 		  		<div class="col-9">
@@ -40,20 +41,41 @@
 		  			<a href = "edit-assignment"> <img src="images/edit project.png" style="width:10vw;margin-top:2vw;"></a>
 		  		</div>
 		  	 </div>
-	  	 </div>
+	  	</div>
+	  		{{#if viewAlt}}
+	  		<h1> alt</h1>
+	  		{{else}}
+	  		<h1> normal</h1>
+	  		{{/if}}
+
 	  	
-	  	<div class="text-center">
-	  		<center>   	
-		  		</br>
-		  		<a href="delay-input.html"><button type="button" class="btn btn-danger btn-wide btn-block" id="pause-button" style="width:60%; background-color: #DB4437; border-color: #DB4437;" align="middle"> Pause </button>
-			  	</a>
-			  	</br>
-			  	</br>
-			  	<a href="finish-confirmation.html"><button type="button" class="btn btn-success btn-wide btn-block" id="finish-button"  style="width: 60%; background-color: #3E50B4; border-color: #3E50B4;">Finish</button></a>
-				</br>
-				</br>
-			</center>
-		</div>		
+
+	  	{{#if viewAlt}}
+		  	<div class="text-center">	  	
+		  		<center>   	
+			  		</br>		  		
+				 	 <button type="button" class="btn btn-danger btn-wide btn-block" id="pause-buttonAlt" style="width:60%; background-color: #DB4437; border-color: #DB4437;" align="middle"> Pause </button>				  	
+				  	</br>
+				  	</br>
+					<button type="button" class="btn btn-success btn-wide btn-block" id="finish-buttonAlt"  style="width: 60%; background-color: #3E50B4; border-color: #3E50B4;">Finish</button>		  	
+					</br>
+					</br>
+				</center>
+			</div>			
+		{{else}}
+		  	<div class="text-center">	  	
+		  		<center>   	
+			  		</br>	
+					<a href="delay-input.html"><button type="button" class="btn btn-danger btn-wide btn-block" id="pause-button" style="width:60%; background-color: #DB4437; border-color: #DB4437;" align="middle"> Pause </button>
+					  	</a>
+					  	</br>
+					  	</br>
+					<a href="finish-confirmation.html"><button type="button" class="btn btn-success btn-wide btn-block" id="finish-button"  style="width: 60%; background-color: #3E50B4; border-color: #3E50B4;">Finish</button></a>		 
+					</br>
+					</br>
+				</center>
+			</div>
+		{{/if}}
 		
 		<div>
 			<p style="margin-bottom: -1vw">Next checkpoint: <div id="progress-timer-2"></div></p>		
@@ -73,39 +95,79 @@
 			<p name="checkpointPercent" id="checkpointPercent">Percent Completed: </p>
 			<p>Estimated Time Left: 6hr 30min</p>
 		</div>
+
 		<div>
-			<button id="checkpoint0">See what happens when checkpoint timer hits 0</button>	</br>
+			<button id="checkpoint0">See what happens when checkpoint timer hits 0</button>
+			</br>
 			</br>
 			<button id="1HourRemaining">See what happens when 1 hour is left</button> 
 		</div>
 
 	<!--the modals -->
-	</div>
-		<div id="myModal" class="modal">
-        	<div class="modal-content">
-            	<!--<span class="close">&times;</span>-->            
-            	<div class="startOptions">
-                	<h6>Enter your progress
-                        <button onclick="checkPointInfo()">?</button><br> 
-                        <input type="text" name="checkpointInterval" id ="checkpointInterval" ><br>
-                    </h6>
-                	
-                    <span class="close"><p onclick="setCheckPoint();"> Next </p></span>
-            	</div>
-        	</div>            
-    	</div>
+		</div>
+			<div id="myModal" class="modal">
+	        	<div class="modal-content">
+	            	<!--<span class="close">&times;</span>-->            
+	            	<div class="startOptions">
+	                	<h6>Enter your progress
+	                        <button onclick="checkPointInfo()">?</button><br> 
+	                        <input type="text" name="checkpointInterval" id ="checkpointInterval" ><br>
+	                    </h6>                	
+	                    <span class="close"><p onclick="setCheckPoint();"> Next </p></span>
+	            	</div>
+	        	</div>            
+	    	</div>
 
-    	<div id="myModal2" class="modal">
-        	<div class="modal-content">
-            	<!--<span class="close">&times;</span>-->            
-            	<div class="startOptions">
-	            	<center>
-	                	<h3>One Hour Remaining!<br></h3>
-	                </center>
-                	<span class="close"> <p> Next </p></span>
-            	</div>
-        	</div>            
+	    	<div id="myModal2" class="modal">
+	        	<div class="modal-content">
+	            	<!--<span class="close">&times;</span>-->            
+	            	<div class="startOptions">
+		            	<center>
+		                	<h3>One Hour Remaining!<br></h3>
+		                </center>
+	                	<span class="close"> <p> Next </p></span>
+	            	</div>
+	        	</div>            
+	    	</div>
+
+	    	{{#if viewAlt}}
+	    	<div id="pauseModal" class="modal">
+	        	<div class="modal-content">
+	            	<!--<span class="close">&times;</span>-->            
+	            	<div class="startOptions">
+	                	<h6>Enter how long you would like to pause working: </h6>
+	                	 <div id="start-forms">
+	            	</br>
+	                <div class="input-field col s12">
+	                    <input placeholder="Enter in MM/DD/YYYY format" name="detail[StartDate]" id="StartDate" type="text" class="validate">
+	                    <label for="StartDate">Restart Date (ex. 01/04/2020)</label>
+	                </div>
+	                <div class="input-field col s12">
+	                    <input placeholder="Enter time in 24 Hours (HH:MM) format" name="detail[StartTime]" id="StartTime" type="text" class="validate">
+	                    <label for="StartTime">Restart Time (ex. 03:30)</label>
+	                </div>
+	            <div>
+	                    <span class="close"><p> Pause </p></span>
+	            	</div>
+	        	</div>            
+	    	</div>
+
+	    	<div id="finishModal" class="modal">
+	        	<div class="modal-content">
+	            	<!--<span class="close">&times;</span>-->            
+	            	<div class="startOptions">
+		            	<center>
+		                	<h3>Are you sure you are finished with your assignment?<br></h3>
+		                </center>
+		                <span class="close"> <p> Yes I am done </p></span>
+	                	<span class="close"> <p> No, I am not done </p></span>
+	            	</div>
+	        	</div>            
+	    	</div>
+	    	{{/if}}
     	</div>
+    </div>
+
 
 	
 		<!--<script data-main="app" src="../requirejs/require.js"></script> -->

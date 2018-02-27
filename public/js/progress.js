@@ -220,6 +220,7 @@ var span2 = document.getElementsByClassName("close")[1];
 //Button sound
 var btn = document.getElementById("checkpoint0");
 var btn2 = document.getElementById("1HourRemaining");
+
 var modal = document.getElementById('myModal');
 var modal2 = document.getElementById('myModal2');
 
@@ -249,10 +250,24 @@ span2.onclick = function() {
 }
 
 
+//the alt modals
+var pause = document.getElementById("pause-buttonAlt");
+var finish = document.getElementById("finish-buttonAlt");
+
+var pauseModal = document.getElementById('pauseModal');
+var finishModal = document.getElementById('finishModal');
 
 
+//alt modal audio
+var pauseAudio = new Audio('pauseScreenSound.mp3');
+var finishAudio = new Audio('finishConfirmationSound.mp3');
 
+pause.onclick = function() {
+    pauseModal.style.display = "block";
+    pauseAudio.play();
+}
 
-
-
-
+finish.onclick = function() {    
+    finishModal.style.display = "block";
+    finishAudio.play();
+}

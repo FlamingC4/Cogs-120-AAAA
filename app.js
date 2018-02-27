@@ -21,15 +21,15 @@ var userSettings = require('./routes/edit-user-settings');
 
 
 //ALT ROUTES
-//var index = require('./routes/index');
-//var login = require('./routes/login');
+//var indexAlt = require('./routes/index');
+//var loginAlt = require('./routes/login');
 //var homeAlt = require('./routes/home-pageAlt');
 var enterDetailsAlt = require('./routes/enterDetails');
 var startCountdownAlt = require('./routes/start-countdown');
 var progressCheckerAlt = require('./routes/progress-checker');
 var editAssignStartAlt = require('./routes/edit-assignment-start');
-//var editAssign = require('./routes/edit-assignment'); //CHANGE TO A MODAL
-//var userSettings = require('./routes/edit-user-settings');
+//var editAssignAlt = require('./routes/edit-assignment'); //CHANGE TO A MODAL
+//var userSettingsAlt = require('./routes/edit-user-settings');
 
 //var editAssignment = requre('./routes/edit-assignment');
 // Example route
