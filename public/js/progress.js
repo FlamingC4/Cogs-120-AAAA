@@ -262,12 +262,26 @@ var finishModal = document.getElementById('finishModal');
 var pauseAudio = new Audio('pauseScreenSound.mp3');
 var finishAudio = new Audio('finishConfirmationSound.mp3');
 
+
 pause.onclick = function() {
     pauseModal.style.display = "block";
     pauseAudio.play();
 }
 
-finish.onclick = function() {    
+finish.onclick = function() {       
     finishModal.style.display = "block";
     finishAudio.play();
+}
+
+
+//close modals
+var closePause = document.getElementsByClassName("close")[2];
+var closeFinish = document.getElementsByClassName("close")[3];
+
+closePause.onclick = function() {
+    pauseModal.style.display = "none";
+}
+
+closeFinish.onclick = function() {
+    finishModal.style.display = "none";
 }

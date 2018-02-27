@@ -57,7 +57,7 @@
 				 	 <button type="button" class="btn btn-danger btn-wide btn-block" id="pause-buttonAlt" style="width:60%; background-color: #DB4437; border-color: #DB4437;" align="middle"> Pause </button>				  	
 				  	</br>
 				  	</br>
-					<button type="button" class="btn btn-success btn-wide btn-block" id="finish-buttonAlt"  style="width: 60%; background-color: #3E50B4; border-color: #3E50B4;">Finish</button>		  	
+					<button type="button" class="btn btn-success btn-wide btn-block" id="finish-buttonAlt"  style="width: 60%; background-color: #3E50B4; border-color: #3E50B4;" align="middle">Finish</button>		  	
 					</br>
 					</br>
 				</center>
@@ -78,7 +78,7 @@
 		{{/if}}
 		
 		<div>
-			<p style="margin-bottom: -1vw">Next checkpoint: <div id="progress-timer-2"></div></p>		
+			<p style="margin-bottom: -1vw">Next checkpoint: <div id="progress-timer-2"></div></p>	
 		</div>
 		
 		<div id="progressBarz">
@@ -136,21 +136,23 @@
 	            	<!--<span class="close">&times;</span>-->            
 	            	<div class="startOptions">
 	                	<h6>Enter how long you would like to pause working: </h6>
-	                	 <div id="start-forms">
-	            	</br>
-	                <div class="input-field col s12">
-	                    <input placeholder="Enter in MM/DD/YYYY format" name="detail[StartDate]" id="StartDate" type="text" class="validate">
-	                    <label for="StartDate">Restart Date (ex. 01/04/2020)</label>
-	                </div>
-	                <div class="input-field col s12">
-	                    <input placeholder="Enter time in 24 Hours (HH:MM) format" name="detail[StartTime]" id="StartTime" type="text" class="validate">
-	                    <label for="StartTime">Restart Time (ex. 03:30)</label>
-	                </div>
-	            <div>
-	                    <span class="close"><p> Pause </p></span>
-	            	</div>
-	        	</div>            
-	    	</div>
+	                	<div id="start-forms">
+	            			</br>
+			                <div class="input-field col s12">
+			                    <input placeholder="Enter in MM/DD/YYYY format" name="detail[StartDate]" id="StartDate" type="text" class="validate">
+			                    <label for="StartDate">Restart Date (ex. 01/04/2020)</label>
+			                </div>
+			                <div class="input-field col s12">
+			                    <input placeholder="Enter time in 24 Hours (HH:MM) format" name="detail[StartTime]" id="StartTime" type="text" class="validate">
+			                    <label for="StartTime">Restart Time (ex. 03:30)</label>
+			                </div>
+			            	<div>
+			                    <span class="close"><p> Pause </p></span>
+			            	</div>
+	        			</div>            
+	    			</div>
+	    		</div>
+	    	</div>	    	
 
 	    	<div id="finishModal" class="modal">
 	        	<div class="modal-content">
@@ -159,7 +161,7 @@
 		            	<center>
 		                	<h3>Are you sure you are finished with your assignment?<br></h3>
 		                </center>
-		                <span class="close"> <p> Yes I am done </p></span>
+		                <a href = "home-page"> <p> Yes I am done </p></a>
 	                	<span class="close"> <p> No, I am not done </p></span>
 	            	</div>
 	        	</div>            
@@ -176,5 +178,6 @@
 		<script src="js/progress.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 		<script src="jquery-countdown/dist/jquery.countdown.js"></script>	
+		<script type="text/javascript" src="js/materialize.js"></script>
 	</body>
 </html>
