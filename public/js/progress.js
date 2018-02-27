@@ -90,13 +90,33 @@ function getTimer(){
     return dueDate;
 }
 
+function setTimer(){
+    /*var dueDate = new Date();
+
+   // var dueDateString =  $('#DueDate').val();
+    //console.log(dueDateString); //undefined
+    //var dueTimeString =  $('#DueTime').val();
+    //var dueDateArray = dueDateString.split('');
+    //var dueTimeArray = dueTimeString.split('');
+
+    dueDate.setYear(parseInt(dueDateArray[6] + dueDateArray[7] + dueDateArray[8] +dueDateArray[9]));
+    dueDate.setMonth(parseInt(dueDateArray[0] + dueDateArray[1]));
+    dueDate.setDate(parseInt(dueDateArray[2] + dueDateArray[3]));
+    dueDate.setHours(parseInt(dueTimeString[0] + dueTimeString[1]));
+    dueDate.setMinutes(parseInt(dueTimeString[2] + dueTimeString[3]));
+
+    return dueDate;*/
+}
+
 
 //for when assignment is due
-function startTimer(/*duedate goes here*/){
+function startTimer(){
     var currentDate = new Date();
     currentDate.setMinutes(currentDate.getMinutes() + 5);
     //var dueDate = getTimer(2019, 11, 31, 23, 59, 59); //change this hard code
     var dueDate = currentDate;
+
+   
     //console.log(dueDate);
 
     $('#progress-timer').countdown(dueDate, function(event) {
@@ -111,12 +131,15 @@ function startTimer(/*duedate goes here*/){
 //for checkpoint
 function checkpointTimer(/*checkpoint interval goes here*/){
     var currentDate = new Date();
+    
     //var checkPoint = getTimer(2019, 11, 31, 23, 59, 59); //change this hard code
-    var checkPoint = getTimer(currentDate.getYear(), currentDate.getMonth(), currentDate.getDate(), 
-        currentDate.getHours(),currentDate.getMinutes() +5,currentDate.getSeconds());
+    /*var checkPoint = getTimer(currentDate.getYear(), currentDate.getMonth(), currentDate.getDate(), 
+        currentDate.getHours(),currentDate.getMinutes() +5,currentDate.getSeconds());*/
+    currentDate.setMinutes(currentDate.getMinutes() + 3)
     //console.log(dueDate);
+    var checkpoint = currentDate;
 
-    $('#progress-timer2').countdown(checkPoint, function(event) {
+    $('#progress-timer-2').countdown(checkpoint, function(event) {
         $(this).html(event.strftime('%w weeks %d days %H:%M:%S'));    
     });
 
@@ -166,6 +189,10 @@ function setCheckPoint(){
     cpBox.innerHTML = "<p>Percent Completed: " + checkpoint + "%</p>";
     //console.log("hello");
 }
+
+
+//setTimer (too pass in information from enter-name-page)
+var coundownTillDue = setTimer();
 
 //start the global timer
 var dueTime = new Date();
