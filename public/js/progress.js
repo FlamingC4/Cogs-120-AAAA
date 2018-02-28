@@ -120,7 +120,7 @@ function startTimer(){
     //console.log(dueDate);
 
     $('#progress-timer').countdown(dueDate, function(event) {
-        $(this).html(event.strftime('%w weeks %d days %H:%M:%S'));    
+        $(this).html(event.strftime('%d days %H:%M:%S'));    
     });
 
     //console.log(toSeconds(dueDate));
@@ -140,7 +140,7 @@ function checkpointTimer(/*checkpoint interval goes here*/){
     var checkpoint = currentDate;
 
     $('#progress-timer-2').countdown(checkpoint, function(event) {
-        $(this).html(event.strftime('%w weeks %d days %H:%M:%S'));    
+        $(this).html(event.strftime('%H:%M:%S'));    
     });
 
     //console.log(toSeconds(dueDate));
@@ -186,7 +186,7 @@ function setCheckPoint(){
     var checkpoint = $("#checkpointInterval").val();
     var cpBox = $("#checkpointPercent")[0];
     //var cpBox = document.getElementById("checkpointPercent");
-    cpBox.innerHTML = "<p>Percent Completed: " + checkpoint + "%</p>";
+    cpBox.innerHTML = "<p>Percent Completed: " + checkpoint + "</p>";
     //console.log("hello");
 }
 
@@ -276,7 +276,7 @@ finish.onclick = function() {
 
 //close modals
 var closePause = document.getElementsByClassName("close")[2];
-var closeFinish = document.getElementsByClassName("close")[3];
+var closeFinish = document.getElementsByClassName("close")[4];
 
 closePause.onclick = function() {
     pauseModal.style.display = "none";

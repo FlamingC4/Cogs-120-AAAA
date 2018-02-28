@@ -22,7 +22,7 @@ var userSettings = require('./routes/edit-user-settings');
 
 //ALT ROUTES
 //var indexAlt = require('./routes/index');
-//var loginAlt = require('./routes/login');
+var loginAlt = require('./routes/login');
 //var homeAlt = require('./routes/home-pageAlt');
 var enterDetailsAlt = require('./routes/enterDetails');
 var startCountdownAlt = require('./routes/start-countdown');
@@ -62,6 +62,7 @@ if ('development' == app.get('env')) {
 app.get('/', login.view);
 app.get('/home-page', home.view);
 //app.get('/enter-name', enterName.enter); DOESN'T WORK
+
 app.get('/enterDetails', enterDetails.view);
 app.get('/start-countdown', startAgain.view);
 app.get('/progress-checker', progressChecker.view);
@@ -79,6 +80,7 @@ app.get('/enterDetailsAlt', enterDetails.viewAlt);
 app.get('/start-countdownAlt', startAgain.viewAlt);
 app.get('/progress-checkerAlt', progressChecker.viewAlt);
 app.get('/edit-assignment-from-startAlt', editAssignStart.viewAlt);
+app.get('/Alt', login.viewAlt);
 //app.get('/edit-assignment', editAssign.view);
 //app.get('/user-settings', userSettings.view);
 //app.post('/enterDetails', enterDetails.view);
