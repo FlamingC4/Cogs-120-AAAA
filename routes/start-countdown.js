@@ -11,7 +11,7 @@ exports.view = function(req, res){
   
   var newEntry = {
      "name": count.name,
-     "estimated_time" : count.details.EstimateHH + ":"  count.deatails.estimteMM + " hours",
+     "estimated_time" : count.details.EstimateHH + ":" + count.details.EstimateMM + " hours",
      "actual_time" : " ",
   }
   record.project.push(newEntry);  

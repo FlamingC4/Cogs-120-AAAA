@@ -20,30 +20,43 @@ function checkPointIntervalAlert(){
 //check input from enter-name-page when user clicks submit
 function checkInputTop(){
 
-	var dueDate = $('#DueDate').val();
-    var dueTime = $('#DueTime').val();    
+	var dueDateMM = $('#DueDateMM').val();
+	var dueDateDD = $('#DueDateDD').val();
+	var dueDateYYYY = $('#DueDateYYYY').val();
+	var dueDate = dueDateMM + '/' + dueDateDD + '/' + dueDateYYYY;
+
+
+    var dueTimeHH = $('#DueTimeHH').val(); 
+    var dueTimeMM = $('#DueTimeMM').val();
+    var dueTime = dueTimeHH + ":" + dueTimeMM;       
 
  	var good = true;
  	
     if(!checkDateFormat(dueDate)){
     	alert("Please format Due Date to MM/DD/YYYY");
-    	$("#DueDate").css("background-color","#ffff99");
+    	$("#wrong1").css("background-color","#ffff99");
+    	$("#wrong2").css("background-color","#ffff99");
+    	$("#wrong3").css("background-color","#ffff99");
     	good = false;	    	
     }
     else if(!checkValidDate(dueDate)){
     	alert("Please make sure Due Date is today or later");
-    	$("#DueDate").css("background-color","#ffff99");
+    	$("#wrong1").css("background-color","#ffff99");
+    	$("#wrong2").css("background-color","#ffff99");
+    	$("#wrong3").css("background-color","#ffff99");
     	good = false;
     }
 
     if(!checkTimeFormat(dueTime)){
     	alert("Please format time in HH:MM in 24 hour format");
-    	$("#DueTime").css("background-color","#ffff99");
+    	$("#wrong4").css("background-color","#ffff99");
+    	$("#wrong5").css("background-color","#ffff99");
     	good = false;
     }
     else if(!checkValidTime(dueDate, dueTime)){
     	alert("Please make sure time is later than today's current time");
-    	$("#DueTime").css("background-color","#ffff99");
+    	$("#wrong4").css("background-color","#ffff99");
+    	$("#wrong5").css("background-color","#ffff99");
     	good = false;
     }
 
@@ -53,55 +66,89 @@ function checkInputTop(){
    
 
 function checkInputBottom(){
-	var startDate = $('#StartDate').val();
-    var startTime = $('#StartTime').val();
-    var checkpoint = $('#Checkpoint').val();
-    var estimate = $('#Estimate').val();
-    var dueDate = $('#DueDate').val();
-    var dueTime = $('#DueTime').val();
+	
+	var startDateMM = $('#StartDateMM').val();
+	var startDateDD = $('#StartDateDD').val();
+	var startDateYYYY = $('#StartDateYYYY').val();	
+	var startDate = startDateMM + '/' + startDateDD + '/' + startDateYYYY;
+
+    var startTimeHH = $('#StartTimeHH').val();
+    var startTimeMM = $('#StartTimeMM').val();
+    var startTime = startTimeHH + ':' + startTimeMM;
+
+   
+    var checkpointHH = $('#CheckpointHH').val();
+    var checkpointMM = $('#CheckpointMM').val();
+    var checkpoint = checkpointHH + ":" + checkpointMM;
+
+    var estimateHH = $('#EstimateHH').val(); 
+    var estimateMM = $('#EstimateMM').val();
+    var estimate = estimateHH + ':' + estimateMM;
+
+    var dueDateMM = $('#DueDateMM').val();
+	var dueDateDD = $('#DueDateDD').val();
+	var dueDateYYYY = $('#DueDateYYYY').val();
+	var dueDate = dueDateMM + '/' + dueDateDD + '/' + dueDateYYYY;
+
+
+    var dueTimeHH = $('#DueTimeHH').val(); 
+    var dueTimeMM = $('#DueTimeMM').val();
+    var dueTime = dueTimeHH + ":" + dueTimeMM;  
 
     var good = true;
 
      if(!checkDateFormat(startDate)){
     	alert("Please format Desired Start Date to MM/DD/YYYY");
-    	$("#StartDate").css("background-color","#ffff99");
+    	$("#wrong6").css("background-color","#ffff99");
+    	$("#wrong7").css("background-color","#ffff99");
+    	$("#wrong8").css("background-color","#ffff99");
     	good = false;
     }
     else if(!checkValidDate(startDate)){
     	alert("Please make sure Desired Start Date is today or later");
-    	$("#StartDate").css("background-color","#ffff99");
+    	$("#wrong6").css("background-color","#ffff99");
+    	$("#wrong7").css("background-color","#ffff99");
+    	$("#wrong8").css("background-color","#ffff99");
     	good = false;	    	
     }
     else if(!checkStartDateEarlierThanDueDate(dueDate, startDate)){
     	alert("Please make sure you are starting before the Due Date");
-    	$("#StartDate").css("background-color","#ffff99");
+    	$("#wrong6").css("background-color","#ffff99");
+    	$("#wrong7").css("background-color","#ffff99");
+    	$("#wrong8").css("background-color","#ffff99");
     	good = false;
     }
 
     if(!checkTimeFormat(startTime)){
     	alert("Please format Desired Start Time in HH:MM in 24 hour format");
-    	$("#StartTime").css("background-color","#ffff99");
+    	$("#wrong9").css("background-color","#ffff99");
+    	$("#wrong10").css("background-color","#ffff99");    	
     	good = false;
     }
     else if(!checkValidTime(startDate, startTime)){
     	alert("Please make sure Desired Start Time is later than Desired Start Time");
-    	$("#StartTime").css("background-color","#ffff99");
+    	$("#wrong9").css("background-color","#ffff99");
+    	$("#wrong10").css("background-color","#ffff99"); 
     	good = false;
     }
     else if(!checkStartTimeEarlierThanDueTime(dueDate, startDate, dueTime, startTime))
     {
     	alert("Please make sure you are starting before the Due Time");
-    	$("#StartTime").css("background-color","#ffff99");
+    	$("#wrong9").css("background-color","#ffff99");
+    	$("#wrong10").css("background-color","#ffff99"); 
     	good = false;
     }
-    if(checkpoint.length == 0){
+    if(checkpoint.length != 5){
     	alert("Please format Checkpoint Interval in HH:MM in 24 hour format");
-    	$("#Checkpoint").css("background-color","#ffff99");
+    	$("#wrong11").css("background-color","#ffff99");
+    	$("#wrong12").css("background-color","#ffff99"); 
     	good = false;
     }
-    if(estimate.length == 0){
+    if(estimate.length != 5){
     	alert("Please format Estimated Hours Until Completion in HH:MM in 24 hour format");
     	$("#Estimate").css("background-color","#ffff99");
+    	$("#wrong13").css("background-color","#ffff99");
+    	$("#wrong14").css("background-color","#ffff99"); 
     	good = false;
     }
 
@@ -272,7 +319,7 @@ function checkStartTimeEarlierThanDueTime(dueDate, startDate, dueTime, startTime
 	var startDateArray = startDate.split('');
 
 	//split time
-	console.log(dueDate);
+	
 	var dueTimeArray = dueTime.split('');
 	var startTimeArray = startTime.split('');
 
