@@ -276,7 +276,7 @@ finish.onclick = function() {
 
 //close modals
 var closePause = document.getElementsByClassName("close")[2];
-var closeFinish = document.getElementsByClassName("close")[3];
+var closeFinish = document.getElementsByClassName("close")[4];
 
 closePause.onclick = function() {
     pauseModal.style.display = "none";
