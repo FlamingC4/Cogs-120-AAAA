@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	$('select').material_select();
    /* $("html, body").animate({ scrollTop: 400 }, "slow");*/
 
     //$("html, body").animate({ scrollTop: $(document).height() }, "slow");    

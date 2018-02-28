@@ -21,7 +21,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container" id="top">
         <div class="top-of-page">
             <div class="row nav-header">
                 <div class="col-3">
@@ -36,38 +36,341 @@
         <div class="col-12">
             <h1 class="project-name">{{name}} Details:</h1>
         </div>
-
-        <div>
-            <form action="/start-countdown" method="POST">
-                <div class="input-field col s12">
+        <form action="/start-countdown" method="POST" class="col-12">
+            <fieldset>
+                <legend>Due date</legend>
+                <div class="row mmddyyyy">
+                    <div class="input-field col-3">
+                        <select id="choose-options" class="validate">
+                            <option value="" disabled selected>MM</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>    
+                    </div>
+                    <div class="input-field col-3">
+                        <select id="choose-options">
+                            <option value="" disabled selected>DD</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="1">4</option>
+                            <option value="2">5</option>
+                            <option value="3">6</option>
+                            <option value="1">7</option>
+                            <option value="2">8</option>
+                            <option value="3">9</option>
+                            <option value="1">10</option>
+                            <option value="2">11</option>
+                            <option value="3">12</option>
+                            <option value="1">13</option>
+                            <option value="2">14</option>
+                            <option value="3">15</option>
+                            <option value="1">16</option>
+                            <option value="2">17</option>
+                            <option value="3">18</option>
+                            <option value="1">19</option>
+                            <option value="2">20</option>
+                            <option value="3">21</option>
+                            <option value="1">22</option>
+                            <option value="2">23</option>
+                            <option value="3">24</option>
+                            <option value="1">25</option>
+                            <option value="2">26</option>
+                            <option value="3">27</option>
+                            <option value="1">28</option>
+                            <option value="2">29</option>
+                            <option value="3">30</option>
+                            <option value="1">31</option>
+                        </select>    
+                    </div>
+                    <div class="input-field col-3">
+                        <select id="choose-options">
+                            <option value="" disabled selected>YYYY</option>
+                            <option value="1">2018</option>
+                            <option value="2">2019</option>
+                            <option value="3">2020</option>
+                            <option value="4">2021</option>
+                            <option value="5">2022</option>
+                        </select>    
+                    </div>
+                </div>   <!-- end row -->
+            </fieldset>
+            <fieldset>
+                <legend>Due time</legend>
+                <div class="row hhmm">
+                    <div class="input-field col-3">
+                        <select id="choose-options" class="validate">
+                            <option value="" disabled selected>HH</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>    
+                    </div>
+                    <div class="input-field col-3">
+                        <select id="choose-options">
+                            <option value="" disabled selected>MM</option>
+                            <option value="1">00</option>
+                            <option value="2">05</option>
+                            <option value="1">10</option>
+                            <option value="3">15</option>
+                            <option value="2">20</option>                                
+                            <option value="1">25</option>
+                            <option value="3">30</option>
+                            <option value="1">35</option>
+                            <option value="2">40</option>
+                            <option value="1">45</option>
+                            <option value="3">50</option>
+                            <option value="2">55</option>                                
+                            <option value="1">60</option>
+                        </select>    
+                    </div>
+                </div>
+            </fieldset>
+        <!--        <div class="input-field col s12">
                     <input placeholder="Enter in MM/DD/YYYY format" name="detail[DueDate]" id="DueDate" type="text" class="validate">
                     <label for="DueDate">Due Date (ex. 01/04/2020)</label>
                 </div>
                 <div class="input-field col s12">
                     <input placeholder="Enter time in 24 Hours (HH:MM) format" name="detail[DueTime]" id="DueTime" type="text" class="validate">
                     <label for="DueTime">Due Time (ex. 03:30)</label>
-                </div>
-                <div class="right next-arrow-pos" onclick="return checkInputTop();">
-                    <a href="#start-forms"><img class="arrow-space" src="images/Arrow3.png"></a>
-                </div>
-            </div>
+                </div> -->
+            <div class="right next-arrow-pos" onclick="return checkInputTop();">
+                <a href="#start-forms"><img class="arrow-space" src="images/Arrow3.png"></a>
+            </div> 
+
             <!-- checkInputTop for when the user clicks the arrow-->
             <!--<a onclick="return checkInputBottom();" href="start-countdown" class="spacedLink">Continue</a>-->
             <!-- Div that contains empty space, to give illusion of two pages -->
             <div class="middle-spacer"></div>
 
             <!--Second set of forms to enter -->
-            <div id="start-forms">
+            <div class="right bottom-form">
+            <div class="left arrow-back">
+                <a href="#top"><img src="images/Arrow-back.png"></a>
+            </div>
+               
+            </div>
+            <div id="start-forms"></div>
             </br>
-                <div class="input-field col s12">
-                    <input placeholder="Enter in MM/DD/YYYY format" name="detail[StartDate]" id="StartDate" type="text" class="validate">
-                    <label for="StartDate">Desired Start Date (ex.01/04/2020)</label>
+            <fieldset>
+                <legend>Desired Start Date:</legend>
+                <div class="row">
+                    <div class="input-field col-3">
+                        <select id="choose-options" class="validate">
+                            <option value="" disabled selected>MM</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>    
+                    </div>
+                    <div class="input-field col-3">
+                        <select id="choose-options">
+                            <option value="" disabled selected>DD</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="1">4</option>
+                            <option value="2">5</option>
+                            <option value="3">6</option>
+                            <option value="1">7</option>
+                            <option value="2">8</option>
+                            <option value="3">9</option>
+                            <option value="1">10</option>
+                            <option value="2">11</option>
+                            <option value="3">12</option>
+                            <option value="1">13</option>
+                            <option value="2">14</option>
+                            <option value="3">15</option>
+                            <option value="1">16</option>
+                            <option value="2">17</option>
+                            <option value="3">18</option>
+                            <option value="1">19</option>
+                            <option value="2">20</option>
+                            <option value="3">21</option>
+                            <option value="1">22</option>
+                            <option value="2">23</option>
+                            <option value="3">24</option>
+                            <option value="1">25</option>
+                            <option value="2">26</option>
+                            <option value="3">27</option>
+                            <option value="1">28</option>
+                            <option value="2">29</option>
+                            <option value="3">30</option>
+                            <option value="1">31</option>
+                        </select>    
+                    </div>
+                    <div class="input-field col-3">
+                        <select id="choose-options">
+                            <option value="" disabled selected>YYYY</option>
+                            <option value="1">2018</option>
+                            <option value="2">2019</option>
+                            <option value="3">2020</option>
+                            <option value="4">2021</option>
+                            <option value="5">2022</option>
+                        </select>    
+                    </div>
                 </div>
-                <div class="input-field col s12">
+            </fieldset>
+        <!--        <div class="input-field col s12">
+                    <label for="StartDate">Desired Start Date (ex.01/04/2020)</label>
+                    <input placeholder="Enter in MM/DD/YYYY format" name="detail[StartDate]" id="StartDate" type="text" class="validate">
+                    
+                </div> -->
+            <fieldset>
+                <legend>Desired Start Time:</legend>
+                <div class="row">
+                    <div class="input-field col-3">
+                        <select id="choose-options" class="validate">
+                            <option value="" disabled selected>HH</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>    
+                    </div>
+                    <div class="input-field col-3">
+                        <select id="choose-options">
+                            <option value="" disabled selected>MM</option>
+                            <option value="1">00</option>
+                            <option value="2">05</option>
+                            <option value="1">10</option>
+                            <option value="3">15</option>
+                            <option value="2">20</option>                                
+                            <option value="1">25</option>
+                            <option value="3">30</option>
+                            <option value="1">35</option>
+                            <option value="2">40</option>
+                            <option value="1">45</option>
+                            <option value="3">50</option>
+                            <option value="2">55</option>                                
+                            <option value="1">60</option>
+                        </select>    
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Checkpoint Interval:</legend>
+                <div class="row">
+                    <div class="input-field col-3">
+                        <select id="choose-options" class="validate">
+                            <option value="" disabled selected>HH</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>    
+                    </div>
+                    <div class="input-field col-3">
+                        <select id="choose-options">
+                            <option value="" disabled selected>MM</option>
+                            <option value="1">00</option>
+                            <option value="2">05</option>
+                            <option value="1">10</option>
+                            <option value="3">15</option>
+                            <option value="2">20</option>                                
+                            <option value="1">25</option>
+                            <option value="3">30</option>
+                            <option value="1">35</option>
+                            <option value="2">40</option>
+                            <option value="1">45</option>
+                            <option value="3">50</option>
+                            <option value="2">55</option>                                
+                            <option value="1">60</option>
+                        </select>    
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Estimated Hours Until Completion:</legend>
+                <div class="row">
+                    <div class="input-field col-3">
+                        <select id="choose-options" class="validate">
+                            <option value="" disabled selected>HH</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>    
+                    </div>
+                    <div class="input-field col-3">
+                        <select id="choose-options">
+                            <option value="" disabled selected>MM</option>
+                            <option value="1">00</option>
+                            <option value="2">05</option>
+                            <option value="1">10</option>
+                            <option value="3">15</option>
+                            <option value="2">20</option>                                
+                            <option value="1">25</option>
+                            <option value="3">30</option>
+                            <option value="1">35</option>
+                            <option value="2">40</option>
+                            <option value="1">45</option>
+                            <option value="3">50</option>
+                            <option value="2">55</option>                                
+                            <option value="1">60</option>
+                        </select>    
+                    </div>
+                </div>
+            </fieldset>
+
+          <!--      <div class="input-field col s12">
                     <input placeholder="Enter time in 24 Hours (HH:MM) format" name="detail[StartTime]" id="StartTime" type="text" class="validate">
                     <label for="StartTime">Desired Start Time (ex. 03:30)</label>
-                </div>
-
+                </div>  -->
+<!--
                 <div class="input-field col s6">
                     <input placeholder="Enter time in 24 Hours (HH:MM) format" name="detail[Checkpoint]" id="Checkpoint" type="text" class="validate">
                     <label for="Checkpoint">Checkpoint Interval (ex. 03:30)</label>
@@ -77,10 +380,10 @@
                     <input placeholder="Enter time in 24 Hours (HH:MM) format" name="detail[Estimate]" id="Estimate" type="text" class="validate">
                     <label for="Estimate">Estimated Hours Until Completion (ex. 03:30)</label>
                 </div>
-            </div>
+            </div>  -->
             
-            <div class="bottom-spacer"></div>
-            <div class="right">
+            
+            <div class="right bottom-form">
             	<button type="submit" onclick="return checkInputBottom();setTimer();" href="#" class="spacedLink no-border">
                 	<div class="right arrow-finish">
                     	<img src="images/Arrow3.png">
@@ -88,11 +391,12 @@
             	</button>
         	</div>
         </form>
-    </div>
+    </div>  <!-- end container -->
 
     <script src="https://code.jquery.com/jquery.js"></script>        
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/materialize.js"></script>
     <script src="js/edit-name-page.js"></script>
-    <script src ="js/progress.js"></script>
+    <script src="js/materialize.js"></script>
+    <!-- <script src ="js/progress.js"></script> -->
 </body>
