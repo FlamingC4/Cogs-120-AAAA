@@ -12,10 +12,10 @@ exports.view = function(req, res){
   var newEntry = {
      "name": count.name,
      "estimated_time" : count.details.Estimate + " hours",
-     "actual_time" : " "
+     "actual_time" : " ",
   }
   record.project.push(newEntry);  
-  count["viewAlt"] = false;
+  //count["viewAlt"] = false;
 };
 
 exports.viewAlt = function(req, res){
@@ -32,6 +32,6 @@ exports.viewAlt = function(req, res){
      "actual_time" : " "
   }
   record.project.push(newEntry);  
-  count["viewAlt"] = true;
+  //count["viewAlt"] = true;
 };
 
