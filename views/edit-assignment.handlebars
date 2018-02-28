@@ -57,7 +57,7 @@
             
             {{else}}
                <fieldset>
-                    <legend>Due date</legend>
+                    <legend>Change Due Date</legend>
                     <div class="row mmddyyyy">
                         <div class="input-field col-3" id="wrong1">
                             <select name="detail[DueDateMM]" id="DueDateMM" class="validate">
@@ -125,11 +125,11 @@
                     </div>   <!-- end row -->
                 </fieldset>
                 <fieldset>
-                    <legend>Due time</legend>
+                    <legend>Change Due Time (24 HR Format)</legend>
                     <div class="row hhmm">
                         <div class="input-field col-3" id="wrong4">
                             <select class="validate" name="detail[DueTimeHH]" id="DueTimeHH">
-                                <option value="" disabled selected>HH</option>
+                                <option value="" disabled selected>HR</option>
                                 <option value="00">0</option>
                                 <option value="01">1</option>
                                 <option value="02">2</option>
@@ -159,7 +159,59 @@
                         </div>
                         <div class="input-field col-3" id="wrong5">
                             <select name="detail[DueTimeMM]" id="DueTimeMM">
-                                <option value="" disabled selected>MM</option>
+                                <option value="" disabled selected>MN</option>
+                                <option value="00">00</option>
+                                <option value="05">05</option>
+                                <option value="10">10</option>
+                                <option value="15">15</option>
+                                <option value="20">20</option>                                
+                                <option value="25">25</option>
+                                <option value="30">30</option>
+                                <option value="35">35</option>
+                                <option value="40">40</option>
+                                <option value="45">45</option>
+                                <option value="50">50</option>
+                                <option value="55">55</option>                                
+                                <option value="59">59</option>
+                            </select>    
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Change Checkpoint Interval:</legend>
+                    <div class="row">
+                        <div class="input-field col-3" id="wrong11">
+                            <select name="detail[CheckpointHH]" id="CheckpointHH" class="validate">
+                                <option value="" disabled selected>HR</option>
+                                <option value="00">0</option>
+                                <option value="01">1</option>
+                                <option value="02">2</option>
+                                <option value="03">3</option>
+                                <option value="04">4</option>
+                                <option value="05">5</option>
+                                <option value="06">6</option>
+                                <option value="07">7</option>
+                                <option value="08">8</option>
+                                <option value="09">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>                                
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                            </select>    
+                        </div>
+                        <div class="input-field col-3" id="wrong12">
+                            <select name="detail[CheckpointMM]" id="CheckpointMM">
+                                <option value="" disabled selected>MN</option>
                                 <option value="00">00</option>
                                 <option value="05">05</option>
                                 <option value="10">10</option>
