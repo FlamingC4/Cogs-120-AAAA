@@ -6,16 +6,12 @@ exports.view = function(req, res){
     var projectName = req.body.name;  
     console.log(projectName);  
     //console.log(currData);
-
-    res.render('enter-name-page', {
-        "name": projectName
-    });
     
-    var currAssignment = {
-        "name" : projectName
-    };
+    //Set the variable for if the value is an alt first!
+    currData["viewAlt"] = false;
     currData.name = projectName; 
-     currData["viewAlt"] = false;
+
+    res.render('enter-name-page', currData);    
 };
 
 exports.viewAlt = function(req, res){
@@ -23,13 +19,11 @@ exports.viewAlt = function(req, res){
     console.log(projectName);  
     //console.log(currData);
 
-    res.render('enter-name-page', {
-        "name": projectName
-    });
+    //Set the variable for if the value is an alt first!
+    currData["viewAlt"] = true;
     
-    var currAssignment = {
-        "name" : projectName
-    };
+    //TODO: Test this because I have no idea if the alt works
     currData.name = projectName; 
-     currData["viewAlt"] = true;
+
+    res.render('enter-name-page', currData);    
 };

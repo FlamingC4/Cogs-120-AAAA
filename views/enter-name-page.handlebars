@@ -37,8 +37,20 @@
         <div class="col-12">
             <h1 class="project-name">{{name}} Details:</h1>
         </div>
+
         <form action="/start-countdown" method="POST" class="col-12">
             <div id="first-form" class="col-12">
+                {{#if viewAlt}}
+                <div class="input-field col s12">
+                    <input placeholder="Enter in MM/DD/YYYY format" name="detail[DueDate]" id="DueDate" type="text" class="validate">
+                    <label for="DueDate">Due Date (ex. 01/04/2020)</label>
+                </div>
+                <div class="input-field col s12">
+                    <input placeholder="Enter time in 24 Hours (HH:MM) format" name="detail[DueTime]" id="DueTime" type="text" class="validate">
+                    <label for="DueTime">Due Time (ex. 03:30)</label>
+                </div>
+
+                {{else}}
                 <fieldset>
                     <legend>Due date</legend>
                     <div class="row mmddyyyy">
@@ -161,18 +173,19 @@
                     </div>
                 </fieldset>
             </div>  <!-- end of first-form -->
-    <!--            <div class="input-field col s12">
-                        <input placeholder="Enter in MM/DD/YYYY format" name="detail[DueDate]" id="DueDate" type="text" class="validate">
-                        <label for="DueDate">Due Date (ex. 01/04/2020)</label>
-                    </div>
-                    <div class="input-field col s12">
-                        <input placeholder="Enter time in 24 Hours (HH:MM) format" name="detail[DueTime]" id="DueTime" type="text" class="validate">
-                        <label for="DueTime">Due Time (ex. 03:30)</label>
-                    </div> --> 
+            {{/if}}
+
             <div class="right col-12 next-arrow" onclick="return checkInputTop();">
                 <a href="#second-form"><img class="arrow-space" src="images/Arrow3.png"></a>
             </div>
+
+            {{#if viewAlt}}
+        
+            <div class="middle-spacer"></div>
+            {{else}}
+        
             <div class="middle-space"></div>
+            {{/if}}
 
             <!-- checkInputTop for when the user clicks the arrow-->
             <!--<a onclick="return checkInputBottom();" href="start-countdown" class="spacedLink">Continue</a>-->
@@ -183,6 +196,29 @@
                 <div class="left arrow-back col-12">
                     <a href="#top"><img src="images/Arrow-back.png"></a>
                 </div>
+
+                {{#if viewAlt}}
+                <div class="input-field col s12">
+                    <label for="StartDate">Desired Start Date (ex.01/04/2020)</label>
+                    <input placeholder="Enter in MM/DD/YYYY format" name="detail[StartDate]" id="StartDate" type="text" class="validate">
+                    
+                </div>
+                <div class="input-field col s12">
+                    <input placeholder="Enter time in 24 Hours (HH:MM) format" name="detail[StartTime]" id="StartTime" type="text" class="validate">
+                    <label for="StartTime">Desired Start Time (ex. 03:30)</label>
+                </div>
+
+                <div class="input-field col s6">
+                    <input placeholder="Enter time in 24 Hours (HH:MM) format" name="detail[Checkpoint]" id="Checkpoint" type="text" class="validate">
+                    <label for="Checkpoint">Checkpoint Interval (ex. 03:30)</label>
+                </div>
+                
+                <div class="input-field col s12">
+                    <input placeholder="Enter time in 24 Hours (HH:MM) format" name="detail[Estimate]" id="Estimate" type="text" class="validate">
+                    <label for="Estimate">Estimated Hours Until Completion (ex. 03:30)</label>
+                </div>
+                {{else}}
+
                 <fieldset>
                     <legend>Desired Start Date:</legend>
                     <div class="row">
@@ -251,11 +287,7 @@
                         </div>
                     </div>  <!-- end row -->
                 </fieldset>
-            <!--        <div class="input-field col s12">
-                        <label for="StartDate">Desired Start Date (ex.01/04/2020)</label>
-                        <input placeholder="Enter in MM/DD/YYYY format" name="detail[StartDate]" id="StartDate" type="text" class="validate">
-                        
-                    </div> -->
+
                 <fieldset>
                     <legend>Desired Start Time:</legend>
                     <div class="row">
@@ -413,22 +445,8 @@
                         </div>
                     </div>
                 </fieldset>
+                {{/if}}
 
-          <!--      <div class="input-field col s12">
-                    <input placeholder="Enter time in 24 Hours (HH:MM) format" name="detail[StartTime]" id="StartTime" type="text" class="validate">
-                    <label for="StartTime">Desired Start Time (ex. 03:30)</label>
-                </div>  -->
-<!--
-                <div class="input-field col s6">
-                    <input placeholder="Enter time in 24 Hours (HH:MM) format" name="detail[Checkpoint]" id="Checkpoint" type="text" class="validate">
-                    <label for="Checkpoint">Checkpoint Interval (ex. 03:30)</label>
-                </div>
-                
-                <div class="input-field col s12">
-                    <input placeholder="Enter time in 24 Hours (HH:MM) format" name="detail[Estimate]" id="Estimate" type="text" class="validate">
-                    <label for="Estimate">Estimated Hours Until Completion (ex. 03:30)</label>
-                </div>
-            </div>  -->
                 <div class="right next-page">
                 	<button type="submit" onclick="return checkInputBottom();" class="spacedLink no-border">
                     	<div class="right arrow-finish">
