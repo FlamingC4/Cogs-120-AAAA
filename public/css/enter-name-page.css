@@ -7,8 +7,8 @@ h1 {
     font-family: Roboto;
 }
 
-.middle-spacer {
-    margin-bottom: 75vh;
+middle-spacer {
+ margin-bottom: 75vh;
 }
 
 .bottom-spacer {
@@ -33,6 +33,10 @@ h1 {
     margin-bottom: 2vh;
 }
 
+.arrow-back {
+  margin-bottom: 30px;
+}
+
 .arrow-finish {
     margin-bottom: 10vh;
     margin-right: 10vw;
@@ -44,10 +48,10 @@ h1 {
    display: block;
 }
 
-.next-arrow-pos {
-    margin-right: 10vw;
-    margin-top: 20vh;
+.next-page {
+  margin-top: 10em;
 }
+
 
 .btn-primary.info {
   color: #ffffff;
@@ -65,8 +69,16 @@ h1 {
   color: #009688;
 }
 
-.bottom-form {
-  margin-top: 12em;
+#first-form {
+  height: 25rem;
+}
+
+#second-form {
+  padding-top: 20px;
+}
+
+.middle-space {
+  height: 15em;
 }
 
 fieldset {
