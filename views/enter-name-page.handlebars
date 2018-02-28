@@ -173,8 +173,8 @@
                         </div>
                     </div>
                 </fieldset>
+                {{/if}}
             </div>  <!-- end of first-form -->
-            {{/if}}
 
             <div class="right col-12 next-arrow" onclick="return checkInputTop();">
                 <a href="#second-form"><img class="arrow-space" src="images/Arrow3.png"></a>
@@ -192,23 +192,20 @@
             <!--<a onclick="return checkInputBottom();" href="start-countdown" class="spacedLink">Continue</a>-->
             <!-- Div that contains empty space, to give illusion of two pages -->
 
+            <div class="arrow-back col-12">
+                <a href="#top"><img src="images/Arrow-back.png"></a>
+            </div> 
+
             <!--Second set of forms to enter -->
             <div id="second-form">
-                <div class="left arrow-back col-12">
-                    <a href="#top"><img src="images/Arrow-back.png"></a>
-                </div> 
-                </br>
-                </br>
-                </br>           
-
                 {{#if viewAlt}}
                 <div class="input-field col s12">
-                    <label for="StartDate">Desired Start Date</label>
                     <input placeholder="Tap here to enter date" id="StartDate" type="text" class="validate datepicker" name="detail[StartDate]">
+                    <label for="StartDate">Desired Start Date</label>
                 </div>
                 <div class="input-field col s12">
-                    <label for="StartTime">Desired Start Time</label>
                     <input placeholder="Tap here to enter time" id="StartTime" type="text" class="validate timepicker" name="detail[StartTime]">
+                    <label for="StartTime">Desired Start Time</label>
                 </div>
 
                 <div class="input-field col s12">
@@ -448,6 +445,10 @@
                         </div>
                     </div>
                 </fieldset>
+                {{/if}}
+
+                {{#if viewAlt}}
+                <div class="bottom-spacer"></div>
                 {{/if}}
 
                 <div class="right next-page">

@@ -8,11 +8,11 @@ h1 {
 }
 
 .middle-spacer {
- margin-bottom: 75vh;
+    margin-bottom: 55vh;
 }
 
 .bottom-spacer {
-    margin-bottom: 35vh;
+    margin-bottom: 25vh;
 }
 
 .container {
@@ -21,11 +21,11 @@ h1 {
 	/*border: 2px solid black;*/
 	margin: 0 auto;
 	height: 100%;
-  padding: 0 0;
+    padding: 0 0;
 	background-color: white;
 	overflow: scroll;
-  overflow-y: auto;
-  scroll-behavior: smooth;
+    overflow-y: auto;
+    scroll-behavior: smooth;
 }
 
 .arrow-space {
@@ -34,11 +34,11 @@ h1 {
 }
 
 .arrow-back {
-  margin-bottom: 30px;
+  margin-bottom: 5vh;
 }
 
 .arrow-finish {
-    margin-bottom: 10vh;
+    margin-bottom: 0vh;
     margin-right: 10vw;
 }
 
@@ -59,6 +59,7 @@ h1 {
   border-color: #285e8e;
 }
 
+
 .input-field label {
   color: black;
   font-size: 1rem;
@@ -69,16 +70,17 @@ h1 {
   color: #009688;
 }
 
+
 #first-form {
-  height: 25rem;
+  /*height: 25rem;*/
 }
 
 #second-form {
-  padding-top: 20px;
+  /* padding-top: 20px;*/
 }
 
 .middle-space {
-  height: 15em;
+  height: 20em;
 }
 
 fieldset {
