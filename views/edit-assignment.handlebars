@@ -15,6 +15,7 @@
     <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen">
     
     <link href="css/main2.css" rel="stylesheet">
+    <link href="css/enter-name-page.css" rel="stylesheet">
     <link href="css/start-input.css" rel="stylesheet">
 </head>
 
@@ -35,21 +36,148 @@
             <h1>Edit Assignment Attributes</h1>
         </div>
         
+         <form action="/start-countdown" method="POST" class="col-12">
+            <div id="first-form" class="col-12">
+        {{#if viewAlt}}
         <div>
             <div class="input-field col s12">
-                <input placeholder="Enter in MM/DD/YYYY format" id="newDate" type="text" class="validate">
-                <label for="newDate">Change Due Date</label>
-            </div>
+                    <input placeholder="Tap here to enter date" id="DueDate" type="text" class="validate datepicker" name="detail[DueDate]">
+                    <label for="DueDate">Change Due Date</label>
+                </div>
+
+                <div class="input-field col s12">
+                    <input placeholder="Tap here to enter time" id="DueTime" type="text" class="validate timepicker" name="detail[DueTime]">
+                    <label for="DueTime">Change Due Time</label>
 
             <div class="input-field col s12">
-                <input placeholder="Enter in hrs:mins format" id="newTime" type="text" class="validate">
-                <label for="newTime">Change Due Time</label>
-            </div>
-
-            <div class="input-field col s12">
-                <input placeholder="Enter in hrs:mins format" id="newCheck" type="text" class="validate">
+                <input placeholder="Enter in hrs:mins format ex: 23:53" id="newCheck" type="text" class="validate">
                 <label for="newCheck">Change Checkpoint Interval</label>
             </div>
+        </div>
+            
+            {{else}}
+               <fieldset>
+                    <legend>Due date</legend>
+                    <div class="row mmddyyyy">
+                        <div class="input-field col-3" id="wrong1">
+                            <select name="detail[DueDateMM]" id="DueDateMM" class="validate">
+                                <option value="" disabled selected>MM</option>                       
+                                <option value="00">1</option>
+                                <option value="01">2</option>
+                                <option value="02">3</option>
+                                <option value="03">4</option>
+                                <option value="04">5</option>
+                                <option value="05">6</option>
+                                <option value="06">7</option>
+                                <option value="07">8</option>
+                                <option value="08">9</option>
+                                <option value="09">10</option>
+                                <option value="10">11</option>
+                                <option value="11">12</option>
+                            </select>    
+                        </div>
+                        <div class="input-field col-3" id="wrong2">
+                            <select name="detail[DueDateDD]" id="DueDateDD">
+                                <option value="" disabled selected>DD</option>
+                                <option value="01">1</option>
+                                <option value="02">2</option>
+                                <option value="03">3</option>
+                                <option value="04">4</option>
+                                <option value="05">5</option>
+                                <option value="06">6</option>
+                                <option value="07">7</option>
+                                <option value="08">8</option>
+                                <option value="09">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                                <option value="24">24</option>
+                                <option value="25">25</option>
+                                <option value="26">26</option>
+                                <option value="27">27</option>
+                                <option value="28">28</option>
+                                <option value="29">29</option>
+                                <option value="30">30</option>
+                                <option value="31">31</option>
+                            </select>    
+                        </div>
+                        <div class="input-field col-3" id="wrong3">
+                            <select name="detail[DueDateYYYY]" id="DueDateYYYY">
+                                <option value="" disabled selected>YYYY</option>
+                                <option value="2018">2018</option>
+                                <option value="2019">2019</option>
+                                <option value="2020">2020</option>
+                                <option value="2021">2021</option>
+                                <option value="2022">2022</option>
+                            </select>    
+                        </div>
+                    </div>   <!-- end row -->
+                </fieldset>
+                <fieldset>
+                    <legend>Due time</legend>
+                    <div class="row hhmm">
+                        <div class="input-field col-3" id="wrong4">
+                            <select class="validate" name="detail[DueTimeHH]" id="DueTimeHH">
+                                <option value="" disabled selected>HH</option>
+                                <option value="00">0</option>
+                                <option value="01">1</option>
+                                <option value="02">2</option>
+                                <option value="03">3</option>
+                                <option value="04">4</option>
+                                <option value="05">5</option>
+                                <option value="06">6</option>
+                                <option value="07">7</option>
+                                <option value="08">8</option>
+                                <option value="09">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>                                
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                               
+                            </select>    
+                        </div>
+                        <div class="input-field col-3" id="wrong5">
+                            <select name="detail[DueTimeMM]" id="DueTimeMM">
+                                <option value="" disabled selected>MM</option>
+                                <option value="00">00</option>
+                                <option value="05">05</option>
+                                <option value="10">10</option>
+                                <option value="15">15</option>
+                                <option value="20">20</option>                                
+                                <option value="25">25</option>
+                                <option value="30">30</option>
+                                <option value="35">35</option>
+                                <option value="40">40</option>
+                                <option value="45">45</option>
+                                <option value="50">50</option>
+                                <option value="55">55</option>                                
+                                <option value="59">59</option>
+                            </select>    
+                        </div>
+                    </div>
+                </fieldset>
+            {{/if}}
         </div>
 
         <div class="button-spacer"></div>
@@ -64,7 +192,11 @@
     </div>
     
     <script src="https://code.jquery.com/jquery.js"></script>        
+    <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/materialize.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/edit-name-page.js"></script>
+    <script src="js/clockAndCalendar.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114902393-1"></script>
 <script>
