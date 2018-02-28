@@ -41,14 +41,19 @@
         <form action="/start-countdown" method="POST" class="col-12">
             <div id="first-form" class="col-12">
                 {{#if viewAlt}}
-                <div class="input-field col s12">
-                    <input placeholder="Tap here to enter date" id="DueDate" type="text" class="validate datepicker" name="detail[DueDate]">
-                    <label for="DueDate">Due Date</label>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">date_range</i>
+                        <input placeholder="Tap here to enter date" id="DueDate" type="text" class="validate datepicker" name="detail[DueDate]">
+                        <label for="DueDate">Due Date</label>
+                    </div>
                 </div>
-
-                <div class="input-field col s12">
-                    <input placeholder="Tap here to enter time" id="DueTime" type="text" class="validate timepicker" name="detail[DueTime]">
-                    <label for="DueTime">Due Time</label>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">alarm</i>
+                        <input placeholder="Tap here to enter time" id="DueTime" type="text" class="validate timepicker" name="detail[DueTime]">
+                        <label for="DueTime">Due Time</label>
+                    </div>
                 </div>
 
                 {{else}}
@@ -199,23 +204,36 @@
             <!--Second set of forms to enter -->
             <div id="second-form">
                 {{#if viewAlt}}
-                <div class="input-field col s12">
-                    <input placeholder="Tap here to enter date" id="StartDate" type="text" class="validate datepicker" name="detail[StartDate]">
-                    <label for="StartDate">Desired Start Date</label>
-                </div>
-                <div class="input-field col s12">
-                    <input placeholder="Tap here to enter time" id="StartTime" type="text" class="validate timepicker" name="detail[StartTime]">
-                    <label for="StartTime">Desired Start Time</label>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">date_range</i>
+                        <input placeholder="Tap here to enter date" id="StartDate" type="text" class="validate datepicker" name="detail[StartDate]">
+                        <label for="StartDate">Desired Start Date</label>
+                    </div>
                 </div>
 
-                <div class="input-field col s12">
-                    <input placeholder="Enter time in 24 Hours (HH:MM) format" name="detail[Checkpoint]" id="Checkpoint" type="text" class="validate">
-                    <label for="Checkpoint">Checkpoint Interval (ex. 03:30)</label>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">alarm</i>
+                        <input placeholder="Tap here to enter time" id="StartTime" type="text" class="validate timepicker" name="detail[StartTime]">
+                        <label for="StartTime">Desired Start Time</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">notifications_active</i>
+                        <input placeholder="Enter time in 24 Hours (HH:MM) format" name="detail[Checkpoint]" id="Checkpoint" type="text" class="validate">
+                        <label for="Checkpoint">Checkpoint Interval (ex. 03:30)</label>
+                    </div>
                 </div>
                 
-                <div class="input-field col s12">
-                    <input placeholder="Enter time in 24 Hours (HH:MM) format" name="detail[Estimate]" id="Estimate" type="text" class="validate">
-                    <label for="Estimate">Estimated Hours Until Completion (ex. 03:30)</label>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">check_circle</i>
+                        <input placeholder="Enter time in 24 Hours (HH:MM) format" name="detail[Estimate]" id="Estimate" type="text" class="validate">
+                        <label for="Estimate">Estimated Hours Until Completion (ex. 03:30)</label>
+                    </div>
                 </div>
                 {{else}}
 
