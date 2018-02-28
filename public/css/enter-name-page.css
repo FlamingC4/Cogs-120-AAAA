@@ -54,3 +54,31 @@ h1 {
   background-color: #009688;
   border-color: #285e8e;
 }
+
+.input-field label {
+  color: black;
+  font-size: 1rem;
+}
+
+/* Style Placeholders */
+::-webkit-input-placeholder {
+  color: #009688;
+}
+
+.bottom-form {
+  margin-top: 12em;
+}
+
+fieldset {
+  padding: 0 5px;
+  border: none;
+}
+ legend {
+  margin: 0;
+  color: #009688;
+  font-size: 1em;
+ }
+
+ form {
+  margin: 5px;
+ }

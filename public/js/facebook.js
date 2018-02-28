@@ -1,9 +1,9 @@
-var express = require('express');
-var http = require('http');
-var path = require('path');
-var handlebars = require('express3-handlebars');
+//var express = require('express');
+//var http = require('http');
+//var path = require('path');
+//var handlebars = require('express3-handlebars');
 
-var login = require('./routes/login');
+//var login = require('../../routes/login');
 
 function checkLoginState() {
   FB.getLoginStatus(function(response) {

@@ -231,19 +231,19 @@ var oneHourRemaining = new Audio('1HourRemaining.mp3');
 btn.onclick = function() {
         modal.style.display = "block";
         checkpointAudio.play();
-    }
+    };
 
 btn2.onclick = function() {    
         modal2.style.display = "block";
         oneHourRemaining.play();
-    }
+    };
 
 
 
 //next button on modal
 span.onclick = function() {
     modal.style.display = "none";
-}
+};
 
 span2.onclick = function() {
     modal2.style.display = "none";
