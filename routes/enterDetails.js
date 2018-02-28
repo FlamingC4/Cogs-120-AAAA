@@ -15,7 +15,7 @@ exports.view = function(req, res){
         "name" : projectName
     };
     currData.name = projectName; 
-     currData["viewAlt"] = true;
+     currData["viewAlt"] = false;
 };
 
 exports.viewAlt = function(req, res){
@@ -31,5 +31,5 @@ exports.viewAlt = function(req, res){
         "name" : projectName
     };
     currData.name = projectName; 
-     currData["viewAlt"] = ture;
+     currData["viewAlt"] = true;
 };
