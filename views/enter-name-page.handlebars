@@ -42,12 +42,13 @@
             <div id="first-form" class="col-12">
                 {{#if viewAlt}}
                 <div class="input-field col s12">
-                    <input placeholder="Enter in MM/DD/YYYY format" name="detail[DueDate]" id="DueDate" type="text" class="validate">
-                    <label for="DueDate">Due Date (ex. 01/04/2020)</label>
+                    <input placeholder="Tap here to enter date" id="DueDate" type="text" class="validate datepicker" name="detail[DueDate]">
+                    <label for="DueDate">Due Date</label>
                 </div>
+
                 <div class="input-field col s12">
-                    <input placeholder="Enter time in 24 Hours (HH:MM) format" name="detail[DueTime]" id="DueTime" type="text" class="validate">
-                    <label for="DueTime">Due Time (ex. 03:30)</label>
+                    <input placeholder="Tap here to enter time" id="DueTime" type="text" class="validate timepicker" name="detail[DueTime]">
+                    <label for="DueTime">Due Time</label>
                 </div>
 
                 {{else}}
@@ -199,13 +200,12 @@
 
                 {{#if viewAlt}}
                 <div class="input-field col s12">
-                    <label for="StartDate">Desired Start Date (ex.01/04/2020)</label>
-                    <input placeholder="Enter in MM/DD/YYYY format" name="detail[StartDate]" id="StartDate" type="text" class="validate">
-                    
+                    <label for="StartDate">Desired Start Date</label>
+                    <input placeholder="Tap here to enter date" id="StartDate" type="text" class="validate datepicker" name="detail[StartDate]">
                 </div>
                 <div class="input-field col s12">
-                    <input placeholder="Enter time in 24 Hours (HH:MM) format" name="detail[StartTime]" id="StartTime" type="text" class="validate">
-                    <label for="StartTime">Desired Start Time (ex. 03:30)</label>
+                    <label for="StartTime">Desired Start Time</label>
+                    <input placeholder="Tap here to enter time" id="StartTime" type="text" class="validate timepicker" name="detail[StartDate]">
                 </div>
 
                 <div class="input-field col s6">
@@ -461,8 +461,9 @@
     <script src="https://code.jquery.com/jquery.js"></script>        
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/materialize.js"></script>
-    <script src="js/edit-name-page.js"></script>
     <script src="js/materialize.js"></script>
+    <script src="js/edit-name-page.js"></script>
+    <script src="js/clockAndCalendar.js"></script>
     <!-- <script src ="js/progress.js"></script> -->
 
     <!--<script src ="js/progress.js"></script>-->
