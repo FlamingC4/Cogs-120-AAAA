@@ -328,7 +328,7 @@
                     <legend>Estimated Hours Until Completion:</legend>
                     <div class="row">
                         <div class="input-field col-3">
-                            <select id="choose-options" class="validate">
+                            <select id="choose-options" class="validate" name="detail[EstimateHH]" id="EstimateHH">
                                 <option value="" disabled selected>HH</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -345,7 +345,7 @@
                             </select>    
                         </div>
                         <div class="input-field col-3">
-                            <select id="choose-options">
+                            <select id="choose-options" name="detail[EstimateMM]" id="EstimateMM">
                                 <option value="" disabled selected>MM</option>
                                 <option value="1">00</option>
                                 <option value="2">05</option>
@@ -381,7 +381,7 @@
                 </div>
             </div>  -->
                 <div class="right next-page">
-                	<button type="submit" onclick="return checkInputBottom();" href="#" class="spacedLink no-border">
+                	<button type="submit" onclick="return checkInputBottom();" class="spacedLink no-border">
                     	<div class="right arrow-finish">
                         	<img src="images/Arrow3.png">
                     	</div>
