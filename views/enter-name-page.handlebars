@@ -181,11 +181,10 @@
                 {{/if}}
             </div>  <!-- end of first-form -->
 
-            {{#unless viewAlt}}
-            <div class="right col-12 next-arrow" onclick="return checkInputTop();">
+            
+            <div class="right col-12 next-arrow" {{#unless viewAlt}}onclick="return checkInputTop();"{{/unless}}>
                 <a href="#second-form"><img class="arrow-space" src="/images/Arrow3.png"></a>
             </div>
-            {{/unless}}
 
             {{#if viewAlt}}
         
@@ -472,7 +471,7 @@
                 {{/if}}
 
                 <div class="right next-page">
-                	<button type="submit" onclick="return checkInputBottom();" class="spacedLink no-border">
+                	<button type="submit" {{#unless viewAlt}}onclick="return checkInputBottom();"{{/unless}} class="spacedLink no-border">
                     	<div class="right arrow-finish">
                         	<img src="/images/Arrow3.png">
                     	</div>

@@ -8,9 +8,7 @@ exports.view = function(req, res){
     //console.log(currData);
     
     //Set the variable for if the value is an alt first!
-    if(currData["viewAlt"] != false) {
-        currData["viewAlt"] = false;
-    }
+    //currData["viewAlt"] = false;
     currData.name = projectName; 
 
     res.render('enter-name-page', currData);    
@@ -22,9 +20,7 @@ exports.viewAlt = function(req, res){
     //console.log(currData);
 
     //Set the variable for if the value is an alt first!
-    if(currData["viewAlt"] != true) {
-        currData["viewAlt"] = true;
-    }
+    //currData["viewAlt"] = true;
     
     //TODO: Test this because I have no idea if the alt works
     currData.name = projectName; 

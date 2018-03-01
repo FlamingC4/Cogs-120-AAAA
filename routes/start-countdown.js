@@ -6,7 +6,7 @@ exports.view = function(req, res){
   console.log(attributes);
 
   count.details = attributes;
-  count["viewAlt"] = false;
+  //count["viewAlt"] = false;
   
   res.render('start-countdown', count);
   
@@ -23,7 +23,7 @@ exports.viewAlt = function(req, res){
   console.log(attributes);
 
   count.details = attributes;
-  count["viewAlt"] = true;
+  //count["viewAlt"] = true;
 
   res.render('start-countdown', count);
   
