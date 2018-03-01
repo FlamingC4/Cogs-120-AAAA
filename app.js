@@ -18,7 +18,7 @@ var progressChecker = require('./routes/progress-checker');
 var editAssignStart = require('./routes/edit-assignment-start');
 var editAssign = require('./routes/edit-assignment');
 var userSettings = require('./routes/edit-user-settings');
-//var pause = require('./routes/delay-input'); NEED TO CREATE JS FILE
+//var delayInput = require('./routes/delay-input'); NOT WORKING
 
 
 //ALT ROUTES
@@ -70,7 +70,7 @@ app.get('/progress-checker', progressChecker.view);
 app.get('/edit-assignment-from-start', editAssignStart.view);
 app.get('/edit-assignment', editAssign.view);
 app.get('/user-settings', userSettings.view);
-//app.get('/routes/delay-input', pause.view); NEED TO ADD JS FILE
+//app.get('/delay-input', delayInput.view); NOT WORKING
 app.post('/enterDetails', enterDetails.view);
 app.post('/start-countdown', startCountdown.view);
 //app.get('/edit-assignment', editAssignment.view);
