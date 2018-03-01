@@ -61,6 +61,7 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', login.view);
+app.get('/page_A', login.view);
 app.get('/home-page', home.view);
 //app.get('/enter-name', enterName.enter); DOESN'T WORK
 
