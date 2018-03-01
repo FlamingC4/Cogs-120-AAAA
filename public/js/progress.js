@@ -224,8 +224,8 @@ var btn2 = document.getElementById("1HourRemaining");
 var modal = document.getElementById('myModal');
 var modal2 = document.getElementById('myModal2');
 
-var checkpointAudio = new Audio('checkpoint.mp3');
-var oneHourRemaining = new Audio('1HourRemaining.mp3');
+var checkpointAudio = new Audio('/checkpoint.mp3');
+var oneHourRemaining = new Audio('/1HourRemaining.mp3');
 
 
 btn.onclick = function() {
@@ -275,12 +275,12 @@ finish.onclick = function() {
 
 
 //close modals
-var closePause = document.getElementsByClassName("close")[2];
-var closeFinish = document.getElementsByClassName("close")[4];
+//var closePause = document.getElementsByClassName("close")[2];
+var closeFinish = document.getElementsByClassName("close")[3];
 
-closePause.onclick = function() {
+/*closePause.onclick = function() {
     pauseModal.style.display = "none";
-}
+}*/
 
 closeFinish.onclick = function() {
     finishModal.style.display = "none";
@@ -290,7 +290,8 @@ closeFinish.onclick = function() {
 var editAssignment = $('#edit-assignment');
 var editAssignmentSound = new Audio('/editAssignmentAttributesSound.mp3');
 
-editAssignment.onclick = function(){
+
+$('#edit-assignment').onclick = function(){
     console.log("hello");
     editAssignmentSound.play();
 }
