@@ -224,8 +224,8 @@ var btn2 = document.getElementById("1HourRemaining");
 var modal = document.getElementById('myModal');
 var modal2 = document.getElementById('myModal2');
 
-var checkpointAudio = new Audio('checkpoint.mp3');
-var oneHourRemaining = new Audio('1HourRemaining.mp3');
+var checkpointAudio = new Audio('/checkpoint.mp3');
+var oneHourRemaining = new Audio('/1HourRemaining.mp3');
 
 
 btn.onclick = function() {
@@ -259,8 +259,8 @@ var finishModal = document.getElementById('finishModal');
 
 
 //alt modal audio
-var pauseAudio = new Audio('pauseScreenSound.mp3');
-var finishAudio = new Audio('finishConfirmationSound.mp3');
+var pauseAudio = new Audio('/pauseScreenSound.mp3');
+var finishAudio = new Audio('/finishConfirmationSound.mp3');
 
 
 pause.onclick = function() {
