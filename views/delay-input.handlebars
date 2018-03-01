@@ -37,11 +37,26 @@
             <h1>Pause Assignment</h1>
         </div>
 
+
         <form action="/start-countdown" method="POST" class="col-12">
             <div id="first-form" class="col-12">
-
-        <fieldset>
-                    <legend>Restart Date:</legend>
+        {{#if viewAlt}}
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">date_range</i>
+                        <input placeholder="Tap here to enter date" id="DueDate" type="text" class="validate datepicker" name="detail[DueDate]">
+                        <label for="DueDate">Change Due Date:</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">alarm</i>
+                        <input placeholder="Tap here to enter time" id="DueTime" type="text" class="validate timepicker" name="detail[DueTime]">
+                        <label for="DueTime">Change Due Time:</label>
+                    </div>
+        {{else}}
+               <fieldset>
+                    <legend>Change Due Date:</legend>
                     <div class="row mmddyyyy">
                         <div class="input-field col-3" id="wrong1">
                             <select name="detail[DueDateMM]" id="DueDateMM" class="validate">
@@ -109,7 +124,7 @@
                     </div>   <!-- end row -->
                 </fieldset>
                 <fieldset>
-                    <legend>Restart Time (24 HR Format):</legend>
+                    <legend>Change Due Time (24 HR Format):</legend>
                     <div class="row hhmm">
                         <div class="input-field col-3" id="wrong4">
                             <select class="validate" name="detail[DueTimeHH]" id="DueTimeHH">
@@ -143,7 +158,7 @@
                         </div>
                         <div class="input-field col-3" id="wrong5">
                             <select name="detail[DueTimeMM]" id="DueTimeMM">
-                                <option value="" disabled selected>MN</option>
+                                <option value="" disabled selected>MIN</option>
                                 <option value="00">00</option>
                                 <option value="05">05</option>
                                 <option value="10">10</option>
@@ -161,7 +176,9 @@
                         </div>
                     </div>
                 </fieldset>
+        {{/if}}
             </div>
+           
            
 
         <!--<div>
