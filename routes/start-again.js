@@ -1,12 +1,12 @@
 var count = require("../cAssignment.json");
 
 exports.view = function(req, res) {
-  res.render('start-countdown',count);
   count["viewAlt"] = false;
+  res.render('start-countdown',count);
 };
 
 exports.viewAlt = function(req, res) {
-  res.render('start-countdown',count);
   count["viewAlt"] = true;
+  res.render('start-countdown',count);
 };
 

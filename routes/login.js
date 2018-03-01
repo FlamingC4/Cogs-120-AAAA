@@ -1,11 +1,11 @@
 var list = require("../data.json");
 
 exports.view = function(req, res) {
-	res.render('login');
 	list["viewAlt"] = false;
+	res.render('login', list);
 };
 
 exports.viewAlt = function(req, res) {
-	res.render('login');
 	list["viewAlt"] = true;
+	res.render('login', list);
 };
