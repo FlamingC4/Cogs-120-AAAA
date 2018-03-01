@@ -259,8 +259,8 @@ var finishModal = document.getElementById('finishModal');
 
 
 //alt modal audio
-var pauseAudio = new Audio('/public/pauseScreenSound.mp3');
-var finishAudio = new Audio('/public/finishConfirmationSound.mp3');
+var pauseAudio = new Audio('/pauseScreenSound.mp3');
+var finishAudio = new Audio('/finishConfirmationSound.mp3');
 
 
 /*pause.onclick = function() {
@@ -288,7 +288,7 @@ closeFinish.onclick = function() {
 
 //edit assignment sound
 var editAssignment = $('#edit-assignment');
-var editAssignmentSound = new Audio('/public/editAssignmentAttributesSound.mp3');
+var editAssignmentSound = new Audio('/editAssignmentAttributesSound.mp3');
 
 editAssignment.onclick = function(){
     console.log("hello");
