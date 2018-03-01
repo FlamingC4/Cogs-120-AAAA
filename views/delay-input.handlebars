@@ -36,12 +36,12 @@
         <div class="col-12">
             <h1>Pause Assignment</h1>
         </div>
-
+        {{#if viewAlt}}
         <form action="/start-countdown" method="POST" class="col-12">
             <div id="first-form" class="col-12">
 
         <fieldset>
-                    <legend>Restart Due Date</legend>
+                    <legend>Restart Date:</legend>
                     <div class="row mmddyyyy">
                         <div class="input-field col-3" id="wrong1">
                             <select name="detail[DueDateMM]" id="DueDateMM" class="validate">
@@ -109,7 +109,7 @@
                     </div>   <!-- end row -->
                 </fieldset>
                 <fieldset>
-                    <legend>Restart Due Time</legend>
+                    <legend>Restart Time (24 HR Format):</legend>
                     <div class="row hhmm">
                         <div class="input-field col-3" id="wrong4">
                             <select class="validate" name="detail[DueTimeHH]" id="DueTimeHH">
@@ -143,7 +143,7 @@
                         </div>
                         <div class="input-field col-3" id="wrong5">
                             <select name="detail[DueTimeMM]" id="DueTimeMM">
-                                <option value="" disabled selected>MN</option>
+                                <option value="" disabled selected>MIN</option>
                                 <option value="00">00</option>
                                 <option value="05">05</option>
                                 <option value="10">10</option>

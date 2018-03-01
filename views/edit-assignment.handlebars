@@ -39,25 +39,31 @@
          <form action="/start-countdown" method="POST" class="col-12">
             <div id="first-form" class="col-12">
         {{#if viewAlt}}
-        <div>
-            <div class="input-field col s12">
-                    <input placeholder="Tap here to enter date" id="DueDate" type="text" class="validate datepicker" name="detail[DueDate]">
-                    <label for="DueDate">Change Due Date</label>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">date_range</i>
+                        <input placeholder="Tap here to enter date" id="DueDate" type="text" class="validate datepicker" name="detail[DueDate]">
+                        <label for="DueDate">Change Due Date:</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">alarm</i>
+                        <input placeholder="Tap here to enter time" id="DueTime" type="text" class="validate timepicker" name="detail[DueTime]">
+                        <label for="DueTime">Change Due Time:</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">notifications_active</i>
+                        <input placeholder="Enter time in HR:MIN format" name="detail[Checkpoint]" id="Checkpoint" type="text" class="validate">
+                        <label for="Checkpoint">Change Checkpoint Interval (ex. 03:30):</label>
+                    </div>
                 </div>
 
-                <div class="input-field col s12">
-                    <input placeholder="Tap here to enter time" id="DueTime" type="text" class="validate timepicker" name="detail[DueTime]">
-                    <label for="DueTime">Change Due Time</label>
-
-            <div class="input-field col s12">
-                <input placeholder="Enter in hrs:mins format ex: 23:53" id="newCheck" type="text" class="validate">
-                <label for="newCheck">Change Checkpoint Interval</label>
-            </div>
-        </div>
-            
             {{else}}
                <fieldset>
-                    <legend>Change Due Date</legend>
+                    <legend>Change Due Date:</legend>
                     <div class="row mmddyyyy">
                         <div class="input-field col-3" id="wrong1">
                             <select name="detail[DueDateMM]" id="DueDateMM" class="validate">
@@ -125,7 +131,7 @@
                     </div>   <!-- end row -->
                 </fieldset>
                 <fieldset>
-                    <legend>Change Due Time (24 HR Format)</legend>
+                    <legend>Change Due Time (24 HR Format):</legend>
                     <div class="row hhmm">
                         <div class="input-field col-3" id="wrong4">
                             <select class="validate" name="detail[DueTimeHH]" id="DueTimeHH">

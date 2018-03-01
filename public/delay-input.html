@@ -2,67 +2,46 @@
 <html lang="en">
 
 <head>
-    <title>Edit Assignment</title>
+    <title>Delay Input</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <script src="bootstrap-4.0.0/js/tests/vendor/jquery-1.9.1.min.js"></script> 
-    <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>   
+    <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen">
-    
     <link href="css/main2.css" rel="stylesheet">
     <link href="css/enter-name-page.css" rel="stylesheet"> 
-    <link href="css/start-input.css" rel="stylesheet">
+
+    <!--link href="css/delay-input.css" rel="stylesheet">-->
 </head>
 
+
 <body>
-    <div class="container">
+     <div class="container">
     <!--Wording might need to be different here -->
         <div class="top-of-page">
             <div class="row nav-header">
                 <div class="col-3">
-                    <a href="start-countdown">
+                    <a href="progress-checker">
                         <img class="arrow-space" src="images/Arrow2.png">
                     </a>
                 </div> 
             </div>
         </div>
-    
-        <div class="col 12">
-            <h1>Edit Assignment Attributes</h1>
+        
+        <div class="col-12">
+            <h1>Pause Assignment</h1>
         </div>
 
         <form action="/start-countdown" method="POST" class="col-12">
             <div id="first-form" class="col-12">
-        {{#if viewAlt}}
-                <div class="row">
-                    <div class="input-field col s12">
-                        <i class="material-icons prefix">date_range</i>
-                        <input placeholder="Tap here to enter date" id="DueDate" type="text" class="validate datepicker" name="detail[DueDate]">
-                        <label for="DueDate">Change Due Date:</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <i class="material-icons prefix">alarm</i>
-                        <input placeholder="Tap here to enter time" id="DueTime" type="text" class="validate timepicker" name="detail[DueTime]">
-                        <label for="DueTime">Change Due Time:</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <i class="material-icons prefix">notifications_active</i>
-                        <input placeholder="Enter time in HR:MIN format" name="detail[Checkpoint]" id="Checkpoint" type="text" class="validate">
-                        <label for="Checkpoint">Change Checkpoint Interval (ex. 03:30):</label>
-                    </div>
-                </div>
 
-    {{else}}
-               <fieldset>
-                    <legend>Change Due Date:</legend>
+        <fieldset>
+                    <legend>Restart Date:</legend>
                     <div class="row mmddyyyy">
                         <div class="input-field col-3" id="wrong1">
                             <select name="detail[DueDateMM]" id="DueDateMM" class="validate">
@@ -130,7 +109,7 @@
                     </div>   <!-- end row -->
                 </fieldset>
                 <fieldset>
-                    <legend>Change Due Time (24 HR Format):</legend>
+                    <legend>Restart Time (24 HR Format):</legend>
                     <div class="row hhmm">
                         <div class="input-field col-3" id="wrong4">
                             <select class="validate" name="detail[DueTimeHH]" id="DueTimeHH">
@@ -182,79 +161,44 @@
                         </div>
                     </div>
                 </fieldset>
-                <fieldset>
-                    <legend>Change Checkpoint Interval:</legend>
-                    <div class="row">
-                        <div class="input-field col-3" id="wrong11">
-                            <select name="detail[CheckpointHH]" id="CheckpointHH" class="validate">
-                                <option value="" disabled selected>HR</option>
-                                <option value="00">0</option>
-                                <option value="01">1</option>
-                                <option value="02">2</option>
-                                <option value="03">3</option>
-                                <option value="04">4</option>
-                                <option value="05">5</option>
-                                <option value="06">6</option>
-                                <option value="07">7</option>
-                                <option value="08">8</option>
-                                <option value="09">9</option>
-                                <option value="10">10</option>
-                                <option value="11">11</option>
-                                <option value="12">12</option>                                
-                                <option value="13">13</option>
-                                <option value="14">14</option>
-                                <option value="15">15</option>
-                                <option value="16">16</option>
-                                <option value="17">17</option>
-                                <option value="18">18</option>
-                                <option value="19">19</option>
-                                <option value="20">20</option>
-                                <option value="21">21</option>
-                                <option value="22">22</option>
-                                <option value="23">23</option>
-                            </select>    
-                        </div>
-                        <div class="input-field col-3" id="wrong12">
-                            <select name="detail[CheckpointMM]" id="CheckpointMM">
-                                <option value="" disabled selected>MIN</option>
-                                <option value="00">00</option>
-                                <option value="05">05</option>
-                                <option value="10">10</option>
-                                <option value="15">15</option>
-                                <option value="20">20</option>                                
-                                <option value="25">25</option>
-                                <option value="30">30</option>
-                                <option value="35">35</option>
-                                <option value="40">40</option>
-                                <option value="45">45</option>
-                                <option value="50">50</option>
-                                <option value="55">55</option>                                
-                                <option value="59">59</option>
-                            </select>    
-                        </div>
-                    </div>
-                </fieldset>
-            {{/if}}
-        </div>
-        <div class="button-spacer"></div>
+            </div>
 
-        <div>
-            <center>
-                <a href="start-countdown">
-                    <button type="button" class="save-button btn" align="middle">Save</button>
-                </a>
-            </center>
-        </div>
-    </div> 
+        <!--<div>
+            <div class="input-field col s12">
+                <input placeholder="Enter in MM/DD/YYYY format" id="DueDate" type="text" class="validate">
+                <label for="DueDate">Restart Date</label>
+            </div>
+            <div class="input-field col s12">
+                <input placeholder="Enter in hrs:mins format" id="DueTime" type="text" class="validate">
+                <label for="DueTime">Restart Time</label>
+            </div>
+        </div>-->
+
+    <!--<div>
+        <p class="forms">
+            Restart Date: <input type="text" name="Date"><br>
+            <div class="input-field col s12">
+                <input placeholder="Enter in MM/DD/YYYY format" id="DueDate" type="text" class="validate">
+            </div>
+        </p>
+
+        <p class="forms">
+            Restart Time: <input type="text" name="Time"><br>
+        </p>
+    </div>-->
+    
+    <div class="right col-12 next-arrow">
+        <a href="start-countdown\">
+                        <img class="arrow-space" src="images/Arrow3.png">
+                    </div>
+
     
     <script src="https://code.jquery.com/jquery.js"></script>        
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/materialize.js"></script>
-    <script src="js/materialize.js"></script>
     <script src="js/edit-name-page.js"></script>
-    <script src="js/clockAndCalendar.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114902393-1"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114902393-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -262,5 +206,4 @@
 
   gtag('config', 'UA-114902393-1');
 </script>
-
 </body>

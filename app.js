@@ -18,6 +18,7 @@ var progressChecker = require('./routes/progress-checker');
 var editAssignStart = require('./routes/edit-assignment-start');
 var editAssign = require('./routes/edit-assignment');
 var userSettings = require('./routes/edit-user-settings');
+//var pause = require('./routes/delay-input'); NEED TO CREATE JS FILE
 
 
 //ALT ROUTES
@@ -28,7 +29,7 @@ var enterDetailsAlt = require('./routes/enterDetails');
 var startCountdownAlt = require('./routes/start-countdown');
 var progressCheckerAlt = require('./routes/progress-checker');
 var editAssignStartAlt = require('./routes/edit-assignment-start');
-//var editAssignAlt = require('./routes/edit-assignment'); //CHANGE TO A MODAL
+var editAssignAlt = require('./routes/edit-assignment'); 
 //var userSettingsAlt = require('./routes/edit-user-settings');
 
 //var editAssignment = requre('./routes/edit-assignment');
@@ -69,6 +70,7 @@ app.get('/progress-checker', progressChecker.view);
 app.get('/edit-assignment-from-start', editAssignStart.view);
 app.get('/edit-assignment', editAssign.view);
 app.get('/user-settings', userSettings.view);
+//app.get('/routes/delay-input', pause.view); NEED TO ADD JS FILE
 app.post('/enterDetails', enterDetails.view);
 app.post('/start-countdown', startCountdown.view);
 //app.get('/edit-assignment', editAssignment.view);
@@ -80,6 +82,7 @@ app.get('/enterDetailsAlt', enterDetails.viewAlt);
 app.get('/start-countdownAlt', startAgain.viewAlt);
 app.get('/progress-checkerAlt', progressChecker.viewAlt);
 app.get('/edit-assignment-from-startAlt', editAssignStart.viewAlt);
+app.get('/edit-assignmentAlt', editAssign.viewAlt)
 app.get('/Alt', login.viewAlt);
 app.post('/start-countdownAlt', startCountdown.viewAlt);
 //app.get('/edit-assignment', editAssign.view);
