@@ -9,14 +9,14 @@
     
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <script src="bootstrap-4.0.0/js/tests/vendor/jquery-1.9.1.min.js"></script> 
+    <script src="/bootstrap-4.0.0/js/tests/vendor/jquery-1.9.1.min.js"></script> 
     <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>   
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen">
-    
+    <link type="text/css" rel="stylesheet" href="/css/materialize.css" media="screen">
+
     <!-- Stylesheets that we wrote -->
-    <link href="css/main2.css" rel="stylesheet">
-    <link href="css/enter-name-page.css" rel="stylesheet"> 
+    <link href="/css/main2.css" rel="stylesheet">
+    <link href="/css/enter-name-page.css" rel="stylesheet"> 
     
 </head>
 
@@ -27,7 +27,7 @@
             <div class="row nav-header">
                 <div class="col-3">
                     <a href="home-page">
-                        <img class="arrow-space" src="images/Arrow2.png"> 
+                        <img class="arrow-space" src="/images/Arrow2.png"> 
                     </a>
                 </div>
                 
@@ -181,9 +181,11 @@
                 {{/if}}
             </div>  <!-- end of first-form -->
 
+            {{#unless viewAlt}}
             <div class="right col-12 next-arrow" onclick="return checkInputTop();">
-                <a href="#second-form"><img class="arrow-space" src="images/Arrow3.png"></a>
+                <a href="#second-form"><img class="arrow-space" src="/images/Arrow3.png"></a>
             </div>
+            {{/unless}}
 
             {{#if viewAlt}}
         
@@ -198,7 +200,7 @@
             <!-- Div that contains empty space, to give illusion of two pages -->
 
             <div class="arrow-back col-12">
-                <a href="#top"><img src="images/Arrow-back.png"></a>
+                <a href="#top"><img src="/images/Arrow-back.png"></a>
             </div> 
 
             <!--Second set of forms to enter -->
@@ -472,7 +474,7 @@
                 <div class="right next-page">
                 	<button type="submit" onclick="return checkInputBottom();" class="spacedLink no-border">
                     	<div class="right arrow-finish">
-                        	<img src="images/Arrow3.png">
+                        	<img src="/images/Arrow3.png">
                     	</div>
                 	</button>
             	</div>
@@ -481,11 +483,11 @@
     </div>  <!-- end container -->
 
     <script src="https://code.jquery.com/jquery.js"></script>        
-    <script src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/materialize.js"></script>
-    <script src="js/materialize.js"></script>
-    <script src="js/edit-name-page.js"></script>
-    <script src="js/clockAndCalendar.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/materialize.js"></script>
+    <script src="/js/materialize.js"></script>
+    <script src="/js/edit-name-page.js"></script>
+    <script src="/js/clockAndCalendar.js"></script>
     <!-- <script src ="js/progress.js"></script> -->
 
     <!--<script src ="js/progress.js"></script>-->
