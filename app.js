@@ -81,6 +81,7 @@ app.get('/start-countdownAlt', startAgain.viewAlt);
 app.get('/progress-checkerAlt', progressChecker.viewAlt);
 app.get('/edit-assignment-from-startAlt', editAssignStart.viewAlt);
 app.get('/Alt', login.viewAlt);
+app.post('/start-countdownAlt', startCountdown.viewAlt);
 //app.get('/edit-assignment', editAssign.view);
 //app.get('/user-settings', userSettings.view);
 //app.post('/enterDetails', enterDetails.view);
