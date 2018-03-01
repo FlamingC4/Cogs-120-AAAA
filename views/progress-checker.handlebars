@@ -11,11 +11,11 @@
 	<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>	
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">	
 	
-	<link href="css/bootstrap-reboot.css" rel="stylesheet">
-	<link href="css/progress.css" rel="stylesheet">
-	<link href="css/main2.css" rel="stylesheet">
+	<link href="/css/bootstrap-reboot.css" rel="stylesheet">
+	<link href="/css/progress.css" rel="stylesheet">
+	<link href="/css/main2.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-	<link href="css/modal.css" rel="stylesheet">
+	<link href="/css/modal.css" rel="stylesheet">
 	<!-- hex:#009688 -->
 	<!-- background hex: #979797 -->
 
@@ -38,23 +38,22 @@
 		  			<h1>{{name}}</h1> 
 		  		</div>
 		  		<div class="col-3">
-		  			<a href = "edit-assignment"> <img src="images/edit project.png" style="width:10vw;margin-top:2vw;"></a>
+		  	{{#if viewAlt}}
+		  			<a href = "/edit-assignment"> <img src="/images/edit project.png" id ="edit-assignment" style="width:10vw;margin-top:2vw;"></a>
+		  	{{else}}
+		  			<a href = "/edit-assignment"> <img src="/images/edit project.png" style="width:10vw;margin-top:2vw;"></a>
+		  	{{/if}}
 		  		</div>
 		  	 </div>
 	  	</div>
-	  		{{#if viewAlt}}
-	  		<h1> alt</h1>
-	  		{{else}}
-	  		<h1> normal</h1>
-	  		{{/if}}
-
-	  	
+	  		 	
 
 	  	{{#if viewAlt}}
 		  	<div class="text-center">	  	
 		  		<center>   	
 			  		</br>		  		
-				 	 <button type="button" class="btn btn-danger btn-wide btn-block" id="pause-buttonAlt" style="width:60%; background-color: #DB4437; border-color: #DB4437;" align="middle"> Pause </button>				  	
+				 	 <a href="/delay-input"><button type="button" class="btn btn-danger btn-wide btn-block" id="pause-button" style="width:60%; background-color: #DB4437; border-color: #DB4437;" align="middle"> Pause </button>
+					  	</a>			  	
 				  	</br>
 				  	</br>
 					<button type="button" class="btn btn-success btn-wide btn-block" id="finish-buttonAlt"  style="width: 60%; background-color: #3E50B4; border-color: #3E50B4;" align="middle">Finish</button>		  	
@@ -66,11 +65,11 @@
 		  	<div class="text-center">	  	
 		  		<center>   	
 			  		</br>	
-					<a href="delay-input"><button type="button" class="btn btn-danger btn-wide btn-block" id="pause-button" style="width:60%; background-color: #DB4437; border-color: #DB4437;" align="middle"> Pause </button>
+					<a href="/delay-input"><button type="button" class="btn btn-danger btn-wide btn-block" id="pause-button" style="width:60%; background-color: #DB4437; border-color: #DB4437;" align="middle"> Pause </button>
 					  	</a>
 					  	</br>
 					  	</br>
-					<a href="finish-confirmation.html"><button type="button" class="btn btn-success btn-wide btn-block" id="finish-button"  style="width: 60%; background-color: #3E50B4; border-color: #3E50B4;">Finish</button></a>		 
+					<a href="/finish-confirmation.html"><button type="button" class="btn btn-success btn-wide btn-block" id="finish-button"  style="width: 60%; background-color: #3E50B4; border-color: #3E50B4;">Finish</button></a>		 
 					</br>
 					</br>
 				</center>
@@ -131,28 +130,7 @@
 	    	</div>
 
 	    	{{#if viewAlt}}
-	    	<div id="pauseModal" class="modal">
-	        	<div class="modal-content">
-	            	<!--<span class="close">&times;</span>-->            
-	            	<div class="startOptions">
-	                	<h6>Enter how long you would like to pause working: </h6>
-	                	<div id="start-forms">
-	            			</br>
-			                <div class="input-field col s12">
-			                    <input placeholder="Enter in MM/DD/YYYY format" name="detail[StartDate]" id="StartDate" type="text" class="validate">
-			                    <label for="StartDate">Restart Date (ex. 01/04/2020)</label>
-			                </div>
-			                <div class="input-field col s12">
-			                    <input placeholder="Enter time in 24 Hours (HH:MM) format" name="detail[StartTime]" id="StartTime" type="text" class="validate">
-			                    <label for="StartTime">Restart Time (ex. 03:30)</label>
-			                </div>
-			            	<div>
-			                    <span class="close"><p> Pause </p></span>
-			            	</div>
-	        			</div>            
-	    			</div>
-	    		</div>
-	    	</div>	    	
+	    	
 
 	    	<div id="finishModal" class="modal">
 	        	<div class="modal-content">
@@ -185,11 +163,11 @@
 	
 		<!--<script data-main="app" src="../requirejs/require.js"></script> -->
 		<script src="https://code.jquery.com/jquery.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/progress.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
+		<script src="/js/progress.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-		<script src="jquery-countdown/dist/jquery.countdown.js"></script>	
-		<script type="text/javascript" src="js/materialize.js"></script>
+		<script src="/jquery-countdown/dist/jquery.countdown.js"></script>	
+		<script type="text/javascript" src="/js/materialize.js"></script>
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114902393-1"></script>
 <script>
