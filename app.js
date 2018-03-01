@@ -78,7 +78,6 @@ app.post('/start-countdown', startCountdown.view);
 // app.get('/users', user.list);
 
 //ALT ROUTES
-<<<<<<< HEAD
 app.get('/enterDetailsAlt', enterDetails.viewAlt);
 app.get('/start-countdownAlt', startAgain.viewAlt);
 app.get('/progress-checkerAlt', progressChecker.viewAlt);
@@ -86,14 +85,12 @@ app.get('/edit-assignment-from-startAlt', editAssignStart.viewAlt);
 app.get('/edit-assignmentAlt', editAssign.viewAlt)
 app.get('/Alt', login.viewAlt);
 app.post('/start-countdownAlt', startCountdown.viewAlt);
-=======
 app.get('/enterDetails/page_B', enterDetails.viewAlt);
 app.get('/start-countdown/page_B', startAgain.viewAlt);
 app.get('/progress-checker/page_B', progressChecker.viewAlt);
 app.get('/edit-assignment-from-start/page_B', editAssignStart.viewAlt);
 app.get('/page_B', login.viewAlt);
 app.post('/start-countdown/page_B', startCountdown.viewAlt);
->>>>>>> 2d279c0ba65d6d911aa33d7836ee2512a14ee03c
 //app.get('/edit-assignment', editAssign.view);
 //app.get('/user-settings', userSettings.view);
 //app.post('/enterDetails', enterDetails.view);
