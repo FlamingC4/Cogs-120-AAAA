@@ -18,7 +18,7 @@ var progressChecker = require('./routes/progress-checker');
 var editAssignStart = require('./routes/edit-assignment-start');
 var editAssign = require('./routes/edit-assignment');
 var userSettings = require('./routes/edit-user-settings');
-var delayInput = require('./routes/delay-input'); //NOT WORKING
+var delayInput = require('./routes/delay-input'); 
 
 
 //ALT ROUTES
@@ -29,7 +29,8 @@ var enterDetailsAlt = require('./routes/enterDetails');
 var startCountdownAlt = require('./routes/start-countdown');
 var progressCheckerAlt = require('./routes/progress-checker');
 var editAssignStartAlt = require('./routes/edit-assignment-start');
-var editAssignAlt = require('./routes/edit-assignment'); 
+var editAssignAlt = require('./routes/edit-assignment');
+var delayInputAlt = require('./routes/delay-input');
 //var userSettingsAlt = require('./routes/edit-user-settings');
 
 //var editAssignment = requre('./routes/edit-assignment');
@@ -85,6 +86,7 @@ app.get('/progress-checker/page_B', progressChecker.viewAlt);
 app.get('/edit-assignment-from-start/page_B', editAssignStart.viewAlt);
 app.get('/page_B', login.viewAlt);
 app.get('/edit-assignment/page_B', editAssign.viewAlt)
+app.get('/delayInput/page_B', delayInput.viewAlt)
 app.post('/start-countdown/page_B', startCountdown.viewAlt);
 //app.get('/edit-assignment', editAssign.view);
 //app.get('/user-settings', userSettings.view);
