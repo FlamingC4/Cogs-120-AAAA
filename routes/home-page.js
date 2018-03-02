@@ -5,5 +5,6 @@ exports.view = function(req, res){
 };
 
 exports.viewAlt = function(req, res){
-  res.render('home-page', assignmentList);
+	console.log("home page viewAlt");
+  	res.render('home-page', assignmentList);
 };

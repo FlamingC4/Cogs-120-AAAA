@@ -10,7 +10,7 @@ exports.view = function(req, res){
 };
 
 exports.viewAlt = function(req, res){
-  //console.log(progress);
+  console.log("progress checker alt");
   //list["viewAlt"] = true;
   res.render('progress-checker', progress);
   //list["viewAlt"] = true;
