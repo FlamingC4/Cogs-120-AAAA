@@ -18,9 +18,9 @@ html, body {
 
 }
 
-.project-name {
+/*.project-name {
 	font-size: 3em;
-}
+} */
 
 .no-border {
 	background-color: rgba(0,0,0,0);
@@ -38,6 +38,10 @@ html, body {
 .div-login {
 	padding: 0 10%;
 }
+
+/*.top-of-page {
+	height: 100vh;
+}*/
 
 .top-of-page .row {
     background-color: #009688;
@@ -75,7 +79,7 @@ html, body {
 .nav-header {
 	max-width: 650px;
 	width: 100%;
-	height: 15%;
+	height: 10vh;
 	padding-bottom: 0;
 	margin: 0 auto;
 	z-index: 1;

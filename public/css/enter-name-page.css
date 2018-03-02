@@ -1,10 +1,16 @@
 h1 {
-    font-size: 6vw;
+  font-size: 6vw;
 	/*white-space: nowrap;*/
 	max-width: 650px;
-    color: #009688;
-    margin-bottom: 10vh;
-    font-family: Roboto;
+  color: #009688;
+  margin-bottom: 10vh;
+  font-family: Roboto;
+}
+
+h3.project-name {
+  max-width: 650px;
+  color: #009688;
+  font-family: Roboto;
 }
 
 .middle-spacer {
@@ -37,10 +43,10 @@ h1 {
   margin-bottom: 5vh;
 }
 
-.arrow-finish {
+/*.arrow-finish {
     margin-bottom: 0vh;
     margin-right: 10vw;
-}
+}*/
 
 .spacedLink {
    margin-top: -15px; 
@@ -48,9 +54,9 @@ h1 {
    display: block;
 }
 
-.next-page {
+/*.next-page {
   margin-top: 10em;
-}
+}*/
 
 
 .btn-primary.info {
@@ -70,13 +76,26 @@ h1 {
   color: #009688;
 }
 
+.assignment-name {
+  height: 10vh;
+}
+
 
 #first-form {
-  /*height: 25rem;*/
+  height: 80vh;
+}
+
+.inner {
+  height: 80%;
+}
+
+.arrow {
+  height: 20%;
 }
 
 #second-form {
-  /* padding-top: 20px;*/
+  height: 100vh;
+  padding-top: 5vh;
 }
 
 .middle-space {
