@@ -16,6 +16,7 @@
 
     <!-- Stylesheets that we wrote -->
     <link href="/css/main2.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/modal.css">
     <link href="/css/enter-name-page.css" rel="stylesheet"> 
     
 </head>
@@ -363,7 +364,7 @@
                             </div>
                         </fieldset>
                         <fieldset>
-                            <legend>Checkpoint Interval</legend>
+                            <legend>Checkpoint Interval <button id="myBtn" type="button">?</button></legend>
                             <div class="row">
                                 <div class="input-field col-3" id="wrong11">
                                     <select name="detail[CheckpointHH]" id="CheckpointHH" class="validate">
@@ -484,12 +485,22 @@
         </form>
     </div>  <!-- end container -->
 
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <!--<span class="close">&times;</span> -->
+            <p>Check points allow you to enter your progress and get an estimate og how much tie is left.</p>
+            <button type="button" class="exit btn btn-success btn-md">Got it!</button>
+        </div>
+    </div>
+
     <script src="https://code.jquery.com/jquery.js"></script>        
     <script src="/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/js/materialize.js"></script>
     <script src="/js/materialize.js"></script>
     <script src="/js/edit-name-page.js"></script>
     <script src="/js/clockAndCalendar.js"></script>
+    <script src="/js/main.js"></script>
     <!-- <script src ="js/progress.js"></script> -->
 
     <!--<script src ="js/progress.js"></script>-->
