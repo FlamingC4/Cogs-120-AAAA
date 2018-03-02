@@ -37,7 +37,26 @@
             	</div>
         	</div>
         {{/each}}
-		
+
+		<!-- The Modal -->
+		<div id="myModal" class="modal">
+	  		<!-- Modal content -->
+	  		<div class="modal-content">
+	    		<!--<span class="close">&times;</span> -->
+	    		<h3>Add New Project</h3>
+	    		<form action="/enterDetails" method="POST">
+		    		<input class="form-control" type="text" name="name" placeholder="Project Name">
+		    		<div class="row">
+		    			<div class="col-xs-6 left">
+		    				<button type="button" class="exit btn btn-danger btn-md">Cancel</button>
+		    			</div>
+		    			<div class="col-xs-6 right">
+		    				<button type="submit" class="exit btn btn-primary btn-md">Save</button>
+		    			</div>
+		  			</div>
+	  			</form>
+			</div>
+		</div>
 		<nav class="right nav-footer">
   			<a id="myBtn" href="#"><span class="glyphicon glyphicon-plus"></span></a>
 		</nav>
