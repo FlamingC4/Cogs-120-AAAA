@@ -24,6 +24,7 @@ function checkInputTop(){
 	var dueDateDD = $('#DueDateDD').val();
 	var dueDateYYYY = $('#DueDateYYYY').val();
 	var dueDate = dueDateMM + '/' + dueDateDD + '/' + dueDateYYYY;
+	    	console.log(dueDate);
 
 
     var dueTimeHH = $('#DueTimeHH').val(); 

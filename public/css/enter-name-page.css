@@ -73,7 +73,7 @@ h3.project-name {
 
 /* Style Placeholders */
 ::-webkit-input-placeholder {
-  color: #009688;
+  /*color: #009688;*/
 }
 
 .assignment-name {
