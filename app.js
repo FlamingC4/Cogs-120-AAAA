@@ -24,7 +24,7 @@ var delayInput = require('./routes/delay-input');
 //ALT ROUTES
 //var indexAlt = require('./routes/index');
 var loginAlt = require('./routes/login');
-//var homeAlt = require('./routes/home-pageAlt');
+//var homeAlt = require('./routes/home-page');
 var enterDetailsAlt = require('./routes/enterDetails');
 var startCountdownAlt = require('./routes/start-countdown');
 var progressCheckerAlt = require('./routes/progress-checker');
@@ -87,6 +87,8 @@ app.get('/edit-assignment-from-start/page_B', editAssignStart.viewAlt);
 app.get('/page_B', login.viewAlt);
 app.get('/edit-assignment/page_B', editAssign.viewAlt)
 app.get('/delayInput/page_B', delayInput.viewAlt)
+app.get('/home-page/page_B', home.viewAlt)
+
 app.post('/start-countdown/page_B', startCountdown.viewAlt);
 //app.get('/edit-assignment', editAssign.view);
 //app.get('/user-settings', userSettings.view);
