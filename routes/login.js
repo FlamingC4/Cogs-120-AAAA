@@ -9,4 +9,5 @@ exports.view = function(req, res) {
 exports.viewAlt = function(req, res) {
 	list["viewAlt"] = true;
 	res.render('login', list);
+	console.log("You are in Alt mode");
 };

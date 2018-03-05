@@ -23,7 +23,7 @@ var delayInput = require('./routes/delay-input');
 
 //ALT ROUTES
 //var indexAlt = require('./routes/index');
-/*var loginAlt = require('./routes/login');
+var loginAlt = require('./routes/login');
 //var homeAlt = require('./routes/home-page');
 var enterDetailsAlt = require('./routes/enterDetails');
 var startCountdownAlt = require('./routes/start-countdown');
@@ -31,7 +31,7 @@ var progressCheckerAlt = require('./routes/progress-checker');
 var editAssignStartAlt = require('./routes/edit-assignment-start');
 var editAssignAlt = require('./routes/edit-assignment');
 var delayInputAlt = require('./routes/delay-input');
-//var userSettingsAlt = require('./routes/edit-user-settings');*/
+//var userSettingsAlt = require('./routes/edit-user-settings');
 
 //var editAssignment = requre('./routes/edit-assignment');
 // Example route
