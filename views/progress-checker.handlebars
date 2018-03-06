@@ -7,6 +7,7 @@
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="/bootstrap-4.0.0/js/tests/vendor/jquery-1.9.1.min.js"></script>
 	<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>	
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">	
@@ -22,17 +23,7 @@
 </head>
 
 <body>
-	<div class="container">
-		<!--<div id="myProgress">
-		  <div id="myBar"></div>
-		</div> 
-		<button onclick="move()">Click Me</button>
-		<div id="top-of-page">
-	  		<p>COGS 108 Assignment</p> 
-	  	</div> -->
-
-	  	
-	  	<div class="top-of-page">
+	<div class="top-of-page">
 		  	<div class="row">
 		  		<div class="col-9">
 		  			<h1>{{name}}</h1> 
@@ -47,7 +38,14 @@
 	  			</div>
 	  	 </div>
   	</div>
-	  		 	
+	<div class="container">
+		<!--<div id="myProgress">
+		  <div id="myBar"></div>
+		</div> 
+		<button onclick="move()">Click Me</button>
+		<div id="top-of-page">
+	  		<p>COGS 108 Assignment</p> 
+	  	</div> -->  		 	
 
 	  	{{#if viewAlt}}
 		  	<div class="text-center">	  	
@@ -76,20 +74,35 @@
 				</center>
 			</div>
 		{{/if}}
-		
-		<div>
-			<p style="margin-bottom: -1vw">Next checkpoint: (HH:MM:SS) <div id="progress-timer-2"></div></p>	
-		</div>
-		
-		<div id="progressBarz">
-	  		<div class="bar"></div>
-		</div>
 
-		<div>
-			<h5>Assignment due in: <div id="progress-timer"></div></h5>		
+	
+		<p style="margin-bottom: -1vw;">Next checkpoint: (HH:MM:SS)</p>							
+		<div class= "row">
+			
+				<i class="material-icons prefix">alarm</i>
+		
+			<div class = "col 2">
+				<div id="progress-timer-2"></div>
+			</div>
 		</div>
-
 		</br>
+		<!--<div class= "row">
+			<div class="col 2"></div>
+			<div id="progress-timer-2" style="margin-right:2vw;"></div>
+		</div>-->
+
+		<center>
+			<div id=border>
+				<div id="progressBarz">
+			  		<div class="bar"></div>
+				</div>
+
+				<div>
+					<h5>Assignment due in <div id="progress-timer"></div></h5>		
+				</div>
+			</div>
+			</br>
+		</center>
 
 		<div>
 			<p name="checkpointPercent" id="checkpointPercent">Progress (% Completed): _____ </p>

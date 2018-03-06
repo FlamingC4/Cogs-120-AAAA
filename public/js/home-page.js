@@ -1,10 +1,7 @@
 'use strict';
-$(document).ready(function() {
-	console.log("hi")
-});
-
+var enterAssignmentName = new Audio('/enterAssignmentName.mp3');
+console.log(enterAssignmentName);
 $('#myBtn').onClick = function() {	
-	console.log("good");
-	var enterAssignmentName = new Audio('/enterAssignmentName.mp3');
+	console.log("good");	
 	enterAssignmentName.play();	
 };
