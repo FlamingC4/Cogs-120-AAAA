@@ -29,7 +29,7 @@ function checkInputTop(){
 	dueDateYYYY = dueDateValueArray[dueDateValueArray.length -4] + dueDateValueArray[dueDateValueArray.length -3] + dueDateValueArray[dueDateValueArray.length -2] + dueDateValueArray[dueDateValueArray.length -1];
 
 	var dueDateValueArray = dueDate.split(' ');
-	console.log(dueDateValueArray[0])
+	//console.log(dueDateValueArray[0])
 	if (dueDateValueArray[0].length == 1)
 		dueDateDD = "0" + dueDateValueArray[0];
 	else
@@ -72,7 +72,7 @@ function checkInputTop(){
 	startDateYYYY = startDateValueArray[startDateValueArray.length -4] + startDateValueArray[startDateValueArray.length -3] + startDateValueArray[startDateValueArray.length -2] + startDateValueArray[startDateValueArray.length -1];
 
 	var startDateValueArray = startDate.split(' ');
-	console.log(startDateValueArray[0])
+	//console.log(startDateValueArray[0])
 	if (startDateValueArray[0].length == 1)
 		startDateDD = "0" + startDateValueArray[0];
 	else
@@ -130,6 +130,24 @@ function checkInputTop(){
 
  	var good = true;
 
+ 	if(!checkDateFormat(startDate)){
+    	alert("Please format Desired Start Date to MM/DD/YYYY");
+    	$("#StartDate").css("background-color","#ffff99");    	
+    	good = false;
+    }
+    else if(!checkValidDate(startDate)){
+    	alert("Please make sure Desired Start Date is today or later");
+    	$("#StartDate").css("background-color","#ffff99");    	
+    	good = false;	    	
+    }
+
+    if(!checkTimeFormat(startTime)){
+    	alert("Please format Desired Start Time in HH:MM in 24 hour format");
+    	$("#StartTime").css("background-color","#ffff99");    	   	
+    	good = false;
+    }
+
+
  	if(!checkDateFormat(dueDate)){
     	alert("Please format Desired Due Date to MM/DD/YYYY");
     	$("#DueDate").css("background-color","#ffff99");
@@ -148,17 +166,7 @@ function checkInputTop(){
     	$("#DueDate").css("background-color","#ffff99");    	
     	good = false;
     }
-
-    if(!checkDateFormat(startDate)){
-    	alert("Please format Desired Start Date to MM/DD/YYYY");
-    	$("#StartDate").css("background-color","#ffff99");    	
-    	good = false;
-    }
-    else if(!checkValidDate(startDate)){
-    	alert("Please make sure Desired Start Date is today or later");
-    	$("#StartDate").css("background-color","#ffff99");    	
-    	good = false;	    	
-    }
+   
     else if(!checkStartDateEarlierThanDueDate(dueDate, startDate)){
     	alert("Please make sure you are starting before the Due Date");
     	$("#StartDate").css("background-color","#ffff99");
@@ -166,11 +174,6 @@ function checkInputTop(){
     	good = false;
     }
 
-    if(!checkTimeFormat(startTime)){
-    	alert("Please format Desired Start Time in HH:MM in 24 hour format");
-    	$("#StartTime").css("background-color","#ffff99");    	   	
-    	good = false;
-    }
     if(!checkTimeFormat(dueTime)){
     	alert("Please format Desired Due Time in HH:MM in 24 hour format");
     	$("#DueTime").css("background-color","#ffff99");    	    	
