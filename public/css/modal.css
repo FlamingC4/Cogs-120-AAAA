@@ -25,6 +25,11 @@
     width: 90%;
 }
 
-.exit {
-	height: 30px;
+.home-modal {
+    height: 2em;
+    font-size: 1.5em;
+}
+
+.done {
+    margin-top: 2em;
 }

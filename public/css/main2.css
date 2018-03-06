@@ -163,4 +163,14 @@ html, body {
 	border-bottom: 1px solid black;
 }
 
+.wrong {
+	color: red;
+} 
 
+.done {
+	margin-top: 2em;
+}
+
+.home-modal {
+	font-size: 3em;
+}

@@ -7,6 +7,8 @@ var btn = document.getElementById("myBtn");
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("exit")[0];
 
+var projectName = document.getElementById("project-name");
+
 // When the user clicks the button, open the modal 
 btn.onclick = function() {
     modal.style.display = "block";
@@ -17,6 +19,16 @@ span.onclick = function() {
 	console.log("exiting");
     modal.style.display = "none";
 };
+
+function validate() {
+	if(projectName.value == 0) {
+		$('.addProject').addClass('wrong');
+		$('.addProject').text("Please Enter a Assignment Name");
+		return false;
+	} 
+
+	return true;
+}
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {

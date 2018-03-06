@@ -43,15 +43,15 @@
 	  		<!-- Modal content -->
 	  		<div class="modal-content">
 	    		<!--<span class="close">&times;</span> -->
-	    		<h3>Add New Project</h3>
+	    		<h3 class="addProject">Add New Project</h3>
 	    		<form action="/enterDetails" method="POST">
-		    		<input class="form-control" type="text" name="name" placeholder="Project Name">
-		    		<div class="row">
-		    			<div class="col-xs-6 left">
-		    				<button type="button" class="exit btn btn-danger btn-md">Cancel</button>
+		    		<input class="form-control" id="project-name" type="text" name="name" placeholder="Project Name" value="">
+		    		<div class="row done">
+		    			<div class="col-xs-6">
+		    				<button type="button" class="exit btn btn-danger btn-block home-modal">Cancel</button>
 		    			</div>
-		    			<div class="col-xs-6 right">
-		    				<button type="submit" class="exit btn btn-primary btn-md">Save</button>
+		    			<div class="col-xs-6">
+		    				<button type="submit" id="save" class="exit btn btn-primary btn-block home-modal" onclick="return validate();">Save</button>
 		    			</div>
 		  			</div>
 	  			</form>
