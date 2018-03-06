@@ -28,5 +28,5 @@ exports.viewAlt = function(req, res){
     res.render('enter-name-page', currData);    
 };
 
-ga('create', 'UA-114902393-1', 'auto');
-ga('send', 'duration')
+/*ga('create', 'UA-114902393-1', 'auto');
+ga('send', 'duration')*/
