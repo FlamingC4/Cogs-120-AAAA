@@ -130,8 +130,8 @@ function checkInputTop(){
 
  	var good = true;
 
- 	if(!checkDateFormat(startDate)){
-    	alert("Please format Desired Start Date to MM/DD/YYYY");
+ 	if(!checkDateFormat(dueDate)){
+    	alert("Please format Desired Due Date to MM/DD/YYYY");
     	$("#DueDate").css("background-color","#ffff99");
     	$("#wrong7").css("background-color","#ffff99");
     	$("#wrong8").css("background-color","#ffff99");
