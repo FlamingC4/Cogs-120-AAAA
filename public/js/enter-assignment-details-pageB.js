@@ -1,4 +1,4 @@
- $(document).ready(function() {
+$(document).ready(function() {
 	$('select').material_select();
    /* $("html, body").animate({ scrollTop: 400 }, "slow");*/
 
@@ -20,17 +20,63 @@ function checkPointIntervalAlert(){
 //check input from enter-name-page when user clicks submit
 function checkInputTop(){
 
-	var dueDate = $('#DueDate').val();
-	//var dueDateDD = $('#DueDateDD').val();
-	//var dueDateYYYY = $('#DueDateYYYY').val();
-	//var dueDate = dueDateMM + '/' + dueDateDD + '/' + dueDateYYYY;
+	var dueDate= $('#DueDate').val();
+	var dueDateValueArray = dueDate.split('');
+	var dueDateMM;
+	var dueDateDD;
+	var dueDateYYYY;
+	dueDateYYYY = dueDateValueArray[dueDateValueArray.length -4] + dueDateValueArray[dueDateValueArray.length -3] + dueDateValueArray[dueDateValueArray.length -2] + dueDateValueArray[dueDateValueArray.length -1];
+
+	var dueDateValueArray = dueDate.split(' ');
+	console.log(dueDateValueArray[0])
+	if (dueDateValueArray[0].length == 1)
+		dueDateDD = "0" + dueDateValueArray[0];
+	else
+		dueDateDD = dueDateValueArray[0];
+	
+	if(dueDate.includes("Janurary"))
+		dueDateMM ="00";
+	else if (dueDate.includes("Feburary"))
+		dueDateMM = "01";
+	else if (dueDate.includes("March"))
+		dueDateMM = "02";
+	else if (dueDate.includes("April"))
+		dueDateMM = "03";
+	else if (dueDate.includes("May"))
+		dueDateMM = "04";
+	else if (dueDate.includes("June"))
+		dueDateMM = "05";
+	else if (dueDate.includes("July"))
+		dueDateMM = "06";
+	else if (dueDate.includes("August"))
+		dueDateMM = "07";
+	else if (dueDate.includes("September"))
+		dueDateMM = "08";
+	else if (dueDate.includes("October"))
+		dueDateMM = "09";
+	else if (dueDate.includes("November"))
+		dueDateMM = "10";
+	else 
+		dueDateMM = "11";
+
+	var dueDate = dueDateMM + '/' + dueDateDD + '/' + dueDateYYYY;
 	console.log(dueDate);
-	console.log("hello");
+
+
 
 
     var dueTimeHH = $('#DueTimeHH').val(); 
     var dueTimeMM = $('#DueTimeMM').val();
-    var dueTime = dueTimeHH + ":" + dueTimeMM;       
+    var dueTime = dueTimeHH + ":" + dueTimeMM;   
+
+    var startDateMM = $('#StartDateMM').val();
+	var startDateDD = $('#StartDateDD').val();
+	var startDateYYYY = $('#StartDateYYYY').val();	
+	var startDate = startDateMM + '/' + startDateDD + '/' + startDateYYYY;
+
+    var startTimeHH = $('#StartTimeHH').val();
+    var startTimeMM = $('#StartTimeMM').val();
+    var startTime = startTimeHH + ':' + startTimeMM;    
 
  	var good = true;
  	
@@ -62,44 +108,7 @@ function checkInputTop(){
     	good = false;
     }
 
-    return good;
-}
-
-   
-
-function checkInputBottom(){
-	
-	var startDateMM = $('#StartDateMM').val();
-	var startDateDD = $('#StartDateDD').val();
-	var startDateYYYY = $('#StartDateYYYY').val();	
-	var startDate = startDateMM + '/' + startDateDD + '/' + startDateYYYY;
-
-    var startTimeHH = $('#StartTimeHH').val();
-    var startTimeMM = $('#StartTimeMM').val();
-    var startTime = startTimeHH + ':' + startTimeMM;
-
-   
-    var checkpointHH = $('#CheckpointHH').val();
-    var checkpointMM = $('#CheckpointMM').val();
-    var checkpoint = checkpointHH + ":" + checkpointMM;
-
-    var estimateHH = $('#EstimateHH').val(); 
-    var estimateMM = $('#EstimateMM').val();
-    var estimate = estimateHH + ':' + estimateMM;
-
-    var dueDateMM = $('#DueDateMM').val();
-	var dueDateDD = $('#DueDateDD').val();
-	var dueDateYYYY = $('#DueDateYYYY').val();
-	var dueDate = dueDateMM + '/' + dueDateDD + '/' + dueDateYYYY;
-
-
-    var dueTimeHH = $('#DueTimeHH').val(); 
-    var dueTimeMM = $('#DueTimeMM').val();
-    var dueTime = dueTimeHH + ":" + dueTimeMM;  
-
-    var good = true;
-
-     if(!checkDateFormat(startDate)){
+    if(!checkDateFormat(startDate)){
     	alert("Please format Desired Start Date to MM/DD/YYYY");
     	$("#wrong6").css("background-color","#ffff99");
     	$("#wrong7").css("background-color","#ffff99");
@@ -140,6 +149,25 @@ function checkInputBottom(){
     	$("#wrong10").css("background-color","#ffff99"); 
     	good = false;
     }
+
+    return good;
+}
+
+   
+
+function checkInputBottom(){
+   
+    var checkpointHH = $('#CheckpointHH').val();
+    var checkpointMM = $('#CheckpointMM').val();
+    var checkpoint = checkpointHH + ":" + checkpointMM;
+
+    var estimateHH = $('#EstimateHH').val(); 
+    var estimateMM = $('#EstimateMM').val();
+    var estimate = estimateHH + ':' + estimateMM;  
+
+    var good = true;
+
+     
     if(checkpoint.length != 5){
     	alert("Please format Checkpoint Interval in HH:MM in 24 hour format");
     	$("#wrong11").css("background-color","#ffff99");
