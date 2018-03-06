@@ -318,7 +318,9 @@
                     </fieldset>
                     {{/if}}
                 </div> <!-- end inner -->
-                <div class="right col-12 arrow next-arrow" {{#unless viewAlt}}onclick="return checkInputTop();"{{/unless}}>
+                <!--<div class="right col-12 arrow next-arrow" {{#unless viewAlt}}onclick="return checkInputTop();"{{/unless}}> -->
+                <div class="right col-12 arrow next-arrow"onclick="return checkInputTop();">
+
                     <a href="#second-form"><img class="arrow-space" src="/images/Arrow3.png"></a>
                 </div>
             </div>  <!-- end of first-form -->
@@ -496,11 +498,16 @@
     <script src="/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/js/materialize.js"></script>
     <script src="/js/materialize.js"></script>
-    <script src="/js/edit-name-page.js"></script>
+    
     <script src="/js/clockAndCalendar.js"></script>
     <script src="/js/main.js"></script>
     {{#if viewAlt}}
-      <script src="/js/enter-details-page-sound.js"></script>
+       <script src="/js/enter-details-page-sound.js"></script>
+    {{/if}}
+    {{#if viewAlt}}
+       <script src="/js/enter-assignment-details-pageB.js"></script>
+    {{else}}
+        <script src="/js/edit-name-page.js"></script>
     {{/if}}
     <!-- <script src ="js/progress.js"></script> -->
 
