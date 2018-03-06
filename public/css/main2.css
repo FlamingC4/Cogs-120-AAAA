@@ -15,8 +15,6 @@ html, body {
 	overflow: scroll;
     overflow-y: auto;
     scroll-behavior: smooth;
-    padding-left: 2.5vw;
-    padding-right:2.5vw;
 
 }
 
@@ -169,10 +167,4 @@ html, body {
 	color: red;
 } 
 
-.done {
-	margin-top: 2em;
-}
 
-.home-modal {
-	font-size: 3em;
-}

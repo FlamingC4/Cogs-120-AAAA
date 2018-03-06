@@ -21,18 +21,18 @@ h3.project-name {
     margin-bottom: 25vh;
 }
 
-.container {
+/* .container {
 	max-width: 650px;
 	width: 100%;
-	/*border: 2px solid black;*/
+	border: 2px solid black;
 	margin: 0 auto;
 	height: 100%;
-    padding: 0 0;
+  padding: 0 0;
 	background-color: white;
 	overflow: scroll;
-    overflow-y: auto;
-    scroll-behavior: smooth;
-}
+  overflow-y: auto;
+  scroll-behavior: smooth;
+} */
 
 .arrow-space {
     margin-top: 2vh;
@@ -48,11 +48,11 @@ h3.project-name {
     margin-right: 10vw;
 }*/
 
-.spacedLink {
+/*.spacedLink {
    margin-top: -15px; 
    margin-bottom: 30px;
    display: block;
-}
+}*/
 
 /*.next-page {
   margin-top: 10em;
@@ -86,11 +86,11 @@ h3.project-name {
 }
 
 .inner {
-  height: 80%;
+  height: 70%;
 }
 
 .arrow {
-  height: 20%;
+  height: 30%;
 }
 
 #second-form {
