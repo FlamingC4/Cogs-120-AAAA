@@ -27,3 +27,5 @@ exports.viewAlt = function(req, res){
 
     res.render('enter-name-page', currData);    
 };
+
+gtag("send", "duration");
