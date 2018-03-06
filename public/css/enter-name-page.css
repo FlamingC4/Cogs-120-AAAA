@@ -35,7 +35,7 @@ h3.project-name {
 } */
 
 .arrow-space {
-    margin-top: 2vh;
+    margin-top: 5vh;
     margin-bottom: 2vh;
 }
 
@@ -86,11 +86,11 @@ h3.project-name {
 }
 
 .inner {
-  height: 70%;
+  height: 75%;
 }
 
 .arrow {
-  height: 30%;
+  height: 25%;
 }
 
 #second-form {
