@@ -186,7 +186,7 @@ function setCheckPoint(){
     var checkpoint = $("#checkpointInterval").val();
     var cpBox = $("#checkpointPercent")[0];
     //var cpBox = document.getElementById("checkpointPercent");
-    cpBox.innerHTML = "<p>Percent Completed: " + checkpoint + "</p>";
+    cpBox.innerHTML = "<p>Progress (% Completed): " + checkpoint + "</p>";
     //console.log("hello");
 }
 
