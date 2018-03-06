@@ -20,6 +20,7 @@ function checkPointIntervalAlert(){
 //check input from enter-name-page when user clicks submit
 function checkInputTop(){
 
+	//dueDate
 	var dueDate= $('#DueDate').val();
 	var dueDateValueArray = dueDate.split('');
 	var dueDateMM;
@@ -35,120 +36,161 @@ function checkInputTop(){
 		dueDateDD = dueDateValueArray[0];
 	
 	if(dueDate.includes("Janurary"))
-		dueDateMM ="00";
+		dueDateMM ="01";
 	else if (dueDate.includes("Feburary"))
-		dueDateMM = "01";
-	else if (dueDate.includes("March"))
 		dueDateMM = "02";
-	else if (dueDate.includes("April"))
+	else if (dueDate.includes("March"))
 		dueDateMM = "03";
-	else if (dueDate.includes("May"))
+	else if (dueDate.includes("April"))
 		dueDateMM = "04";
-	else if (dueDate.includes("June"))
+	else if (dueDate.includes("May"))
 		dueDateMM = "05";
-	else if (dueDate.includes("July"))
+	else if (dueDate.includes("June"))
 		dueDateMM = "06";
-	else if (dueDate.includes("August"))
+	else if (dueDate.includes("July"))
 		dueDateMM = "07";
-	else if (dueDate.includes("September"))
+	else if (dueDate.includes("August"))
 		dueDateMM = "08";
-	else if (dueDate.includes("October"))
+	else if (dueDate.includes("September"))
 		dueDateMM = "09";
-	else if (dueDate.includes("November"))
+	else if (dueDate.includes("October"))
 		dueDateMM = "10";
-	else 
+	else if (dueDate.includes("November"))
 		dueDateMM = "11";
+	else 
+		dueDateMM = "12";
 
 	var dueDate = dueDateMM + '/' + dueDateDD + '/' + dueDateYYYY;
-	console.log(dueDate);
+	
 
+	//startDate
+	var startDate= $('#StartDate').val();
+	var startDateValueArray = startDate.split('');
+	var startDateMM;
+	var startDateDD;
+	var startDateYYYY;
+	startDateYYYY = startDateValueArray[startDateValueArray.length -4] + startDateValueArray[startDateValueArray.length -3] + startDateValueArray[startDateValueArray.length -2] + startDateValueArray[startDateValueArray.length -1];
 
+	var startDateValueArray = startDate.split(' ');
+	console.log(startDateValueArray[0])
+	if (startDateValueArray[0].length == 1)
+		startDateDD = "0" + startDateValueArray[0];
+	else
+		startDateDD = startDateValueArray[0];
+	
+	if(startDate.includes("Janurary"))
+		startDateMM ="01";
+	else if (startDate.includes("Feburary"))
+		startDateMM = "02";
+	else if (startDate.includes("March"))
+		startDateMM = "03";
+	else if (startDate.includes("April"))
+		startDateMM = "04";
+	else if (startDate.includes("May"))
+		startDateMM = "05";
+	else if (startDate.includes("June"))
+		startDateMM = "06";
+	else if (startDate.includes("July"))
+		startDateMM = "07";
+	else if (startDate.includes("August"))
+		startDateMM = "08";
+	else if (startDate.includes("September"))
+		startDateMM = "09";
+	else if (startDate.includes("October"))
+		startDateMM = "10";
+	else if (startDate.includes("November"))
+		startDateMM = "11";
+	else 
+		startDateMM = "12";
 
-
-    var dueTimeHH = $('#DueTimeHH').val(); 
-    var dueTimeMM = $('#DueTimeMM').val();
-    var dueTime = dueTimeHH + ":" + dueTimeMM;   
-
-    var startDateMM = $('#StartDateMM').val();
-	var startDateDD = $('#StartDateDD').val();
-	var startDateYYYY = $('#StartDateYYYY').val();	
 	var startDate = startDateMM + '/' + startDateDD + '/' + startDateYYYY;
 
-    var startTimeHH = $('#StartTimeHH').val();
-    var startTimeMM = $('#StartTimeMM').val();
-    var startTime = startTimeHH + ':' + startTimeMM;    
+	//dueTime
+	var dueTime = $('#DueTime').val();	
+	var dueTimeArray = dueTime.split('');
+    var dueTimeHH
+    if(dueTimeArray[dueTimeArray.length - 2] + dueTimeArray[dueTimeArray.length - 1] == "PM")
+    	dueTimeHH = parseInt(dueTimeArray[0] + dueTimeArray[1]) + 12;
+    else
+    	dueTimeHH = dueTimeArray[0] + dueTimeArray[1];
+    var dueTimeMM = dueTimeArray[3] + dueTimeArray[4];
+    var dueTime = dueTimeHH + ":" + dueTimeMM; 
+    //console.log(dueTime);  
+
+    //startTime
+    var startTime = $('#StartTime').val();	
+	var startTimeArray = startTime.split('');
+    var startTimeHH
+    if(startTimeArray[startTimeArray.length - 2] + startTimeArray[startTimeArray.length - 1] == "PM")
+    	startTimeHH = parseInt(startTimeArray[0] + startTimeArray[1]) + 12;
+    else
+    	startTimeHH = startTimeArray[0] + startTimeArray[1];
+    var startTimeMM = startTimeArray[3] + startTimeArray[4];
+    var startTime = startTimeHH + ":" + startTimeMM;    
 
  	var good = true;
- 	
-    if(!checkDateFormat(dueDate)){
-    	alert("Please format Due Date to MM/DD/YYYY");
-    	$("#wrong1").css("background-color","#ffff99");
-    	$("#wrong2").css("background-color","#ffff99");
-    	$("#wrong3").css("background-color","#ffff99");
-    	good = false;	    	
-    }
+
+ 	if(!checkDateFormat(startDate)){
+    	alert("Please format Desired Start Date to MM/DD/YYYY");
+    	$("#DueDate").css("background-color","#ffff99");
+    	$("#wrong7").css("background-color","#ffff99");
+    	$("#wrong8").css("background-color","#ffff99");
+    	good = false;
+    } 	
     else if(!checkValidDate(dueDate)){
     	alert("Please make sure Due Date is today or later");
-    	$("#wrong1").css("background-color","#ffff99");
-    	$("#wrong2").css("background-color","#ffff99");
-    	$("#wrong3").css("background-color","#ffff99");
+    	$("#DueDate").css("background-color","#ffff99");    	
     	good = false;
     }
 
-    if(!checkTimeFormat(dueTime)){
-    	alert("Please format time in HH:MM in 24 hour format");
-    	$("#wrong4").css("background-color","#ffff99");
-    	$("#wrong5").css("background-color","#ffff99");
-    	good = false;
-    }
     else if(!checkValidTime(dueDate, dueTime)){
     	alert("Please make sure time is later than today's current time");
-    	$("#wrong4").css("background-color","#ffff99");
-    	$("#wrong5").css("background-color","#ffff99");
+    	$("#DueDate").css("background-color","#ffff99");    	
     	good = false;
     }
 
     if(!checkDateFormat(startDate)){
     	alert("Please format Desired Start Date to MM/DD/YYYY");
-    	$("#wrong6").css("background-color","#ffff99");
-    	$("#wrong7").css("background-color","#ffff99");
-    	$("#wrong8").css("background-color","#ffff99");
+    	$("#StartDate").css("background-color","#ffff99");    	
     	good = false;
     }
     else if(!checkValidDate(startDate)){
     	alert("Please make sure Desired Start Date is today or later");
-    	$("#wrong6").css("background-color","#ffff99");
-    	$("#wrong7").css("background-color","#ffff99");
-    	$("#wrong8").css("background-color","#ffff99");
+    	$("#StartDate").css("background-color","#ffff99");    	
     	good = false;	    	
     }
     else if(!checkStartDateEarlierThanDueDate(dueDate, startDate)){
     	alert("Please make sure you are starting before the Due Date");
-    	$("#wrong6").css("background-color","#ffff99");
-    	$("#wrong7").css("background-color","#ffff99");
-    	$("#wrong8").css("background-color","#ffff99");
+    	$("#StartDate").css("background-color","#ffff99");
+    	$("#DueDate").css("background-color","#ffff99");    	
     	good = false;
     }
 
     if(!checkTimeFormat(startTime)){
     	alert("Please format Desired Start Time in HH:MM in 24 hour format");
-    	$("#wrong9").css("background-color","#ffff99");
-    	$("#wrong10").css("background-color","#ffff99");    	
+    	$("#StartTime").css("background-color","#ffff99");    	   	
+    	good = false;
+    }
+    if(!checkTimeFormat(dueTime)){
+    	alert("Please format Desired Due Time in HH:MM in 24 hour format");
+    	$("#DueTime").css("background-color","#ffff99");    	    	
     	good = false;
     }
     else if(!checkValidTime(startDate, startTime)){
     	alert("Please make sure Desired Start Time is later than Desired Start Time");
-    	$("#wrong9").css("background-color","#ffff99");
-    	$("#wrong10").css("background-color","#ffff99"); 
+    	$("#StartTime").css("background-color","#ffff99");
+    	$("#DueTime").css("background-color","#ffff99"); 
+    	
     	good = false;
     }
     else if(!checkStartTimeEarlierThanDueTime(dueDate, startDate, dueTime, startTime))
     {
     	alert("Please make sure you are starting before the Due Time");
-    	$("#wrong9").css("background-color","#ffff99");
-    	$("#wrong10").css("background-color","#ffff99"); 
+    	$("#StartTime").css("background-color","#ffff99");
+    	$("#DueTime").css("background-color","#ffff99"); 
     	good = false;
     }
+    
 
     return good;
 }
@@ -157,28 +199,20 @@ function checkInputTop(){
 
 function checkInputBottom(){
    
-    var checkpointHH = $('#CheckpointHH').val();
-    var checkpointMM = $('#CheckpointMM').val();
-    var checkpoint = checkpointHH + ":" + checkpointMM;
-
-    var estimateHH = $('#EstimateHH').val(); 
-    var estimateMM = $('#EstimateMM').val();
-    var estimate = estimateHH + ':' + estimateMM;  
-
+    var checkpoint = $('#Checkpoint').val();
+    var estimate = $('#Estimate').val(); 
+    
     var good = true;
 
      
     if(checkpoint.length != 5){
     	alert("Please format Checkpoint Interval in HH:MM in 24 hour format");
-    	$("#wrong11").css("background-color","#ffff99");
-    	$("#wrong12").css("background-color","#ffff99"); 
+    	$("#Checkpoint").css("background-color","#ffff99");    	
     	good = false;
     }
     if(estimate.length != 5){
     	alert("Please format Estimated Hours Until Completion in HH:MM in 24 hour format");
-    	$("#Estimate").css("background-color","#ffff99");
-    	$("#wrong13").css("background-color","#ffff99");
-    	$("#wrong14").css("background-color","#ffff99"); 
+    	$("#Estimate").css("background-color","#ffff99");    	
     	good = false;
     }
 

@@ -354,7 +354,7 @@
                             <label for="Checkpoint">Checkpoint Interval (ex. 03:30) <button id="myBtn" type="button">?</button></label>
                         </div>
                     </div>
-                    
+    
                     <div class="row">
                         <div class="input-field col s12">
                             <i class="material-icons prefix">check_circle</i>
@@ -475,7 +475,8 @@
                     {{/if}}
                 </div>  <!-- end inner -->
                 <div class="right arrow next-page">
-                	<button type="submit" {{#unless viewAlt}}onclick="return checkInputBottom();"{{/unless}} class="spacedLink no-border">
+                	<!--<button type="submit" {{#unless viewAlt}}onclick="return checkInputBottom();"{{/unless}} class="spacedLink no-border">-->
+                    <button type="submit" onclick="return checkInputBottom();" class="spacedLink no-border">
                     	<div class="arrow-finish">
                         	<img src="/images/Arrow3.png">
                     	</div>
@@ -504,6 +505,7 @@
     {{#if viewAlt}}
        <script src="/js/enter-details-page-sound.js"></script>
     {{/if}}
+
     {{#if viewAlt}}
        <script src="/js/enter-assignment-details-pageB.js"></script>
     {{else}}
