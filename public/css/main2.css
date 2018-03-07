@@ -129,6 +129,11 @@ html, body {
 	text-align: center;
 }
 
+.fb-login-button {
+	height: 60px !important;
+	font-size: 2em !important; 
+}
+
 .login {
 	height: 60px;
 	font-size: 2em;
