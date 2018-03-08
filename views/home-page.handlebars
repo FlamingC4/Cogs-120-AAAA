@@ -22,7 +22,7 @@
 	
 	<div class="nav-container navbar-fixed-top">
 		<nav class="nav-header">
-				<div class="row header">
+			<div class="row header">
 				<div class="col-xs-10">
 					<h1>ASSIGNMENTS</h1>
 				</div>
@@ -34,42 +34,44 @@
 			</div>
 		</nav>
 	</div> 
-		<div class="container text-center container-pad">		
+	<div class="container text-center container-pad">		
 		{{#each project}}
 			<div class="row item">
-             	<div class="col-xs-10 left">
-                    <a href="#" onclick="window.alert('Estimated Time: {{estimated_time}}\nActual Time: {{actual_time}}');">
-                        <h3 class="prevAssignment">{{name}}</h3>
-                    </a>
-            	</div>
-            	<div class="col-xs-2 right">
-                	<h4><span class="glyphicon glyphicon-ok"></span></h4>	
-            	</div>
-        	</div>
-        {{/each}}
+	         	<div class="col-xs-10 left">
+	                <a href="#" onclick="window.alert('Estimated Time: {{estimated_time}}\nActual Time: {{actual_time}}');">
+	                    <h3 class="prevAssignment">{{name}}</h3>
+	                </a>
+	        	</div>
+	        	<div class="col-xs-2 right">
+	            	<h4><span class="glyphicon glyphicon-ok"></span></h4>	
+	        	</div>
+	    	</div>
+	    {{/each}}
 
-		<!-- The Modal -->
-		<div id="myModal" class="modal">
-	  		<!-- Modal content -->
-	  		<div class="modal-content">
-	    		<!--<span class="close">&times;</span> -->
-	    		<h3 class="addProject">Add New Assignment</h3>
-	    		<form action="/enterDetails" method="POST">
-		    		<input class="form-control" id="project-name" type="text" name="name" placeholder="Assignment Name" value="">
-		    		<div class="row done">
-		    			<div class="col-xs-6">
-		    				<button type="button" class="exit btn btn-danger btn-block home-modal">Cancel</button>
-		    			</div>
-		    			<div class="col-xs-6">
-		    				<button type="submit" id="save" class="exit btn btn-primary btn-block home-modal" onclick="return validate();">Save</button>
-		    			</div>
-		  			</div>
-	  			</form>
-			</div>
-		</div>
+	
 		<nav class="right nav-footer">
-  			<a href="#"><span id="myBtn" class="glyphicon glyphicon-plus"></span></a>
+				<a href="#"><span id="myBtn" class="glyphicon glyphicon-plus"></span></a>
 		</nav>
+	</div> <!-- end container -->
+
+	<!-- The Modal -->
+	<div id="myModal" class="modal">
+  		<!-- Modal content -->
+  		<div class="modal-content">
+    		<!--<span class="close">&times;</span> -->
+    		<h3 class="addProject">Add New Assignment</h3>
+    		<form action="/enterDetails" method="POST">
+	    		<input class="form-control" id="project-name" type="text" name="name" placeholder="Assignment Name" value="">
+	    		<div class="row done">
+	    			<div class="col-xs-6">
+	    				<button type="button" class="exit btn btn-danger btn-block home-modal">Cancel</button>
+	    			</div>
+	    			<div class="col-xs-6">
+	    				<button type="submit" id="save" class="exit btn btn-primary btn-block home-modal" onclick="return validate();">Save</button>
+	    			</div>
+	  			</div>
+  			</form>
+		</div>
 	</div>
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
