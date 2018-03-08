@@ -180,7 +180,7 @@ function checkInputTop(){
     	good = false;
     }
     else if(!checkValidTime(startDate, startTime)){
-    	alert("Please make sure Start Time is ealier than today's time");
+    	alert("Please make sure inputted start time is today's current time or later");
     	$("#StartTime").css("background-color","#ffff99");
     	$("#DueTime").css("background-color","#ffff99"); 
     	

@@ -79,7 +79,7 @@ function checkInputTop(){
     	$("#wrong8").css("background-color","#ffff99");
     	good = false;
     } 
-    
+
     if(!checkTimeFormat(startTime)){
     	alert("Please format Desired Start Time in HH:MM in 24 hour format");
     	$("#wrong9").css("background-color","#ffff99");
@@ -100,7 +100,7 @@ function checkInputTop(){
     	good = false;
     }
     else if(!checkValidTime(dueDate, dueTime)){
-    	alert("Please make sure time is later than today's current time");
+    	alert("Please make sure inputted start time is today's current time or later");
     	$("#wrong4").css("background-color","#ffff99");
     	$("#wrong5").css("background-color","#ffff99");
     	good = false;
