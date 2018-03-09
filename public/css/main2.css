@@ -50,6 +50,7 @@ html, body {
     width: 100%;    
     color: white;  
     margin: 0 auto;
+    height: 65px;
 }
 
 .nav-container {

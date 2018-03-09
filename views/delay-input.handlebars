@@ -22,7 +22,7 @@
     <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen">
+    <link type="text/css" rel="stylesheet" href="/css/materialize.css" media="screen">
     <link href="css/main2.css" rel="stylesheet">
     <link href="css/enter-name-page.css" rel="stylesheet"> 
 
@@ -49,7 +49,7 @@
 
 
         <form action="/start-countdown" method="POST" class="col-12">
-            <div id="first-form" class="col-12">
+            <div id="pause-form" class="col-12">
         {{#if viewAlt}}
                 <div class="row">
                     <div class="input-field col s12">
@@ -228,8 +228,9 @@
   
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/materialize.js"></script>
+    <script type="text/javascript" src="/js/materialize.js"></script>
     <script src="/js/edit-name-page.js"></script>
+    <script src="/js/clockAndCalendar.js"></script>
     {{#if viewAlt}}
     <script src="/js/delay-input.js"></script>
     {{/if}}

@@ -85,6 +85,14 @@ h3.project-name {
   height: 77vh;
 }
 
+#pause-form {
+  height: 50vh;
+}
+
+#edit-form {
+  height: 50vh;
+}
+
 .inner {
   height: 75%;
 }
