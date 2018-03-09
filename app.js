@@ -61,7 +61,7 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-app.get('/', login.view);
+app.get('/', login.viewAlt);
 app.get('/page_A', login.view);
 app.get('/home-page', home.view);
 //app.get('/enter-name', enterName.enter); DOESN'T WORK
