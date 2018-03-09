@@ -38,14 +38,19 @@
 		{{#each project}}
 			<div class="row item">
 	         	<div class="col-xs-10 left">
-	                <a href="#" onclick="window.alert('Estimated Time: {{estimated_time}}\nActual Time: {{actual_time}}');">
+	                <a href="#" class="thisAssignment">
 	                    <h3 class="prevAssignment">{{name}}</h3>
 	                </a>
+	                <div class="col-xs-12 hiddenInfo" id="{{name}}">
+    					<p class="hiddenEtime">{{estimated_time}}</p>
+    					<p class="hiddenAtime">{{actual_time}}</p>
+    				</div>
 	        	</div>
 	        	<div class="col-xs-2 right">
 	            	<h4><span class="glyphicon glyphicon-ok"></span></h4>	
 	        	</div>
 	    	</div>
+	    	
 	    {{/each}}
 
 	
@@ -73,14 +78,27 @@
   			</form>
 		</div>
 	</div>
+
+	<div id="myModal" class="modal moreInfo">
+		<div class="modal-content">
+			<div class="info">
+				<h1 id="name">Assignment Name</h1>
+				<p class="eTime">Estimated Time: </p>
+				<p id="aTime">Actual Time Spent: </p>
+			</div>
+			<div class="buttons">
+				<button>Got it!</button>
+			</div>
+		</div>
+	</div>
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 	<script src="/js/main.js"></script>		
-	{{#if viewAlt}}	
+	
 	<script src="/js/home-page.js"></script>
-	{{/if}}
+
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114902393-1"></script>
 	<script>

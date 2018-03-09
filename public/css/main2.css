@@ -178,4 +178,8 @@ input.placeholderred::-webkit-input-placeholder {
    color: green;
 }
 
+.hiddenInfo {
+	display: none;
+}
+
 
