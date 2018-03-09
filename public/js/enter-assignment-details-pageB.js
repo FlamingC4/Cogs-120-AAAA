@@ -110,7 +110,13 @@ function checkInputTop(){
 	var dueTimeArray = dueTime.split('');
     var dueTimeHH
     if(dueTimeArray[dueTimeArray.length - 2] + dueTimeArray[dueTimeArray.length - 1] == "PM")
-    	dueTimeHH = parseInt(dueTimeArray[0] + dueTimeArray[1]) + 12;
+        if(dueTimeArray[0] + dueTimeArray[1] == 12) {
+            console.log("This is entered");
+            dueTimeHH = 12;
+        }
+        else {
+    	    dueTimeHH = parseInt(dueTimeArray[0] + dueTimeArray[1]) + 12;
+        }
     else
     	dueTimeHH = dueTimeArray[0] + dueTimeArray[1];
     var dueTimeMM = dueTimeArray[3] + dueTimeArray[4];
@@ -122,7 +128,12 @@ function checkInputTop(){
 	var startTimeArray = startTime.split('');
     var startTimeHH
     if(startTimeArray[startTimeArray.length - 2] + startTimeArray[startTimeArray.length - 1] == "PM")
-    	startTimeHH = parseInt(startTimeArray[0] + startTimeArray[1]) + 12;
+        if(dueTimeArray[0] + dueTimeArray[1] == 12) {
+            startTimeHH = 12;
+        }
+        else {
+    	    startTimeHH = parseInt(startTimeArray[0] + startTimeArray[1]) + 12;
+        }
     else
     	startTimeHH = startTimeArray[0] + startTimeArray[1];
     var startTimeMM = startTimeArray[3] + startTimeArray[4];

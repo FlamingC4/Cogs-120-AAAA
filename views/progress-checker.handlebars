@@ -34,14 +34,14 @@
 	<div class="top-of-page">
 		  	<div class="row">
 		  		<div class="col-9">
-		  			<h1>{{name}}</h1> 
+		  			<h1 class="title-text">{{name}}</h1> 
 		  		</div>
 		  		<div class="col-3">
 
 		  	{{#if viewAlt}}
-		  			<a href = "/edit-assignment"> <img src="/images/edit project.png" id ="edit-assignment" style="width:10vw;margin-top:2vw;"></a>
+		  			<a href = "/edit-assignment"> <img src="/images/edit project.png" class="edit-button" id="edit-assignment"></a>
 		  	{{else}}
-		  			<a href = "/edit-assignment"> <img src="/images/edit project.png" style="width:10vw;margin-top:2vw;"></a>
+		  			<a href = "/edit-assignment"> <img src="/images/edit project.png" class="edit-button"></a>
 		  	{{/if}}
 	  			</div>
 	  	 </div>
@@ -59,12 +59,12 @@
 		  	<div class="text-center">	  	
 		  		<center>   	
 			  		</br>		  		
+                    </br>
 				 	 <a href="/delay-input"><button type="button" class="btn btn-danger btn-wide btn-block" id="pause-button" style="width:60%; background-color: #DB4437; border-color: #DB4437;" align="middle"> Pause </button>
 					  	</a>			  	
 				  	</br>
 				  	</br>
 					<button type="button" class="btn btn-success btn-wide btn-block" id="finish-buttonAlt"  style="width: 60%; background-color: #3E50B4; border-color: #3E50B4;" align="middle">Finish</button>		  	
-					</br>
 					</br>
 				</center>
 			</div>			
@@ -72,27 +72,27 @@
 		  	<div class="text-center">	  	
 		  		<center>   	
 			  		</br>	
+                    </br>
 					<a href="/delay-input"><button type="button" class="btn btn-danger btn-wide btn-block" id="pause-button" style="width:60%; background-color: #DB4437; border-color: #DB4437;" align="middle"> Pause </button>
 					  	</a>
 					  	</br>
-					  	</br>
 					<a href="/finish-confirmation.html"><button type="button" class="btn btn-success btn-wide btn-block" id="finish-button"  style="width: 60%; background-color: #3E50B4; border-color: #3E50B4;">Finish</button></a>		 
-					</br>
 					</br>
 				</center>
 			</div>
 		{{/if}}
 
-	
-		<p style="margin-bottom: -1vw;">Next checkpoint: (HH:MM:SS)</p>							
-		<div class= "row">
-			
-				<i class="material-icons prefix">alarm</i>
-		
-			<div class = "col 2">
-				<div id="progress-timer-2"></div>
-			</div>
-		</div>
+        <div class="row">	
+            <div class="col-1">
+                <i class="material-icons prefix">alarm</i> 
+            </div>
+            <div class="col-6 countdown-spacer">
+                <h6> Next checkpoint: </h6>
+            </div>
+            <div class="col-4 countdown countdown-spacer">
+			    <h6><div id="progress-timer-2"></div></h6>
+            </div>
+        </div>
 		</br>
 		<!--<div class= "row">
 			<div class="col 2"></div>
@@ -104,24 +104,36 @@
 				<div id="progressBarz">
 			  		<div class="bar"></div>
 				</div>
+                
+                <div class="row">
+                    <div class="col-6">
+                        <h6>Assignment due in: </h6>		
+                    </div>
 
-				<div>
-					<h5>Assignment due in <div id="progress-timer"></div></h5>		
-				</div>
+                    <div class="col-6">
+                        <h6><div id="progress-timer"></div></h6>
+                    </div>
+                </div>
 			</div>
 			</br>
 		</center>
 
-		<div>
-			<p name="checkpointPercent" id="checkpointPercent">Progress (% Completed): _____ </p>
-			<p>Estimate Based on Progress: 6hr 30min</p>
+		<div class="row">
+            <div class="col-12">
+                <p name="checkpointPercent" id="checkpointPercent">Progress (% Completed): _____ </p>
+                <p>Estimate Based on Progress: 6hr 30min</p>
+            </div>
 		</div>
 
-		<div>
-			<button id="checkpoint0">See what happens when checkpoint timer hits 0</button>
-			</br>
-			</br>
-			<button id="1HourRemaining">See what happens when 1 hour is left</button> 
+        <div class="wizard-spacer"></div>
+
+		<div class="row">
+            <div class="col-12">
+                <button id="checkpoint0">See what happens when checkpoint is 0</button>
+                </br>
+                </br>
+                <button id="1HourRemaining">See what happens when 1 hour is left</button> 
+            </div>
 		</div>
 
 	<!--the modals -->
@@ -182,15 +194,15 @@
 
 
 	
-		<!--<script data-main="app" src="../requirejs/require.js"></script> -->
-		<script src="/bootstrap-4.0.0/js/tests/vendor/jquery-1.9.1.min.js"></script>
-		<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
-		<script src="https://code.jquery.com/jquery.js"></script>
-		<script src="/js/bootstrap.min.js"></script>
-		<script src="/js/progress.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
-		<script src="/jquery-countdown/dist/jquery.countdown.js"></script>	
-		<script type="text/javascript" src="/js/materialize.js"></script>
+    <!--<script data-main="app" src="../requirejs/require.js"></script> -->
+    <script src="/bootstrap-4.0.0/js/tests/vendor/jquery-1.9.1.min.js"></script>
+    <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/progress.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+    <script src="/jquery-countdown/dist/jquery.countdown.js"></script>	
+    <script type="text/javascript" src="/js/materialize.js"></script>
 
 	</body>
 </html>

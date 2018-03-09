@@ -11,6 +11,7 @@ h3.project-name {
   max-width: 650px;
   color: #009688;
   font-family: Roboto;
+  font-size: 8vw;
 }
 
 .middle-spacer {
@@ -35,8 +36,8 @@ h3.project-name {
 } */
 
 .arrow-space {
-    margin-top: 5vh;
-    margin-bottom: 2vh;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .arrow-back {
@@ -83,6 +84,14 @@ h3.project-name {
 
 #first-form {
   height: 77vh;
+}
+
+#pause-form {
+  height: 50vh;
+}
+
+#edit-form {
+  height: 50vh;
 }
 
 .inner {
