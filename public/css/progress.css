@@ -71,6 +71,7 @@ h5{
     font-family: Roboto;
     max-width: 650px;
     width: 100vw;    
+    height: 65px;
     color: white;  
 }
 
@@ -93,6 +94,15 @@ h5{
     height:20px;
     position:relative;
     top:-10px;
+}
+
+.edit-button {
+   margin-top: 2vh;
+   width: 40px;
+}
+
+.title-text {
+   margin-top: 20px;
 }
 
 /*.container{
