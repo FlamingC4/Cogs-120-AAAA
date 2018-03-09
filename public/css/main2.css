@@ -139,6 +139,7 @@ html, body {
 	font-size: 2em;
 	background-color: #009688; 
 	border-color: #009688;
+	margin-bottom: 8px;
 }
 
 .signup {
@@ -172,5 +173,9 @@ html, body {
 	color: red;
 	font-size: 1.25em;
 } 
+
+input.placeholderred::-webkit-input-placeholder {
+   color: green;
+}
 
 

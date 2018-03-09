@@ -43,14 +43,16 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 			<form action="/home-page" method="GET">
 				<div class="form-group input-group">
 			  		<span class="input-group-addon glyphicon glyphicon-envelope"></span>    
-			  		<input class="form-control" type="text" placeholder="Email">
+			  		<input class="form-control" type="text" name="email" id="email" placeholder="Email">
 				</div>
 				<div class="form-group input-group">
 			  		<span class="input-group-addon glyphicon glyphicon-lock"></span>    
-			  		<input class="form-control" type="password" placeholder="Password">
+			  		<input class="form-control" name="password" type="password" id="password" placeholder="Password">
 				</div>
-				<button type="submit" class="btn btn-success btn-block login">LOGIN</button>
+				<button type="submit" class="btn btn-success btn-block login" onclick="return loginValidate();">LOGIN</button>
 			</form>
+			
+			<div class="fb-login-button facebookLogin" data-max-rows="1" data-size="large" data-width="100%" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false" scope="public_profile,email" onlogin="window.location='/home-page'"></div>
 			<div class="row signup">
 				<div class="col-xs-5">
 					<h5 class="left">Sign Up</h5>
@@ -58,16 +60,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 				<div class="col-xs-7">
 					<h5 class="right">Forgot Password</h5>
 				</div>
-
-					
-				<!--
-				<p class="facebookLogin">
-					<fb:login-button scope="public_profile,email" onlogin="window.location='/home-page'">
-					</fb:login-button>
-				</p> -->
 			</div>
-			<div class="fb-login-button facebookLogin" data-max-rows="1" data-size="large" data-width="100%" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false" scope="public_profile,email" onlogin="window.location='/home-page'"></div>
-
 		</div>
 	</div>
 
@@ -80,6 +73,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 	<script src="/js/facebook.js"></script>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114902393-1"></script>
+	<script src="/js/loginValidate.js"></script>
 	<script>
 	 	window.dataLayer = window.dataLayer || [];
 	  	function gtag(){dataLayer.push(arguments);}
