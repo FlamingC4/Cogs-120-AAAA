@@ -44,14 +44,14 @@ function checkInputTop(){
 
 
  	 if(!checkDateFormat(startDate)){
-    	alert("Please format Desired Start Date to MM/DD/YYYY");
+    	alert("Please select Start Date");
     	$("#wrong6").css("background-color","#ffff99");
     	$("#wrong7").css("background-color","#ffff99");
     	$("#wrong8").css("background-color","#ffff99");
     	good = false;
     }
     else if(!checkValidDate(startDate)){
-    	alert("Please make sure Desired Start Date is today or later");
+    	alert("Please make sure Start Date is today or later");
     	$("#wrong6").css("background-color","#ffff99");
     	$("#wrong7").css("background-color","#ffff99");
     	$("#wrong8").css("background-color","#ffff99");
@@ -59,7 +59,7 @@ function checkInputTop(){
     }
  	
     if(!checkDateFormat(dueDate)){
-    	alert("Please format Due Date to MM/DD/YYYY");
+    	alert("Please select a Due Date");
     	$("#wrong1").css("background-color","#ffff99");
     	$("#wrong2").css("background-color","#ffff99");
     	$("#wrong3").css("background-color","#ffff99");
@@ -81,7 +81,7 @@ function checkInputTop(){
     } 
 
     if(!checkTimeFormat(startTime)){
-    	alert("Please format Desired Start Time in HH:MM in 24 hour format");
+    	alert("Please select a Start Time");
     	$("#wrong9").css("background-color","#ffff99");
     	$("#wrong10").css("background-color","#ffff99");    	
     	good = false;
@@ -94,7 +94,7 @@ function checkInputTop(){
     }
 
     if(!checkTimeFormat(dueTime)){
-    	alert("Please format time in HH:MM in 24 hour format");
+    	alert("Please select a Due Time");
     	$("#wrong4").css("background-color","#ffff99");
     	$("#wrong5").css("background-color","#ffff99");
     	good = false;
@@ -107,7 +107,7 @@ function checkInputTop(){
     }   
     else if(!checkStartTimeEarlierThanDueTime(dueDate, startDate, dueTime, startTime))
     {
-    	alert("Please make sure you are starting before the Due Time");
+    	alert("Please make sure your Start Time is before your Due Time");
     	$("#wrong9").css("background-color","#ffff99");
     	$("#wrong10").css("background-color","#ffff99"); 
     	good = false;
