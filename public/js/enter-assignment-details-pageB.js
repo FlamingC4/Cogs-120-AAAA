@@ -153,7 +153,7 @@ function checkInputTop(){
     }
 
     if(!checkTimeFormat(startTime)){
-    	alert("Please select a Start Time");
+    	alert("Please select a valid Start Time");
     	$("#StartTime").css("background-color","#ffff99");    	   	
     	good = false;
     }
@@ -338,6 +338,8 @@ function checkTimeFormat(time){
 
 function checkValidTime(date, time){
 	var currentDate = new Date();
+	currentDate.setMinutes(currentDate.getMinutes);
+
 	var timeArray = time.split('');
 	
 	//check user input date
