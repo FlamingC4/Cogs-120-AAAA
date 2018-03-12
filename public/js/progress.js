@@ -268,10 +268,10 @@ var finishAudio = new Audio('/finishConfirmationSound.mp3');
     pauseAudio.play();
 }*/
 
-finish.onclick = function() {       
+/*finish.onclick = function() {       
     finishModal.style.display = "block";
     finishAudio.play();
-}
+}*/
 
 
 //close modals
@@ -291,7 +291,7 @@ var editAssignment = $('#edit-assignment');
 var editAssignmentSound = new Audio('/editAssignmentAttributesSound.mp3');
 
 
-$('#edit-assignment').onclick = function(){
+/*$('#edit-assignment').onclick = function(){
     console.log("hello");
     editAssignmentSound.play();
-}
+}*/
