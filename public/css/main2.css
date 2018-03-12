@@ -13,6 +13,7 @@ body {
 
 .container { 
 	padding: 0;
+	padding-top: 3vh;
 	background: rgba(0, 0, 0, 0.1);
 	margin-bottom: 0;	
 	margin: 0 auto;
@@ -29,6 +30,9 @@ body {
 	font-size: 3em;
 } */
 
+#wrap{
+	overflow-wrap: break-word;
+}
 .no-border {
 	background-color: rgba(0,0,0,0);
 	border-color: rgba(0,0,0,0);
@@ -56,8 +60,9 @@ body {
     max-width: 650px;
     width: 100%;    
     color: white;  
-    margin: 0 auto;
-    height: 65px;
+    margin: 0 auto;    
+    /*height: 65px;*/
+    word-wrap: break-word;
 }
 
 .nav-container {
