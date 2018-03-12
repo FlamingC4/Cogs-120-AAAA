@@ -22,10 +22,10 @@ function statusChangeCallback(response) {
     // Logged into your app and Facebook.
         console.log('Successfully logged in with Facebook');
          FB.api('/me?fields=name,first_name,picture.width(480)', changeUser);
-         
+
   }
 }
 
 function changeUser(response) {
-  login(res, req);
+  
 };
