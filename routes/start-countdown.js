@@ -4,6 +4,7 @@ var record = require("../data.json");
 exports.view = function(req, res){
   var attributes = req.body.detail;
   console.log(attributes);
+  console.log("This is the dropdown menu version");
 
   count.details = attributes;
   //count["viewAlt"] = false;
