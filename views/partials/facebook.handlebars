@@ -5,8 +5,13 @@
       appId      : '146017632759612',
       cookie     : true,
       xfbml      : true,
-      version    : 'v2.8'
+      version    : 'v2.8',
     });
+
+    FB.Event.subscribe('auth.login', function() {
+    console.log("entering home page");
+
+    })
   };
   (function(d, s, id){
      var js, fjs = d.getElementsByTagName(s)[0];

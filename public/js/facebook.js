@@ -21,10 +21,12 @@ function statusChangeCallback(response) {
   if (response.status === 'connected') {
     // Logged into your app and Facebook.
         console.log('Successfully logged in with Facebook');
-         FB.api('/me?fields=name,first_name,picture.width(480)', changeUser);
+        window.location="/home-page";
+        // FB.api('/me?fields=name,first_name,picture.width(480)', changeUser);
+
   }
 }
 
 function changeUser(response) {
-  login(res, req);
+  
 };

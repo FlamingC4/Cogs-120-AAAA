@@ -53,7 +53,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 				<button type="submit" class="btn btn-success btn-block login" onclick="return loginValidate();">LOGIN</button>
 			</form>
 			
-			<div class="fb-login-button facebookLogin" data-max-rows="1" data-size="large" data-width="100%" data-show-faces="false" data-use-continue-as="false" onlogin="window.location='/home-page'"></div>
+			<div class="fb-login-button facebookLogin" data-max-rows="1" data-size="large" data-width="100%" data-show-faces="false" data-use-continue-as="false" scope="public_profile,email" onlogin="checkLoginState();"></div>
 			<div class="row signup">
 				<div class="col-xs-5">
 					<h5 class="left">Sign Up</h5>
