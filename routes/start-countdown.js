@@ -13,8 +13,8 @@ exports.view = function(req, res){
   
   var newEntry = {
      "name": count.name,
-     "estimated_time" : count.details.EstimateHH + ":" + count.details.EstimateMM + " hours",
-     "actual_time" : " ",
+     "estimated_time" : count.details.Estimate + " hours",
+     "actual_time" : " "
   }
   record.project.push(newEntry);  
 };
@@ -30,8 +30,8 @@ exports.viewAlt = function(req, res){
   
   var newEntry = {
      "name": count.name,
-     "estimated_time" : count.details.Estimate + " hours",
-     "actual_time" : " "
+     "estimated_time" : count.details.EstimateHH + ":" + count.details.EstimateMM + " hours",
+     "actual_time" : " ",
   }
   record.project.push(newEntry);  
 };
