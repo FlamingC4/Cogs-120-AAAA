@@ -75,7 +75,7 @@ app.get('/user-settings', userSettings.view);
 app.get('/delay-input', delayInput.view); //NOT WORKING
 app.post('/enterDetails', enterDetails.view);
 app.post('/start-countdown', startCountdown.view);
-app.post('/', login.view);
+app.post('/home-page', home.progressView);
 //app.get('/edit-assignment', editAssignment.view);
 // Example route
 // app.get('/users', user.list);
