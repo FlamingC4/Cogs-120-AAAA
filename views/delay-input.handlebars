@@ -48,21 +48,21 @@
         </div>
 
 
-        <form action="/start-countdown" method="POST" class="col-12">
+        <form action="/home-page" method="POST" class="col-12">
             <div id="pause-form" class="col-12">
         {{#if viewAlt}}
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="material-icons prefix">date_range</i>
-                        <input placeholder="Tap here to enter date" id="DueDate" type="text" class="validate datepicker" name="detail[DueDate]">
-                        <label for="DueDate">Resume Date:</label>
+                        <input placeholder="Tap here to enter date" id="ResumeDate" type="text" class="validate datepicker" name="resInfo[resTime]">
+                        <label for="ResumeDate">Resume Date:</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="material-icons prefix">alarm</i>
-                        <input placeholder="Tap here to enter time" id="DueTime" type="text" class="validate timepicker" name="detail[DueTime]">
-                        <label for="DueTime">Resume Time</label>
+                        <input placeholder="Tap here to enter time" id="ResumeTime" type="text" class="validate timepicker" name="resInfo[resDate]">
+                        <label for="ResumeTime">Resume Time</label>
                     </div>
 
         {{else}}
@@ -189,43 +189,13 @@
                 </fieldset>
         {{/if}}
             </div>
+            <div class="right col-12 next-arrow">
+                <a href="start-countdown">
+                    <img class="arrow-space" src="images/Arrow3.png">
+                </a>
+            </div>
         </form>
-        
-           
-           
-
-        <!--<div>
-            <div class="input-field col s12">
-                <input placeholder="Enter in MM/DD/YYYY format" id="DueDate" type="text" class="validate">
-                <label for="DueDate">Restart Date</label>
-            </div>
-            <div class="input-field col s12">
-                <input placeholder="Enter in hrs:mins format" id="DueTime" type="text" class="validate">
-                <label for="DueTime">Restart Time</label>
-            </div>
-        </div>-->
-
-    <!--<div>
-        <p class="forms">
-            Restart Date: <input type="text" name="Date"><br>
-            <div class="input-field col s12">
-                <input placeholder="Enter in MM/DD/YYYY format" id="DueDate" type="text" class="validate">
-            </div>
-        </p>
-
-        <p class="forms">
-            Restart Time: <input type="text" name="Time"><br>
-        </p>
-    </div>-->
-    
-        <div class="right col-12 next-arrow">
-            <a href="start-countdown">
-                <img class="arrow-space" src="images/Arrow3.png">
-            </a>
-        </div>
-    
-
-  
+    </div> 
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/js/materialize.js"></script>
