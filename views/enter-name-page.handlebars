@@ -27,7 +27,7 @@
 
     <!-- Stylesheets that we wrote -->
     <link href="/css/main2.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/modal.css">
+    <link href="/css/modal.css" rel="stylesheet" >
     <link href="/css/enter-name-page.css" rel="stylesheet"> 
     
 </head>
@@ -359,10 +359,15 @@
                     <div class="row">
                         <div class="input-field col s12">
                             <i class="material-icons prefix">notifications_active</i>
-                            <input placeholder="Enter time in HR:MIN format" name="detail[Checkpoint]" id="Checkpoint" type="text" class="validate">
-                            <label for="Checkpoint">Checkpoint Interval (ex. 03:30) <button id="myBtn" type="button">?</button></label>
-                        </div>
+                            <input placeholder="Enter time in HR:MIN format" name="detail[Checkpoint]" id="Checkpoint" type="text" class="validate">                            
+                            <label for="Checkpoint">Checkpoint Interval (ex. 03:30)</label>                             
+                        </div>                        
                     </div>
+                    <center><button id="myBtn" type = "button" class="btn btn-sm" >What is a checkpoint interval?</button></center>
+                    </br>
+                    </br>
+                    </br>
+                    </br>
     
                     <div class="row">
                         <div class="input-field col s12">
@@ -371,6 +376,8 @@
                             <label for="Estimate">Your Estimate (ex. 03:30):</label>
                         </div>
                     </div>
+                    
+                    <center><button id="myBtn2" type="button" class="btn btn-sm">What is an estimate?</button></center>
 
                     {{else}}     
                     <fieldset>
@@ -499,8 +506,17 @@
         <!-- Modal content -->
         <div class="modal-content">
             <!--<span class="close">&times;</span> -->
-            <p>Check points allow you to enter your progress and get an estimate on how much time is left.</p>
-            <span class="exit"<button type="button" class="exit btn btn-success btn-md">Got it!</button>
+            <p>Check points allow you to enter your progress percentage and get an estimate on how much time is left.</p>
+            <span class="exit btn btn-success btn-md" type="button">Got it!</button>
+        </div>
+    </div>
+
+    <div id="myModal2" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <!--<span class="close">&times;</span> -->
+            <p>Estimate how long you will take to complete the assignment.</p>
+            <span class="exit btn btn-success btn-md" type="button">Got it!</button>
         </div>
     </div>
 
