@@ -1,4 +1,13 @@
 {
+    "inProgressAssignments": [
+        {
+            "name": "Cogs 120 project",
+            "restart_date" : "18 March, 2018",
+            "restart_time" : "09:00AM",
+            "estimated_time": "20 hours"
+        }
+    ],
+
 	"project": [
 		{
 			"name": "PA #1",
@@ -14,11 +23,8 @@
 			"name": "Muir 50 Essay",
 			"estimated_time": "4 Hours",
 			"actual_time": "3 Hours 46 Minutes"			
-		},
-        {
-            "name": "Cogs 120 project",
-            "estimated_time": "20 hours",
-            "actual_time": "24 hours"
-        }
-	]
+		}
+	],
+
+    "inProgress" : false
 }
