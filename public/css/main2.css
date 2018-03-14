@@ -3,18 +3,19 @@ html, body {
 	min-height: 100%;
 }
 
-body {
+/*body {
 	background: url("../bg.jpg") no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-}
+<<<<<<< HEAD
+}*/
 
 .container { 
 	padding: 0;
 	padding-top: 3vh;
-	background: rgba(0, 0, 0, 0.1);
+	background: rgba(255, 255, 255, 0);
 	margin-bottom: 0;	
 	margin: 0 auto;
 	max-width: 650px;
@@ -31,7 +32,7 @@ body {
 } */
 
 #wrap{
-	overflow-wrap: break-word;
+
 }
 .no-border {
 	background-color: rgba(0,0,0,0);
