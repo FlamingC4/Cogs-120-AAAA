@@ -153,7 +153,7 @@ function checkInputTop(){
     }
 
     if(!checkTimeFormat(startTime)){
-    	alert("Please select a valid Start Time");
+    	alert("Please select a Start Time");
     	$("#StartTime").css("background-color","#ffff99");    	   	
     	good = false;
     }
@@ -338,8 +338,6 @@ function checkTimeFormat(time){
 
 function checkValidTime(date, time){
 	var currentDate = new Date();
-	currentDate.setMinutes(currentDate.getMinutes);
-
 	var timeArray = time.split('');
 	
 	//check user input date
@@ -368,7 +366,7 @@ function checkValidTime(date, time){
 	if ((dt.getFullYear() == tm.getFullYear()) && (dt.getMonth() == tm.getMonth()) && (dt.getDate() == tm.getDate())){
 		if(currentDate.getHours() > tm.getHours())
 			return false;
-		if((currentDate.getHours() == tm.getHours()) && currentDate.getMinutes() > tm.getMinutes())
+		if((currentDate.getHours() == tm.getHours()) && currentDate.getMinutes() -5 > tm.getMinutes())
 			return false;
 	}
 	return true;
