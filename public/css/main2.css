@@ -9,7 +9,8 @@ html, body {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-}**/
+<<<<<<< HEAD
+}*/
 
 .container { 
 	padding: 0;
@@ -31,7 +32,7 @@ html, body {
 } */
 
 #wrap{
-	overflow-wrap: break-word;
+
 }
 .no-border {
 	background-color: rgba(0,0,0,0);
