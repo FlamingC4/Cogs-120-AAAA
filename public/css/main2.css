@@ -3,17 +3,6 @@ html, body {
 	min-height: 100%;
 }
 
-body {
-	background: url("../pen.jpeg") no-repeat center center fixed;
-/*body {
-	background: url("../bg.jpg") no-repeat center center fixed;
->>>>>>> 9731d3cb2855a303ae4a3a36bc8573aed7d9b4e2
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-}*/
-}
 
 .container { 
 	padding: 0;
