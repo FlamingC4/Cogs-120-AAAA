@@ -13,9 +13,11 @@ exports.progressView = function(req, res) {
     "name": curr.name,
     "restart_date": restartInfo.resDate,
     "restart_time": restartInfo.resTime,
-    "estimated_time" : curr.currAssignment[0].estimated_time
+    "estimated_time" : curr.currAssignment[0].estimated_time,
+    "percent_completed" : "30"
   };
 
+  assignmentList.inProgressAssignments.push(newInProgress);
   console.log(newInProgress);
 
   res.render('home-page', assignmentList);
