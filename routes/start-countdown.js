@@ -16,7 +16,7 @@ exports.view = function(req, res){
      "estimated_time" : count.details.Estimate + " hours",
      "actual_time" : " "
   }
-  record.project.push(newEntry);  
+  count.currAssignment.push(newEntry);
 };
 
 exports.viewAlt = function(req, res){
@@ -33,6 +33,6 @@ exports.viewAlt = function(req, res){
      "estimated_time" : count.details.EstimateHH + ":" + count.details.EstimateMM + " hours",
      "actual_time" : " ",
   }
-  record.project.push(newEntry);  
+  count.currAssignment.push(newEntry);
 };
 
