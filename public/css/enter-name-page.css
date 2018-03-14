@@ -18,6 +18,9 @@ h3.project-name {
   color: #009688;
   font-family: Roboto;
   font-size: 8vw;
+  word-wrap: break-word; 
+  padding-bottom: 3vw;
+
 }
 
 .middle-spacer {
