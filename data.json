@@ -4,7 +4,8 @@
             "name": "Cogs 120 project",
             "restart_date" : "18 March, 2018",
             "restart_time" : "09:00AM",
-            "estimated_time": "20 hours"
+            "estimated_time": "20 hours",
+            "percent_completed" : "60"
         }
     ],
 
