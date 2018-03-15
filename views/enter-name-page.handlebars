@@ -27,7 +27,7 @@
 
     <!-- Stylesheets that we wrote -->
     <link href="/css/main2.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/modal.css">
+    <link href="/css/modal.css" rel="stylesheet" >
     <link href="/css/enter-name-page.css" rel="stylesheet"> 
     
 </head>
@@ -47,7 +47,7 @@
         <div class="col-12 assignment-name">
             <h3 class="project-name">{{name}} Details:</h3>
         </div>
-        
+        </br>
         <form action="/start-countdown" method="POST" class="col-12">
             <div id="first-form" class="col-12">
 
@@ -359,10 +359,15 @@
                     <div class="row">
                         <div class="input-field col s12">
                             <i class="material-icons prefix">notifications_active</i>
-                            <input placeholder="Enter time in HR:MIN format" name="detail[Checkpoint]" id="Checkpoint" type="text" class="validate">
-                            <label for="Checkpoint">Checkpoint Interval (ex. 03:30) <button id="myBtn" type="button">?</button></label>
-                        </div>
+                            <input placeholder="Enter time in HR:MIN format" name="detail[Checkpoint]" id="Checkpoint" type="text" class="validate">                            
+                            <label for="Checkpoint">Checkpoint Interval (ex. 03:30)</label>                             
+                        </div>                        
                     </div>
+                    <center><button id="myBtn" type = "button" class="btn btn-sm" >What is a checkpoint interval?</button></center>
+                    </br>
+                    </br>
+                    </br>
+                    </br>
     
                     <div class="row">
                         <div class="input-field col s12">
@@ -371,10 +376,12 @@
                             <label for="Estimate">Your Estimate (ex. 03:30):</label>
                         </div>
                     </div>
+                    
+                    <center><button id="myBtn2" type="button" class="btn btn-sm">What is an estimate?</button></center>
 
                     {{else}}     
                     <fieldset>
-                        <legend>Checkpoint Interval <button id="myBtn" type="button">?</button></legend>
+                        <legend>Checkpoint Frequency <button id="myBtn" type="button">?</button></legend>
                         <div class="row">
                             <div class="input-field col-3" id="wrong11">
                                 <select name="detail[CheckpointHH]" id="CheckpointHH" class="validate">
@@ -499,8 +506,17 @@
         <!-- Modal content -->
         <div class="modal-content">
             <!--<span class="close">&times;</span> -->
-            <p>Check points allow you to enter your progress and get an estimate on how much time is left.</p>
-            <span class="exit"<button type="button" class="exit btn btn-success btn-md">Got it!</button>
+            <p>Checkpoints allow you to enter your progress and get an estimate of how much time is left. You can specify how often you would like them to occur.</p>
+            <span class="exit btn btn-success btn-md" type="button">Got it!</button>
+        </div>
+    </div>
+
+    <div id="myModal2" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <!--<span class="close">&times;</span> -->
+            <p>Your personal estimate of how long you think it will take to complete your assignment.</p>
+            <span class="exit btn btn-success btn-md" type="button">Got it!</button>
         </div>
     </div>
 
