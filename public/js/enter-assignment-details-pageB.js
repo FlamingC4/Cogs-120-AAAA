@@ -322,11 +322,12 @@ function checkValidDate(date){
 }
 
 function checkTimeFormat(time){
+	//console.log(time);
 	if(time.length != 5)
 		return false;
 	var timeArray = time.split('');
 
-	if(timeArray[0] + timeArray[1] < 00 || timeArray[0] + timeArray[1] > 23)
+	if(timeArray[0] + timeArray[1] < 00 || timeArray[0] + timeArray[1] > 24)
 		return false;
 	if(timeArray[2] != ':')
 		return false;
