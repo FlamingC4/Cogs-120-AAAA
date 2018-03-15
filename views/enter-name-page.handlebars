@@ -32,8 +32,7 @@
     
 </head>
 
-<body>
-    <div id="top"></div>
+<body>   
     <div class="top-of-page">
         <div class="row nav-header">
             <div class="col-3">
@@ -43,11 +42,12 @@
             </div>        
         </div>
     </div>
+
     <div class="container">  
         <div class="col-12 assignment-name">
             <h3 class="project-name">{{name}} Details:</h3>
         </div>
-        </br>
+        
         <form action="/start-countdown" method="POST" class="col-12">
             <div id="first-form" class="col-12">
 
@@ -502,6 +502,8 @@
         </form>
     </div>  <!-- end container -->
 
+   
+
     <div id="myModal" class="modal">
         <!-- Modal content -->
         <div class="modal-content">
@@ -519,6 +521,8 @@
             <span class="exit btn btn-success btn-md" type="button">Got it!</button>
         </div>
     </div>
+     
+
 
     <script src="https://code.jquery.com/jquery.js"></script>        
     <script src="/js/bootstrap.min.js"></script>
@@ -526,7 +530,7 @@
     <script src="/js/materialize.js"></script>
     
     <script src="/js/clockAndCalendar.js"></script>
-    <script src="/js/main.js"></script>
+    <script src="/js/enter-name-page-modals.js"></script>
     
     {{#if viewAlt}}
        <script src="/js/enter-assignment-details-pageB.js"></script>
@@ -539,3 +543,7 @@
 
 
 </body>
+
+
+</html>
+
