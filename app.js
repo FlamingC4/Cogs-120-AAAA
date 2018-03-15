@@ -64,11 +64,13 @@ if ('development' == app.get('env')) {
 app.get('/', login.viewAlt);
 app.get('/page_A', login.view);
 app.get('/home-page', home.view);
+app.get('/home-page/finished', home.viewFinished);
 //app.get('/enter-name', enterName.enter); DOESN'T WORK
 
 app.get('/enterDetails', enterDetails.view);
 app.get('/start-countdown', startAgain.view);
-app.get('/progress-checker', progressChecker.view);
+app.get('/progress-checker/:name', progressChecker.view);
+app.get('/progress-checker/:name/resume', progressChecker.viewResume);
 app.get('/edit-assignment-from-start', editAssignStart.view);
 app.get('/edit-assignment', editAssign.view);
 app.get('/user-settings', userSettings.view);
