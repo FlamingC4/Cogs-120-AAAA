@@ -139,6 +139,12 @@ fieldset {
   margin: 5px;
  }
 
+html, body {
+  margin:0;
+  padding:0;
+  height:100vh;
+}
+
 .top-of-page{
   margin-bottom: 2vh;
 }
