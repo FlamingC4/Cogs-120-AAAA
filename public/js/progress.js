@@ -268,10 +268,10 @@ var finishAudio = new Audio('/finishConfirmationSound.mp3');
     pauseAudio.play();
 }*/
 
-/*finish.onclick = function() {       
+finish.onclick = function() {       
     finishModal.style.display = "block";
-    finishAudio.play();
-}*/
+    //finishAudio.play();
+}
 
 
 //close modals
