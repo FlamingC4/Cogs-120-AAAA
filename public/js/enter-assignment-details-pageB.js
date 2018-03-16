@@ -205,8 +205,8 @@ function checkInputTop(){
     	good = false;
     }
     
-    console.log(startTime);
-    console.log(dueTime);
+    //console.log(startTime);
+    //console.log(dueTime);
     return good;
 }
 
