@@ -118,7 +118,17 @@ h5{
 }
 
 .wizard-spacer {
-   margin-bottom: 7vh;
+   margin-bottom: 25px;
+}
+
+.dev-options {
+   display: none;
+   text-align: center;
+}
+
+.show-wizard {
+   width: 100%;
+   text-align: center;
 }
 
 /*.container{
