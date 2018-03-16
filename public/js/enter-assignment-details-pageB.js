@@ -205,7 +205,8 @@ function checkInputTop(){
     	good = false;
     }
     
-
+    //console.log(startTime);
+    //console.log(dueTime);
     return good;
 }
 
@@ -410,7 +411,7 @@ function checkStartTimeEarlierThanDueTime(dueDate, startDate, dueTime, startTime
 		if((dueTimeArray[0] + dueTimeArray[1]) < (startTimeArray[0] + startTimeArray[1]))
 			return false;
 		else if ((dueTimeArray[0] + dueTimeArray[1]) == (startTimeArray[0] + startTimeArray[1]))
-			if ((dueTimeArray[3] + dueTimeArray[4]) > (startTimeArray[3] + startTimeArray[4]))
+			if ((dueTimeArray[3] + dueTimeArray[4]) < (startTimeArray[3] + startTimeArray[4]))
 				return false;
 	}
 	return true;
