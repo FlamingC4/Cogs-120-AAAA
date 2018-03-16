@@ -200,17 +200,17 @@ input.placeholderred::-webkit-input-placeholder {
 	text-align: center;
 }
 
-a {
+a.toggleButton {
 	text-decoration: none;
 	color: white;
 }
 
-a:active { 
+a.toggleButton:active { 
     color: white;
     text-decoration: none;
 }
 
-a:visited {
+a.toggleButton:visited {
     color: white;
     text-decoration: none;
 }
