@@ -188,9 +188,31 @@ input.placeholderred::-webkit-input-placeholder {
 	display: none;
 }
 
-.moreInfo {
-	margin-top: 10%;
+.hiddenDevTools {
+	display: none;
+}
+
+
+.wizardOfOz {
+	margin: 20px auto;
+	color: white;
+	font-size: 1.2em;
 	text-align: center;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+a:active { 
+    color: white;
+    text-decoration: none;
+}
+
+a:visited {
+    color: white;
+    text-decoration: none;
 }
 
 button.wizOz {

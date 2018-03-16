@@ -52,3 +52,7 @@ function startCounterWizardofOzTimer(/*checkpoint interval goes here*/){
         modal.style.display = "none";
     }
 }*/
+
+$(".toggleButton").click(function(e) {
+    $("#hiddenInfo").toggleClass("hiddenDevTools");
+});
