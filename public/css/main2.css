@@ -197,7 +197,7 @@ button.wizOz {
 	width: 80%;
 }
 
-.countDown {
+.countDown, .timerHeader {
 	font-size: 2.5em;
 	color: white;
 }
