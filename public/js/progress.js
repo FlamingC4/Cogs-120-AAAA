@@ -7,11 +7,23 @@
 //var jsonfile = require('jsonfile');
 
 $(document).ready(function() {
+    initWizardBox();
     moveBootStrap();
     getTimer();
     startTimer();
     checkpointTimer();
-    });
+});
+
+function initWizardBox() {
+    $(".show-wizard").click(toggleDevWizard); 
+}
+
+function toggleDevWizard(e) {
+    e.preventDefault();
+    console.log("You found the dev options!");
+
+    $(".dev-options").fadeToggle();
+}
 
 //from enter-due-date
 
