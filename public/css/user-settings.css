@@ -1,0 +1,30 @@
+.container {
+	padding-top: 0;
+}
+
+.edit-profile {
+	color: #009688;
+	margin-top: 7vh;
+	margin-bottom: 7vh;
+}
+
+.save-button {
+	width: 70%;
+}
+
+.centered {
+	text-align: center;
+	margin-top: 5vh;
+}
+
+.logout {
+	text-align: right;
+	color: white;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 1.5em;
+}
+
+h1 a {
+	color: white;
+}

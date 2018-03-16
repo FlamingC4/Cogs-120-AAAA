@@ -27,10 +27,11 @@
     
     <link href="css/main2.css" rel="stylesheet">
     <link href="css/start-input.css" rel="stylesheet">
+    <link href="css/user-settings.css" rel="stylesheet">
 </head>
 
 <body>
-    <div>
+    <div class="container">
         <div class="top-of-page">
             <div class="row nav-header">
                 <div class="col-3">
@@ -38,30 +39,28 @@
                         <img class="arrow-space" src="images/Arrow2.png">
                     </a>
                 </div> 
+                <div class="col-9 logout">
+                    <h1 class="logout"><a href="#" onclick="window.location='/'">Logout</a></h1>
+                </div>
             </div>
         </div>
 
-    <div class ="col-12">
-        <div>
-            <h1>Edit Settings</h1>
+        <div class ="col-12 edit-settings">
+            <h3 class="edit-profile">Edit Profile</h3>
+            <form>
+                <p>
+                    Change Email: <input type="text" name="email"><br>
+                </p>  
+                <p>
+                    Change Password: <input type="text" name="pass"><br>
+                </p>
+                <p class="centered">
+                    <button type="button" class="save-button btn" onclick="window.location='/home-page'">SAVE CHANGES</button>
+                </p>
+            </form>
         </div>
-    
-    <div>
-        <p>
-            Change Email: <input type="text" name="email"><br>
-        </p>
-        <p>
-            Change Password: <input type="text" name="pass"><br>
-        </p>
+    </div>
 
-    </div>
-    </div>
-    
-      <div>
-        <center>
-            <a href="home-page">
-                <button type="button" class="save-button btn" align="middle">Save</button>
-            </a>
-        </center>
-    </div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
+</html>
