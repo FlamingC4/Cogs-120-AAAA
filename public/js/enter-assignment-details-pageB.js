@@ -205,7 +205,8 @@ function checkInputTop(){
     	good = false;
     }
     
-
+    //console.log(startTime);
+    //console.log(dueTime);
     return good;
 }
 
@@ -220,12 +221,12 @@ function checkInputBottom(){
 
      
     if(checkpoint.length != 5){
-    	alert("Please format Checkpoint Interval in HR:MIN format");
+    	alert("Please format Checkpoint Interval in HR:MIN format- ex. enter 3 hours 30 minutes as 03:30");
     	$("#Checkpoint").css("background-color","#ffff99");    	
     	good = false;
     }
     if(estimate.length != 5){
-    	alert("Please format Your Estimate in HR:MIN in format");
+    	alert("Please format Your Estimate in HR:MIN in format- ex. enter 3 hours 30 minutes as 03:30");
     	$("#Estimate").css("background-color","#ffff99");    	
     	good = false;
     }
@@ -410,7 +411,7 @@ function checkStartTimeEarlierThanDueTime(dueDate, startDate, dueTime, startTime
 		if((dueTimeArray[0] + dueTimeArray[1]) < (startTimeArray[0] + startTimeArray[1]))
 			return false;
 		else if ((dueTimeArray[0] + dueTimeArray[1]) == (startTimeArray[0] + startTimeArray[1]))
-			if ((dueTimeArray[3] + dueTimeArray[4]) > (startTimeArray[3] + startTimeArray[4]))
+			if ((dueTimeArray[3] + dueTimeArray[4]) < (startTimeArray[3] + startTimeArray[4]))
 				return false;
 	}
 	return true;
