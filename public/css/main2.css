@@ -201,18 +201,18 @@ input.placeholderred::-webkit-input-placeholder {
 }
 
 a.toggleButton {
-	text-decoration: none;
+	text-decoration: underline;
 	color: white;
 }
 
 a.toggleButton:active { 
     color: white;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 a.toggleButton:visited {
     color: white;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 button.wizOz {

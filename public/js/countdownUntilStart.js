@@ -54,5 +54,5 @@ function startCounterWizardofOzTimer(/*checkpoint interval goes here*/){
 }*/
 
 $(".toggleButton").click(function(e) {
-    $("#hiddenInfo").toggleClass("hiddenDevTools");
+    $(".hiddenDevTools").fadeToggle();
 });

@@ -15,6 +15,20 @@
   
 }
 
+a.display-link {
+    text-decoration: underline;
+    color: black;
+}
+
+a.display-link:active {
+    text-decoration: underline;
+    color: black;
+}
+
+a.display-link:visited {
+    text-decoration: underline;
+    color: black;
+}
 p {
   margin-bottom: 3vh;
 }
