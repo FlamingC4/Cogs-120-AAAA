@@ -43,8 +43,6 @@ exports.viewResume = function(req, res) {
     assignmentList.splice(copyIndex, 1);
 
     res.render('progress-checker', progress);
-    //http.get('/progress-checker/:name', exports.view);
-
 }
 
 exports.viewAlt = function(req, res){
